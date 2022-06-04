@@ -13,9 +13,8 @@
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
-        If Me.Height < 640 Then
+        If Me.Height < 793 Then
             Me.Height += 20
-            Me.panelTop.Height -= 2
         Else
             timer.Stop()
             For Each btn As Button In Me.panelBottom.Controls.OfType(Of Button)
