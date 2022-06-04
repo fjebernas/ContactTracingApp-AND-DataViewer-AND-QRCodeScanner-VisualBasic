@@ -1,0 +1,14 @@
+First name: Fracise Joseph
+Middle name: Enriquez
+Last name: Bernas
+Age: 26
+Phone number: 09123123123
+Address: Tondo, Manila
+Gender: male
+
+USER'S ANSWERS:
+
+1. Have you traveled outside the country anytime from last month until now?\nnot set
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?\nnot set
+3. Do you currently have any of the following conditions during this time?\nnot set
+

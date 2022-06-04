@@ -44,7 +44,7 @@ Partial Class FormMain
         Me.rdoFirstQuestionNS = New System.Windows.Forms.RadioButton()
         Me.rdoFirstQuestionNo = New System.Windows.Forms.RadioButton()
         Me.rdoFirstQuestionYes = New System.Windows.Forms.RadioButton()
-        Me.txtBxCPnum = New System.Windows.Forms.TextBox()
+        Me.txtBxCpNum = New System.Windows.Forms.TextBox()
         Me.lblCPnum = New System.Windows.Forms.Label()
         Me.txtBxGender = New System.Windows.Forms.TextBox()
         Me.txtBxAge = New System.Windows.Forms.TextBox()
@@ -157,10 +157,10 @@ Partial Class FormMain
         Me.lblWelcomeH2.AutoSize = True
         Me.lblWelcomeH2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcomeH2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.lblWelcomeH2.Location = New System.Drawing.Point(250, 88)
+        Me.lblWelcomeH2.Location = New System.Drawing.Point(251, 96)
         Me.lblWelcomeH2.Name = "lblWelcomeH2"
         Me.lblWelcomeH2.Size = New System.Drawing.Size(148, 33)
-        Me.lblWelcomeH2.TabIndex = 1
+        Me.lblWelcomeH2.TabIndex = 0
         Me.lblWelcomeH2.Text = "Are you a:"
         '
         'lblWelcomeH1
@@ -168,7 +168,7 @@ Partial Class FormMain
         Me.lblWelcomeH1.AutoSize = True
         Me.lblWelcomeH1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcomeH1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblWelcomeH1.Location = New System.Drawing.Point(135, 33)
+        Me.lblWelcomeH1.Location = New System.Drawing.Point(135, 38)
         Me.lblWelcomeH1.Name = "lblWelcomeH1"
         Me.lblWelcomeH1.Size = New System.Drawing.Size(379, 42)
         Me.lblWelcomeH1.TabIndex = 0
@@ -186,7 +186,7 @@ Partial Class FormMain
         Me.panelContent.Controls.Add(Me.chkBxFever)
         Me.panelContent.Controls.Add(Me.GroupBox1)
         Me.panelContent.Controls.Add(Me.gbxFirstQuestion)
-        Me.panelContent.Controls.Add(Me.txtBxCPnum)
+        Me.panelContent.Controls.Add(Me.txtBxCpNum)
         Me.panelContent.Controls.Add(Me.lblCPnum)
         Me.panelContent.Controls.Add(Me.txtBxGender)
         Me.panelContent.Controls.Add(Me.txtBxAge)
@@ -218,7 +218,7 @@ Partial Class FormMain
         Me.chkBxDB.Location = New System.Drawing.Point(34, 460)
         Me.chkBxDB.Name = "chkBxDB"
         Me.chkBxDB.Size = New System.Drawing.Size(148, 21)
-        Me.chkBxDB.TabIndex = 3
+        Me.chkBxDB.TabIndex = 16
         Me.chkBxDB.Text = "Difficulty breathing"
         Me.chkBxDB.UseVisualStyleBackColor = True
         '
@@ -229,7 +229,7 @@ Partial Class FormMain
         Me.chkBxCough.Location = New System.Drawing.Point(34, 433)
         Me.chkBxCough.Name = "chkBxCough"
         Me.chkBxCough.Size = New System.Drawing.Size(72, 21)
-        Me.chkBxCough.TabIndex = 3
+        Me.chkBxCough.TabIndex = 15
         Me.chkBxCough.Text = "Cough"
         Me.chkBxCough.UseVisualStyleBackColor = True
         '
@@ -240,7 +240,7 @@ Partial Class FormMain
         Me.chkBxFever.Location = New System.Drawing.Point(34, 406)
         Me.chkBxFever.Name = "chkBxFever"
         Me.chkBxFever.Size = New System.Drawing.Size(61, 21)
-        Me.chkBxFever.TabIndex = 3
+        Me.chkBxFever.TabIndex = 14
         Me.chkBxFever.Text = "Fever"
         Me.chkBxFever.UseVisualStyleBackColor = True
         '
@@ -262,7 +262,7 @@ Partial Class FormMain
         Me.rdoSecondQuestionNS.Location = New System.Drawing.Point(292, 15)
         Me.rdoSecondQuestionNS.Name = "rdoSecondQuestionNS"
         Me.rdoSecondQuestionNS.Size = New System.Drawing.Size(79, 21)
-        Me.rdoSecondQuestionNS.TabIndex = 0
+        Me.rdoSecondQuestionNS.TabIndex = 13
         Me.rdoSecondQuestionNS.TabStop = True
         Me.rdoSecondQuestionNS.Text = "Not sure"
         Me.rdoSecondQuestionNS.UseVisualStyleBackColor = True
@@ -274,7 +274,7 @@ Partial Class FormMain
         Me.rdoSecondQuestionNo.Location = New System.Drawing.Point(153, 15)
         Me.rdoSecondQuestionNo.Name = "rdoSecondQuestionNo"
         Me.rdoSecondQuestionNo.Size = New System.Drawing.Size(45, 21)
-        Me.rdoSecondQuestionNo.TabIndex = 0
+        Me.rdoSecondQuestionNo.TabIndex = 12
         Me.rdoSecondQuestionNo.TabStop = True
         Me.rdoSecondQuestionNo.Text = "No"
         Me.rdoSecondQuestionNo.UseVisualStyleBackColor = True
@@ -286,7 +286,7 @@ Partial Class FormMain
         Me.rdoSecondQuestionYes.Location = New System.Drawing.Point(11, 15)
         Me.rdoSecondQuestionYes.Name = "rdoSecondQuestionYes"
         Me.rdoSecondQuestionYes.Size = New System.Drawing.Size(46, 21)
-        Me.rdoSecondQuestionYes.TabIndex = 0
+        Me.rdoSecondQuestionYes.TabIndex = 11
         Me.rdoSecondQuestionYes.TabStop = True
         Me.rdoSecondQuestionYes.Text = "Yes"
         Me.rdoSecondQuestionYes.UseVisualStyleBackColor = True
@@ -309,7 +309,7 @@ Partial Class FormMain
         Me.rdoFirstQuestionNS.Location = New System.Drawing.Point(292, 15)
         Me.rdoFirstQuestionNS.Name = "rdoFirstQuestionNS"
         Me.rdoFirstQuestionNS.Size = New System.Drawing.Size(79, 21)
-        Me.rdoFirstQuestionNS.TabIndex = 0
+        Me.rdoFirstQuestionNS.TabIndex = 10
         Me.rdoFirstQuestionNS.TabStop = True
         Me.rdoFirstQuestionNS.Text = "Not sure"
         Me.rdoFirstQuestionNS.UseVisualStyleBackColor = True
@@ -321,7 +321,7 @@ Partial Class FormMain
         Me.rdoFirstQuestionNo.Location = New System.Drawing.Point(153, 15)
         Me.rdoFirstQuestionNo.Name = "rdoFirstQuestionNo"
         Me.rdoFirstQuestionNo.Size = New System.Drawing.Size(45, 21)
-        Me.rdoFirstQuestionNo.TabIndex = 0
+        Me.rdoFirstQuestionNo.TabIndex = 9
         Me.rdoFirstQuestionNo.TabStop = True
         Me.rdoFirstQuestionNo.Text = "No"
         Me.rdoFirstQuestionNo.UseVisualStyleBackColor = True
@@ -333,21 +333,21 @@ Partial Class FormMain
         Me.rdoFirstQuestionYes.Location = New System.Drawing.Point(11, 15)
         Me.rdoFirstQuestionYes.Name = "rdoFirstQuestionYes"
         Me.rdoFirstQuestionYes.Size = New System.Drawing.Size(46, 21)
-        Me.rdoFirstQuestionYes.TabIndex = 0
+        Me.rdoFirstQuestionYes.TabIndex = 8
         Me.rdoFirstQuestionYes.TabStop = True
         Me.rdoFirstQuestionYes.Text = "Yes"
         Me.rdoFirstQuestionYes.UseVisualStyleBackColor = True
         '
-        'txtBxCPnum
+        'txtBxCpNum
         '
-        Me.txtBxCPnum.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxCPnum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBxCPnum.Location = New System.Drawing.Point(378, 114)
-        Me.txtBxCPnum.Multiline = True
-        Me.txtBxCPnum.Name = "txtBxCPnum"
-        Me.txtBxCPnum.Size = New System.Drawing.Size(166, 32)
-        Me.txtBxCPnum.TabIndex = 1
-        Me.txtBxCPnum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtBxCpNum.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBxCpNum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxCpNum.Location = New System.Drawing.Point(378, 114)
+        Me.txtBxCpNum.Multiline = True
+        Me.txtBxCpNum.Name = "txtBxCpNum"
+        Me.txtBxCpNum.Size = New System.Drawing.Size(166, 32)
+        Me.txtBxCpNum.TabIndex = 6
+        Me.txtBxCpNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCPnum
         '
@@ -367,7 +367,7 @@ Partial Class FormMain
         Me.txtBxGender.Multiline = True
         Me.txtBxGender.Name = "txtBxGender"
         Me.txtBxGender.Size = New System.Drawing.Size(57, 32)
-        Me.txtBxGender.TabIndex = 1
+        Me.txtBxGender.TabIndex = 7
         Me.txtBxGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtBxAge
@@ -378,7 +378,7 @@ Partial Class FormMain
         Me.txtBxAge.Multiline = True
         Me.txtBxAge.Name = "txtBxAge"
         Me.txtBxAge.Size = New System.Drawing.Size(57, 32)
-        Me.txtBxAge.TabIndex = 1
+        Me.txtBxAge.TabIndex = 4
         Me.txtBxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblGender
@@ -399,7 +399,7 @@ Partial Class FormMain
         Me.txtBxLastName.Multiline = True
         Me.txtBxLastName.Name = "txtBxLastName"
         Me.txtBxLastName.Size = New System.Drawing.Size(168, 32)
-        Me.txtBxLastName.TabIndex = 1
+        Me.txtBxLastName.TabIndex = 3
         Me.txtBxLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblAge
@@ -430,7 +430,7 @@ Partial Class FormMain
         Me.txtBxMiddleName.Multiline = True
         Me.txtBxMiddleName.Name = "txtBxMiddleName"
         Me.txtBxMiddleName.Size = New System.Drawing.Size(168, 32)
-        Me.txtBxMiddleName.TabIndex = 1
+        Me.txtBxMiddleName.TabIndex = 2
         Me.txtBxMiddleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblMiddleName
@@ -451,7 +451,7 @@ Partial Class FormMain
         Me.txtBxAddress.Multiline = True
         Me.txtBxAddress.Name = "txtBxAddress"
         Me.txtBxAddress.Size = New System.Drawing.Size(342, 32)
-        Me.txtBxAddress.TabIndex = 1
+        Me.txtBxAddress.TabIndex = 5
         Me.txtBxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblSecondQuestion2
@@ -576,7 +576,7 @@ Partial Class FormMain
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtBxMiddleName As TextBox
     Friend WithEvents lblMiddleName As Label
-    Friend WithEvents txtBxCPnum As TextBox
+    Friend WithEvents txtBxCpNum As TextBox
     Friend WithEvents lblCPnum As Label
     Friend WithEvents txtBxAddress As TextBox
     Friend WithEvents lblAddress As Label
