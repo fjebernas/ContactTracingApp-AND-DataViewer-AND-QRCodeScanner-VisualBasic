@@ -22,13 +22,17 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.panelBottom = New System.Windows.Forms.Panel()
-        Me.panelTop = New System.Windows.Forms.Panel()
-        Me.lblWelcomeH1 = New System.Windows.Forms.Label()
-        Me.lblWelcomeH2 = New System.Windows.Forms.Label()
-        Me.btnFaculty = New System.Windows.Forms.Button()
         Me.btnGuest = New System.Windows.Forms.Button()
         Me.btnStudent = New System.Windows.Forms.Button()
+        Me.btnFaculty = New System.Windows.Forms.Button()
+        Me.panelTop = New System.Windows.Forms.Panel()
+        Me.lblWelcomeH2 = New System.Windows.Forms.Label()
+        Me.lblWelcomeH1 = New System.Windows.Forms.Label()
+        Me.timer = New System.Windows.Forms.Timer(Me.components)
+        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.panelContent = New System.Windows.Forms.Panel()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         Me.SuspendLayout()
@@ -36,61 +40,15 @@ Partial Class FormMain
         'panelBottom
         '
         Me.panelBottom.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.panelBottom.Controls.Add(Me.btnSubmit)
         Me.panelBottom.Controls.Add(Me.btnGuest)
         Me.panelBottom.Controls.Add(Me.btnStudent)
         Me.panelBottom.Controls.Add(Me.btnFaculty)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 306)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 131)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.Size = New System.Drawing.Size(632, 131)
         Me.panelBottom.TabIndex = 0
-        '
-        'panelTop
-        '
-        Me.panelTop.BackColor = System.Drawing.Color.AntiqueWhite
-        Me.panelTop.Controls.Add(Me.lblWelcomeH2)
-        Me.panelTop.Controls.Add(Me.lblWelcomeH1)
-        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTop.Location = New System.Drawing.Point(0, 0)
-        Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(632, 135)
-        Me.panelTop.TabIndex = 1
-        '
-        'lblWelcomeH1
-        '
-        Me.lblWelcomeH1.AutoSize = True
-        Me.lblWelcomeH1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcomeH1.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.lblWelcomeH1.Location = New System.Drawing.Point(139, 28)
-        Me.lblWelcomeH1.Name = "lblWelcomeH1"
-        Me.lblWelcomeH1.Size = New System.Drawing.Size(379, 42)
-        Me.lblWelcomeH1.TabIndex = 0
-        Me.lblWelcomeH1.Text = "Contact Tracing App"
-        '
-        'lblWelcomeH2
-        '
-        Me.lblWelcomeH2.AutoSize = True
-        Me.lblWelcomeH2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcomeH2.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.lblWelcomeH2.Location = New System.Drawing.Point(257, 84)
-        Me.lblWelcomeH2.Name = "lblWelcomeH2"
-        Me.lblWelcomeH2.Size = New System.Drawing.Size(148, 33)
-        Me.lblWelcomeH2.TabIndex = 1
-        Me.lblWelcomeH2.Text = "Are you a:"
-        '
-        'btnFaculty
-        '
-        Me.btnFaculty.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnFaculty.FlatAppearance.BorderSize = 0
-        Me.btnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFaculty.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFaculty.ForeColor = System.Drawing.Color.Navy
-        Me.btnFaculty.Location = New System.Drawing.Point(34, 32)
-        Me.btnFaculty.Name = "btnFaculty"
-        Me.btnFaculty.Size = New System.Drawing.Size(165, 60)
-        Me.btnFaculty.TabIndex = 0
-        Me.btnFaculty.Text = "Faculty"
-        Me.btnFaculty.UseVisualStyleBackColor = False
         '
         'btnGuest
         '
@@ -120,12 +78,88 @@ Partial Class FormMain
         Me.btnStudent.Text = "Student"
         Me.btnStudent.UseVisualStyleBackColor = False
         '
+        'btnFaculty
+        '
+        Me.btnFaculty.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnFaculty.FlatAppearance.BorderSize = 0
+        Me.btnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFaculty.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFaculty.ForeColor = System.Drawing.Color.Navy
+        Me.btnFaculty.Location = New System.Drawing.Point(34, 32)
+        Me.btnFaculty.Name = "btnFaculty"
+        Me.btnFaculty.Size = New System.Drawing.Size(165, 60)
+        Me.btnFaculty.TabIndex = 0
+        Me.btnFaculty.Text = "Faculty"
+        Me.btnFaculty.UseVisualStyleBackColor = False
+        '
+        'panelTop
+        '
+        Me.panelTop.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.panelTop.Controls.Add(Me.lblWelcomeH2)
+        Me.panelTop.Controls.Add(Me.lblWelcomeH1)
+        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panelTop.Location = New System.Drawing.Point(0, 0)
+        Me.panelTop.MinimumSize = New System.Drawing.Size(632, 110)
+        Me.panelTop.Name = "panelTop"
+        Me.panelTop.Size = New System.Drawing.Size(632, 135)
+        Me.panelTop.TabIndex = 1
+        '
+        'lblWelcomeH2
+        '
+        Me.lblWelcomeH2.AutoSize = True
+        Me.lblWelcomeH2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcomeH2.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.lblWelcomeH2.Location = New System.Drawing.Point(242, 86)
+        Me.lblWelcomeH2.Name = "lblWelcomeH2"
+        Me.lblWelcomeH2.Size = New System.Drawing.Size(148, 33)
+        Me.lblWelcomeH2.TabIndex = 1
+        Me.lblWelcomeH2.Text = "Are you a:"
+        '
+        'lblWelcomeH1
+        '
+        Me.lblWelcomeH1.AutoSize = True
+        Me.lblWelcomeH1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcomeH1.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.lblWelcomeH1.Location = New System.Drawing.Point(132, 32)
+        Me.lblWelcomeH1.Name = "lblWelcomeH1"
+        Me.lblWelcomeH1.Size = New System.Drawing.Size(379, 42)
+        Me.lblWelcomeH1.TabIndex = 0
+        Me.lblWelcomeH1.Text = "Contact Tracing App"
+        '
+        'timer
+        '
+        Me.timer.Interval = 1
+        '
+        'btnSubmit
+        '
+        Me.btnSubmit.BackColor = System.Drawing.Color.LightGreen
+        Me.btnSubmit.FlatAppearance.BorderSize = 0
+        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.ForeColor = System.Drawing.Color.DarkGreen
+        Me.btnSubmit.Location = New System.Drawing.Point(234, 32)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(165, 60)
+        Me.btnSubmit.TabIndex = 0
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = False
+        Me.btnSubmit.Visible = False
+        '
+        'panelContent
+        '
+        Me.panelContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelContent.Location = New System.Drawing.Point(0, 135)
+        Me.panelContent.Name = "panelContent"
+        Me.panelContent.Size = New System.Drawing.Size(632, 0)
+        Me.panelContent.TabIndex = 2
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(632, 437)
+        Me.ClientSize = New System.Drawing.Size(632, 262)
+        Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelBottom)
         Me.Name = "FormMain"
@@ -144,4 +178,7 @@ Partial Class FormMain
     Friend WithEvents panelTop As Panel
     Friend WithEvents lblWelcomeH2 As Label
     Friend WithEvents lblWelcomeH1 As Label
+    Friend WithEvents timer As Timer
+    Friend WithEvents btnSubmit As Button
+    Friend WithEvents panelContent As Panel
 End Class
