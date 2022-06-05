@@ -1,5 +1,5 @@
 ﻿Public Class FormMain
-    Dim user As Object
+    Dim user As User
     Public Sub New()
 
         ' This call is required by the designer.
@@ -43,6 +43,6 @@
         user.Address = txtBxAddress.Text
         user.CpNum = txtBxCpNum.Text
         user.Gender = txtBxGender.Text
-        user.CreateFile()
+        user.CreateTxtFile()
     End Sub
 End Class

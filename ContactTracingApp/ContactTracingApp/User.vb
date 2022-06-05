@@ -73,7 +73,7 @@ Public Class User
 
     End Sub
 
-    Public Sub CreateFile()
+    Public Sub CreateTxtFile()
         Dim txtFile As StreamWriter
         txtFile = File.CreateText(PATH & _lastName + "," & _firstName & " " & _middleName & ".txt")
         txtFile.WriteLine("First name: " + _firstName + vbCrLf +

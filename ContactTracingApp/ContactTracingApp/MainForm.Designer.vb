@@ -23,12 +23,14 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.panelBottom = New System.Windows.Forms.Panel()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.btnGuest = New System.Windows.Forms.Button()
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnFaculty = New System.Windows.Forms.Button()
         Me.panelTop = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWelcomeH2 = New System.Windows.Forms.Label()
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
@@ -65,6 +67,7 @@ Partial Class FormMain
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
@@ -78,23 +81,25 @@ Partial Class FormMain
         Me.panelBottom.Controls.Add(Me.btnStudent)
         Me.panelBottom.Controls.Add(Me.btnFaculty)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 128)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 132)
         Me.panelBottom.Name = "panelBottom"
-        Me.panelBottom.Size = New System.Drawing.Size(658, 119)
+        Me.panelBottom.Size = New System.Drawing.Size(658, 140)
         Me.panelBottom.TabIndex = 0
         '
         'btnSubmit
         '
-        Me.btnSubmit.BackColor = System.Drawing.Color.LightGreen
+        Me.btnSubmit.BackColor = System.Drawing.Color.PaleGreen
         Me.btnSubmit.FlatAppearance.BorderSize = 0
         Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSubmit.Image = CType(resources.GetObject("btnSubmit.Image"), System.Drawing.Image)
         Me.btnSubmit.Location = New System.Drawing.Point(242, 21)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(165, 60)
+        Me.btnSubmit.Size = New System.Drawing.Size(165, 86)
         Me.btnSubmit.TabIndex = 0
         Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSubmit.UseVisualStyleBackColor = False
         Me.btnSubmit.Visible = False
         '
@@ -105,11 +110,13 @@ Partial Class FormMain
         Me.btnGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuest.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnGuest.Image = CType(resources.GetObject("btnGuest.Image"), System.Drawing.Image)
         Me.btnGuest.Location = New System.Drawing.Point(446, 21)
         Me.btnGuest.Name = "btnGuest"
-        Me.btnGuest.Size = New System.Drawing.Size(165, 60)
+        Me.btnGuest.Size = New System.Drawing.Size(165, 86)
         Me.btnGuest.TabIndex = 0
         Me.btnGuest.Text = "Guest"
+        Me.btnGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnGuest.UseVisualStyleBackColor = False
         '
         'btnStudent
@@ -119,11 +126,13 @@ Partial Class FormMain
         Me.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStudent.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStudent.ForeColor = System.Drawing.Color.Navy
+        Me.btnStudent.Image = CType(resources.GetObject("btnStudent.Image"), System.Drawing.Image)
         Me.btnStudent.Location = New System.Drawing.Point(242, 21)
         Me.btnStudent.Name = "btnStudent"
-        Me.btnStudent.Size = New System.Drawing.Size(165, 60)
+        Me.btnStudent.Size = New System.Drawing.Size(165, 86)
         Me.btnStudent.TabIndex = 0
         Me.btnStudent.Text = "Student"
+        Me.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnStudent.UseVisualStyleBackColor = False
         '
         'btnFaculty
@@ -133,16 +142,19 @@ Partial Class FormMain
         Me.btnFaculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFaculty.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFaculty.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.btnFaculty.Image = CType(resources.GetObject("btnFaculty.Image"), System.Drawing.Image)
         Me.btnFaculty.Location = New System.Drawing.Point(38, 21)
         Me.btnFaculty.Name = "btnFaculty"
-        Me.btnFaculty.Size = New System.Drawing.Size(165, 60)
+        Me.btnFaculty.Size = New System.Drawing.Size(167, 86)
         Me.btnFaculty.TabIndex = 0
         Me.btnFaculty.Text = "Faculty"
+        Me.btnFaculty.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnFaculty.UseVisualStyleBackColor = False
         '
         'panelTop
         '
         Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.PictureBox1)
         Me.panelTop.Controls.Add(Me.lblWelcomeH2)
         Me.panelTop.Controls.Add(Me.lblWelcomeH1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
@@ -151,6 +163,16 @@ Partial Class FormMain
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(658, 133)
         Me.panelTop.TabIndex = 1
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(98, 30)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'lblWelcomeH2
         '
@@ -168,7 +190,7 @@ Partial Class FormMain
         Me.lblWelcomeH1.AutoSize = True
         Me.lblWelcomeH1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcomeH1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblWelcomeH1.Location = New System.Drawing.Point(135, 38)
+        Me.lblWelcomeH1.Location = New System.Drawing.Point(173, 40)
         Me.lblWelcomeH1.Name = "lblWelcomeH1"
         Me.lblWelcomeH1.Size = New System.Drawing.Size(379, 42)
         Me.lblWelcomeH1.TabIndex = 0
@@ -181,6 +203,7 @@ Partial Class FormMain
         'panelContent
         '
         Me.panelContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.panelContent.Controls.Add(Me.chkBxDB)
         Me.panelContent.Controls.Add(Me.chkBxCough)
         Me.panelContent.Controls.Add(Me.chkBxFever)
@@ -259,6 +282,7 @@ Partial Class FormMain
         '
         Me.rdoSecondQuestionNS.AutoSize = True
         Me.rdoSecondQuestionNS.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoSecondQuestionNS.ForeColor = System.Drawing.Color.Teal
         Me.rdoSecondQuestionNS.Location = New System.Drawing.Point(292, 15)
         Me.rdoSecondQuestionNS.Name = "rdoSecondQuestionNS"
         Me.rdoSecondQuestionNS.Size = New System.Drawing.Size(79, 21)
@@ -271,6 +295,7 @@ Partial Class FormMain
         '
         Me.rdoSecondQuestionNo.AutoSize = True
         Me.rdoSecondQuestionNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoSecondQuestionNo.ForeColor = System.Drawing.Color.Maroon
         Me.rdoSecondQuestionNo.Location = New System.Drawing.Point(153, 15)
         Me.rdoSecondQuestionNo.Name = "rdoSecondQuestionNo"
         Me.rdoSecondQuestionNo.Size = New System.Drawing.Size(45, 21)
@@ -283,6 +308,7 @@ Partial Class FormMain
         '
         Me.rdoSecondQuestionYes.AutoSize = True
         Me.rdoSecondQuestionYes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoSecondQuestionYes.ForeColor = System.Drawing.Color.DarkGreen
         Me.rdoSecondQuestionYes.Location = New System.Drawing.Point(11, 15)
         Me.rdoSecondQuestionYes.Name = "rdoSecondQuestionYes"
         Me.rdoSecondQuestionYes.Size = New System.Drawing.Size(46, 21)
@@ -306,6 +332,7 @@ Partial Class FormMain
         '
         Me.rdoFirstQuestionNS.AutoSize = True
         Me.rdoFirstQuestionNS.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoFirstQuestionNS.ForeColor = System.Drawing.Color.Teal
         Me.rdoFirstQuestionNS.Location = New System.Drawing.Point(292, 15)
         Me.rdoFirstQuestionNS.Name = "rdoFirstQuestionNS"
         Me.rdoFirstQuestionNS.Size = New System.Drawing.Size(79, 21)
@@ -318,6 +345,7 @@ Partial Class FormMain
         '
         Me.rdoFirstQuestionNo.AutoSize = True
         Me.rdoFirstQuestionNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoFirstQuestionNo.ForeColor = System.Drawing.Color.Maroon
         Me.rdoFirstQuestionNo.Location = New System.Drawing.Point(153, 15)
         Me.rdoFirstQuestionNo.Name = "rdoFirstQuestionNo"
         Me.rdoFirstQuestionNo.Size = New System.Drawing.Size(45, 21)
@@ -330,6 +358,7 @@ Partial Class FormMain
         '
         Me.rdoFirstQuestionYes.AutoSize = True
         Me.rdoFirstQuestionYes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoFirstQuestionYes.ForeColor = System.Drawing.Color.DarkGreen
         Me.rdoFirstQuestionYes.Location = New System.Drawing.Point(11, 15)
         Me.rdoFirstQuestionYes.Name = "rdoFirstQuestionYes"
         Me.rdoFirstQuestionYes.Size = New System.Drawing.Size(46, 21)
@@ -458,6 +487,7 @@ Partial Class FormMain
         '
         Me.lblSecondQuestion2.AutoSize = True
         Me.lblSecondQuestion2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecondQuestion2.ForeColor = System.Drawing.Color.Navy
         Me.lblSecondQuestion2.Location = New System.Drawing.Point(24, 268)
         Me.lblSecondQuestion2.Name = "lblSecondQuestion2"
         Me.lblSecondQuestion2.Size = New System.Drawing.Size(421, 21)
@@ -478,6 +508,7 @@ Partial Class FormMain
         '
         Me.lblThirdQuestion1.AutoSize = True
         Me.lblThirdQuestion1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblThirdQuestion1.ForeColor = System.Drawing.Color.Navy
         Me.lblThirdQuestion1.Location = New System.Drawing.Point(24, 346)
         Me.lblThirdQuestion1.Name = "lblThirdQuestion1"
         Me.lblThirdQuestion1.Size = New System.Drawing.Size(553, 21)
@@ -488,6 +519,7 @@ Partial Class FormMain
         '
         Me.lblSecondQuestion1.AutoSize = True
         Me.lblSecondQuestion1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecondQuestion1.ForeColor = System.Drawing.Color.Navy
         Me.lblSecondQuestion1.Location = New System.Drawing.Point(23, 241)
         Me.lblSecondQuestion1.Name = "lblSecondQuestion1"
         Me.lblSecondQuestion1.Size = New System.Drawing.Size(579, 21)
@@ -498,6 +530,7 @@ Partial Class FormMain
         '
         Me.lblFirstQuestion.AutoSize = True
         Me.lblFirstQuestion.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstQuestion.ForeColor = System.Drawing.Color.Navy
         Me.lblFirstQuestion.Location = New System.Drawing.Point(23, 163)
         Me.lblFirstQuestion.Name = "lblFirstQuestion"
         Me.lblFirstQuestion.Size = New System.Drawing.Size(589, 21)
@@ -540,7 +573,7 @@ Partial Class FormMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(658, 247)
+        Me.ClientSize = New System.Drawing.Size(658, 272)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelBottom)
@@ -550,6 +583,7 @@ Partial Class FormMain
         Me.panelBottom.ResumeLayout(False)
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContent.ResumeLayout(False)
         Me.panelContent.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -600,4 +634,5 @@ Partial Class FormMain
     Friend WithEvents lblThirdQuestion1 As Label
     Friend WithEvents lblSecondQuestion1 As Label
     Friend WithEvents lblFirstQuestion As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
