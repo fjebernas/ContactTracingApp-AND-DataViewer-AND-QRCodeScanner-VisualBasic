@@ -65,6 +65,10 @@ Partial Class FormMain
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.lblRequired1 = New System.Windows.Forms.Label()
+        Me.lblRequired2 = New System.Windows.Forms.Label()
+        Me.lblRequired3 = New System.Windows.Forms.Label()
+        Me.lblRequired4 = New System.Windows.Forms.Label()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +85,7 @@ Partial Class FormMain
         Me.panelBottom.Controls.Add(Me.btnStudent)
         Me.panelBottom.Controls.Add(Me.btnFaculty)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 124)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 125)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.Size = New System.Drawing.Size(658, 140)
         Me.panelBottom.TabIndex = 0
@@ -179,11 +183,11 @@ Partial Class FormMain
         Me.lblWelcomeH2.AutoSize = True
         Me.lblWelcomeH2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcomeH2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.lblWelcomeH2.Location = New System.Drawing.Point(251, 96)
+        Me.lblWelcomeH2.Location = New System.Drawing.Point(206, 92)
         Me.lblWelcomeH2.Name = "lblWelcomeH2"
-        Me.lblWelcomeH2.Size = New System.Drawing.Size(148, 33)
+        Me.lblWelcomeH2.Size = New System.Drawing.Size(197, 33)
         Me.lblWelcomeH2.TabIndex = 0
-        Me.lblWelcomeH2.Text = "Are you a:"
+        Me.lblWelcomeH2.Text = "       Are you a:"
         '
         'lblWelcomeH1
         '
@@ -204,6 +208,10 @@ Partial Class FormMain
         '
         Me.panelContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.panelContent.Controls.Add(Me.lblRequired4)
+        Me.panelContent.Controls.Add(Me.lblRequired3)
+        Me.panelContent.Controls.Add(Me.lblRequired2)
+        Me.panelContent.Controls.Add(Me.lblRequired1)
         Me.panelContent.Controls.Add(Me.chkBxDB)
         Me.panelContent.Controls.Add(Me.chkBxCough)
         Me.panelContent.Controls.Add(Me.chkBxFever)
@@ -385,9 +393,9 @@ Partial Class FormMain
         Me.lblCPnum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCPnum.Location = New System.Drawing.Point(374, 90)
         Me.lblCPnum.Name = "lblCPnum"
-        Me.lblCPnum.Size = New System.Drawing.Size(157, 21)
+        Me.lblCPnum.Size = New System.Drawing.Size(89, 21)
         Me.lblCPnum.TabIndex = 0
-        Me.lblCPnum.Text = "Cell Phone number"
+        Me.lblCPnum.Text = "Phone No."
         '
         'txtBxGender
         '
@@ -573,12 +581,60 @@ Partial Class FormMain
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First name"
         '
+        'lblRequired1
+        '
+        Me.lblRequired1.AutoSize = True
+        Me.lblRequired1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired1.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired1.Location = New System.Drawing.Point(111, 21)
+        Me.lblRequired1.Name = "lblRequired1"
+        Me.lblRequired1.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired1.TabIndex = 17
+        Me.lblRequired1.Tag = "lblSayingRequired"
+        Me.lblRequired1.Text = "*required"
+        '
+        'lblRequired2
+        '
+        Me.lblRequired2.AutoSize = True
+        Me.lblRequired2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired2.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired2.Location = New System.Drawing.Point(471, 21)
+        Me.lblRequired2.Name = "lblRequired2"
+        Me.lblRequired2.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired2.TabIndex = 17
+        Me.lblRequired2.Tag = "lblSayingRequired"
+        Me.lblRequired2.Text = "*required"
+        '
+        'lblRequired3
+        '
+        Me.lblRequired3.AutoSize = True
+        Me.lblRequired3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired3.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired3.Location = New System.Drawing.Point(588, 21)
+        Me.lblRequired3.Name = "lblRequired3"
+        Me.lblRequired3.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired3.TabIndex = 17
+        Me.lblRequired3.Tag = "lblSayingRequired"
+        Me.lblRequired3.Text = "*required"
+        '
+        'lblRequired4
+        '
+        Me.lblRequired4.AutoSize = True
+        Me.lblRequired4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired4.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired4.Location = New System.Drawing.Point(469, 90)
+        Me.lblRequired4.Name = "lblRequired4"
+        Me.lblRequired4.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired4.TabIndex = 17
+        Me.lblRequired4.Tag = "lblSayingRequired"
+        Me.lblRequired4.Text = "*required"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(658, 264)
+        Me.ClientSize = New System.Drawing.Size(658, 265)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelBottom)
@@ -640,4 +696,8 @@ Partial Class FormMain
     Friend WithEvents lblSecondQuestion1 As Label
     Friend WithEvents lblFirstQuestion As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblRequired4 As Label
+    Friend WithEvents lblRequired3 As Label
+    Friend WithEvents lblRequired2 As Label
+    Friend WithEvents lblRequired1 As Label
 End Class
