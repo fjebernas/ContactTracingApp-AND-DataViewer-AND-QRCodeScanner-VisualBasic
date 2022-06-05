@@ -26,7 +26,7 @@
             Me.Height += 20
         Else
             timer.Stop()
-            For Each btn As Button In Me.panelBottom.Controls.OfType(Of Button)
+            For Each btn As Button In panelBottom.Controls.OfType(Of Button)
                 btn.Visible = False
                 If btn.Name = "btnSubmit" Then
                     btn.Visible = True
@@ -36,13 +36,30 @@
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        user.FirstName = txtBxFirstName.Text
-        user.MiddleName = txtBxMiddleName.Text
-        user.LastName = txtBxLastName.Text
-        user.Age = Convert.ToByte(txtBxAge.Text)
-        user.Address = txtBxAddress.Text
-        user.CpNum = txtBxCpNum.Text
-        user.Gender = txtBxGender.Text
-        user.CreateTxtFile()
+        Try
+            If CheckRequiredFields() Then
+                user.FirstName = txtBxFirstName.Text
+                user.MiddleName = txtBxMiddleName.Text
+                user.LastName = txtBxLastName.Text
+                user.Age = Convert.ToByte(txtBxAge.Text)
+                user.Address = txtBxAddress.Text
+                user.CpNum = txtBxCpNum.Text
+                user.Gender = txtBxGender.Text
+                user.CreateTxtFile()
+            Else
+                MessageBox.Show("Please fill out all required fields", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
+    Private Function CheckRequiredFields() As Boolean
+        For Each txtBx As TextBox In panelContent.Controls.OfType(Of TextBox)
+            If txtBx.Tag = "requiredField" And txtBx.Text = "" Then
+                Return False
+            End If
+        Next
+        Return True
+    End Function
 End Class

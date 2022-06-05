@@ -81,7 +81,7 @@ Partial Class FormMain
         Me.panelBottom.Controls.Add(Me.btnStudent)
         Me.panelBottom.Controls.Add(Me.btnFaculty)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 132)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 124)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.Size = New System.Drawing.Size(658, 140)
         Me.panelBottom.TabIndex = 0
@@ -376,6 +376,7 @@ Partial Class FormMain
         Me.txtBxCpNum.Name = "txtBxCpNum"
         Me.txtBxCpNum.Size = New System.Drawing.Size(166, 32)
         Me.txtBxCpNum.TabIndex = 6
+        Me.txtBxCpNum.Tag = "requiredField"
         Me.txtBxCpNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCPnum
@@ -408,6 +409,7 @@ Partial Class FormMain
         Me.txtBxAge.Name = "txtBxAge"
         Me.txtBxAge.Size = New System.Drawing.Size(57, 32)
         Me.txtBxAge.TabIndex = 4
+        Me.txtBxAge.Tag = "requiredField"
         Me.txtBxAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblGender
@@ -429,6 +431,7 @@ Partial Class FormMain
         Me.txtBxLastName.Name = "txtBxLastName"
         Me.txtBxLastName.Size = New System.Drawing.Size(168, 32)
         Me.txtBxLastName.TabIndex = 3
+        Me.txtBxLastName.Tag = "requiredField"
         Me.txtBxLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblAge
@@ -481,6 +484,7 @@ Partial Class FormMain
         Me.txtBxAddress.Name = "txtBxAddress"
         Me.txtBxAddress.Size = New System.Drawing.Size(342, 32)
         Me.txtBxAddress.TabIndex = 5
+        Me.txtBxAddress.Tag = "requiredField"
         Me.txtBxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblSecondQuestion2
@@ -556,6 +560,7 @@ Partial Class FormMain
         Me.txtBxFirstName.Name = "txtBxFirstName"
         Me.txtBxFirstName.Size = New System.Drawing.Size(168, 32)
         Me.txtBxFirstName.TabIndex = 1
+        Me.txtBxFirstName.Tag = "requiredField"
         Me.txtBxFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblFirstName
@@ -573,7 +578,7 @@ Partial Class FormMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(658, 272)
+        Me.ClientSize = New System.Drawing.Size(658, 264)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelBottom)

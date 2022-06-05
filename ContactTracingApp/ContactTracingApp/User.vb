@@ -75,23 +75,28 @@ Public Class User
 
     Public Sub CreateTxtFile()
         Dim txtFile As StreamWriter
-        txtFile = File.CreateText(PATH & _lastName + "," & _firstName & " " & _middleName & ".txt")
-        txtFile.WriteLine("First name: " + _firstName + vbCrLf +
-                            "Middle name: " + _middleName + vbCrLf +
-                            "Last name: " + _lastName + vbCrLf +
-                            "Age: " + _age.ToString() + vbCrLf +
-                            "Phone number: " + _cpNum + vbCrLf +
-                            "Address: " + _address + vbCrLf +
-                            "Gender: " + _gender + vbCrLf + vbCrLf +
-                            "USER'S ANSWERS:" + vbCrLf + vbCrLf +
-                            "1. Have you traveled outside the country anytime from last month until now?" + vbCrLf +
-                            "not set" + vbCrLf +
-                            "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" + vbCrLf +
-                            "not set" + vbCrLf +
-                            "3. Do you currently have any of the following conditions during this time?" + vbCrLf +
-                            "not set" + vbCrLf
-                            )
-        txtFile.Close()
-        MessageBox.Show("Submitted successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Try
+            txtFile = File.CreateText(PATH & _lastName + "," & _firstName & " " & _middleName & ".txt")
+            txtFile.WriteLine("First name: " + _firstName + vbCrLf +
+                                "Middle name: " + _middleName + vbCrLf +
+                                "Last name: " + _lastName + vbCrLf +
+                                "Age: " + _age.ToString() + vbCrLf +
+                                "Phone number: " + _cpNum + vbCrLf +
+                                "Address: " + _address + vbCrLf +
+                                "Gender: " + _gender + vbCrLf + vbCrLf +
+                                "USER'S ANSWERS:" + vbCrLf + vbCrLf +
+                                "1. Have you traveled outside the country anytime from last month until now?" + vbCrLf +
+                                "not set" + vbCrLf +
+                                "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" + vbCrLf +
+                                "not set" + vbCrLf +
+                                "3. Do you currently have any of the following conditions during this time?" + vbCrLf +
+                                "not set" + vbCrLf
+                                )
+            txtFile.Close()
+            MessageBox.Show("Submitted successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 End Class
