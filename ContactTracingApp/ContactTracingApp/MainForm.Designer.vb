@@ -35,6 +35,10 @@ Partial Class FormMain
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
         Me.panelContent = New System.Windows.Forms.Panel()
+        Me.lblRequired4 = New System.Windows.Forms.Label()
+        Me.lblRequired3 = New System.Windows.Forms.Label()
+        Me.lblRequired2 = New System.Windows.Forms.Label()
+        Me.lblRequired1 = New System.Windows.Forms.Label()
         Me.chkBxDB = New System.Windows.Forms.CheckBox()
         Me.chkBxCough = New System.Windows.Forms.CheckBox()
         Me.chkBxFever = New System.Windows.Forms.CheckBox()
@@ -65,10 +69,6 @@ Partial Class FormMain
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.lblRequired1 = New System.Windows.Forms.Label()
-        Me.lblRequired2 = New System.Windows.Forms.Label()
-        Me.lblRequired3 = New System.Windows.Forms.Label()
-        Me.lblRequired4 = New System.Windows.Forms.Label()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +85,7 @@ Partial Class FormMain
         Me.panelBottom.Controls.Add(Me.btnStudent)
         Me.panelBottom.Controls.Add(Me.btnFaculty)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 125)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 122)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.Size = New System.Drawing.Size(658, 140)
         Me.panelBottom.TabIndex = 0
@@ -242,6 +242,58 @@ Partial Class FormMain
         Me.panelContent.Size = New System.Drawing.Size(658, 0)
         Me.panelContent.TabIndex = 2
         '
+        'lblRequired4
+        '
+        Me.lblRequired4.AutoSize = True
+        Me.lblRequired4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired4.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired4.Location = New System.Drawing.Point(469, 90)
+        Me.lblRequired4.Name = "lblRequired4"
+        Me.lblRequired4.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired4.TabIndex = 17
+        Me.lblRequired4.Tag = "lblSayingRequired"
+        Me.lblRequired4.Text = "*required"
+        Me.lblRequired4.Visible = False
+        '
+        'lblRequired3
+        '
+        Me.lblRequired3.AutoSize = True
+        Me.lblRequired3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired3.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired3.Location = New System.Drawing.Point(588, 21)
+        Me.lblRequired3.Name = "lblRequired3"
+        Me.lblRequired3.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired3.TabIndex = 17
+        Me.lblRequired3.Tag = "lblSayingRequired"
+        Me.lblRequired3.Text = "*required"
+        Me.lblRequired3.Visible = False
+        '
+        'lblRequired2
+        '
+        Me.lblRequired2.AutoSize = True
+        Me.lblRequired2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired2.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired2.Location = New System.Drawing.Point(471, 21)
+        Me.lblRequired2.Name = "lblRequired2"
+        Me.lblRequired2.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired2.TabIndex = 17
+        Me.lblRequired2.Tag = "lblSayingRequired"
+        Me.lblRequired2.Text = "*required"
+        Me.lblRequired2.Visible = False
+        '
+        'lblRequired1
+        '
+        Me.lblRequired1.AutoSize = True
+        Me.lblRequired1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired1.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired1.Location = New System.Drawing.Point(111, 21)
+        Me.lblRequired1.Name = "lblRequired1"
+        Me.lblRequired1.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired1.TabIndex = 17
+        Me.lblRequired1.Tag = "lblSayingRequired"
+        Me.lblRequired1.Text = "*required"
+        Me.lblRequired1.Visible = False
+        '
         'chkBxDB
         '
         Me.chkBxDB.AutoSize = True
@@ -378,7 +430,8 @@ Partial Class FormMain
         'txtBxCpNum
         '
         Me.txtBxCpNum.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxCpNum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxCpNum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxCpNum.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxCpNum.Location = New System.Drawing.Point(378, 114)
         Me.txtBxCpNum.Multiline = True
         Me.txtBxCpNum.Name = "txtBxCpNum"
@@ -400,7 +453,8 @@ Partial Class FormMain
         'txtBxGender
         '
         Me.txtBxGender.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxGender.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxGender.Location = New System.Drawing.Point(551, 114)
         Me.txtBxGender.Multiline = True
         Me.txtBxGender.Name = "txtBxGender"
@@ -411,7 +465,8 @@ Partial Class FormMain
         'txtBxAge
         '
         Me.txtBxAge.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxAge.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxAge.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxAge.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxAge.Location = New System.Drawing.Point(551, 47)
         Me.txtBxAge.Multiline = True
         Me.txtBxAge.Name = "txtBxAge"
@@ -433,7 +488,8 @@ Partial Class FormMain
         'txtBxLastName
         '
         Me.txtBxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxLastName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxLastName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxLastName.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxLastName.Location = New System.Drawing.Point(376, 47)
         Me.txtBxLastName.Multiline = True
         Me.txtBxLastName.Name = "txtBxLastName"
@@ -465,7 +521,8 @@ Partial Class FormMain
         'txtBxMiddleName
         '
         Me.txtBxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxMiddleName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxMiddleName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxMiddleName.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxMiddleName.Location = New System.Drawing.Point(201, 47)
         Me.txtBxMiddleName.Multiline = True
         Me.txtBxMiddleName.Name = "txtBxMiddleName"
@@ -486,7 +543,8 @@ Partial Class FormMain
         'txtBxAddress
         '
         Me.txtBxAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxAddress.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxAddress.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxAddress.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxAddress.Location = New System.Drawing.Point(27, 114)
         Me.txtBxAddress.Multiline = True
         Me.txtBxAddress.Name = "txtBxAddress"
@@ -562,7 +620,8 @@ Partial Class FormMain
         'txtBxFirstName
         '
         Me.txtBxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBxFirstName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxFirstName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxFirstName.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txtBxFirstName.Location = New System.Drawing.Point(26, 47)
         Me.txtBxFirstName.Multiline = True
         Me.txtBxFirstName.Name = "txtBxFirstName"
@@ -581,60 +640,12 @@ Partial Class FormMain
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First name"
         '
-        'lblRequired1
-        '
-        Me.lblRequired1.AutoSize = True
-        Me.lblRequired1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired1.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired1.Location = New System.Drawing.Point(111, 21)
-        Me.lblRequired1.Name = "lblRequired1"
-        Me.lblRequired1.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired1.TabIndex = 17
-        Me.lblRequired1.Tag = "lblSayingRequired"
-        Me.lblRequired1.Text = "*required"
-        '
-        'lblRequired2
-        '
-        Me.lblRequired2.AutoSize = True
-        Me.lblRequired2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired2.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired2.Location = New System.Drawing.Point(471, 21)
-        Me.lblRequired2.Name = "lblRequired2"
-        Me.lblRequired2.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired2.TabIndex = 17
-        Me.lblRequired2.Tag = "lblSayingRequired"
-        Me.lblRequired2.Text = "*required"
-        '
-        'lblRequired3
-        '
-        Me.lblRequired3.AutoSize = True
-        Me.lblRequired3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired3.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired3.Location = New System.Drawing.Point(588, 21)
-        Me.lblRequired3.Name = "lblRequired3"
-        Me.lblRequired3.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired3.TabIndex = 17
-        Me.lblRequired3.Tag = "lblSayingRequired"
-        Me.lblRequired3.Text = "*required"
-        '
-        'lblRequired4
-        '
-        Me.lblRequired4.AutoSize = True
-        Me.lblRequired4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired4.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired4.Location = New System.Drawing.Point(469, 90)
-        Me.lblRequired4.Name = "lblRequired4"
-        Me.lblRequired4.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired4.TabIndex = 17
-        Me.lblRequired4.Tag = "lblSayingRequired"
-        Me.lblRequired4.Text = "*required"
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(658, 265)
+        Me.ClientSize = New System.Drawing.Size(658, 262)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelBottom)

@@ -1,8 +1,9 @@
 ﻿Imports System.IO
 
 Public Class User
-    Private Const PATH As String = "C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\Entries\"
+    Private Const PATH As String = "C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingAppEntries\"
 #Region "Private backing fields"
+    Private _userType As String
     Private _firstName As String
     Private _middleName As String
     Private _lastName As String
@@ -12,6 +13,14 @@ Public Class User
     Private _gender As String
 #End Region
 #Region "Properties"
+    Public Property UserType As String
+        Get
+            Return _userType
+        End Get
+        Set(value As String)
+            _userType = value
+        End Set
+    End Property
     Public Property FirstName As String
         Get
             Return _firstName
@@ -76,21 +85,22 @@ Public Class User
     Public Sub CreateTxtFile()
         Dim txtFile As StreamWriter
         Try
-            txtFile = File.CreateText(PATH & _lastName + "," & _firstName & " " & _middleName & ".txt")
-            txtFile.WriteLine("First name: " + _firstName + vbCrLf +
-                                "Middle name: " + _middleName + vbCrLf +
-                                "Last name: " + _lastName + vbCrLf +
-                                "Age: " + _age.ToString() + vbCrLf +
-                                "Phone number: " + _cpNum + vbCrLf +
-                                "Address: " + _address + vbCrLf +
-                                "Gender: " + _gender + vbCrLf + vbCrLf +
-                                "USER'S ANSWERS:" + vbCrLf + vbCrLf +
-                                "1. Have you traveled outside the country anytime from last month until now?" + vbCrLf +
-                                "not set" + vbCrLf +
-                                "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" + vbCrLf +
-                                "not set" + vbCrLf +
-                                "3. Do you currently have any of the following conditions during this time?" + vbCrLf +
-                                "not set" + vbCrLf
+            txtFile = File.CreateText(PATH & _lastName & "," & _firstName & " " & _middleName & ".txt")
+            txtFile.WriteLine("Selected type: " & _userType & vbCrLf & vbCrLf &
+                                "First name: " & _firstName & vbCrLf &
+                                "Middle name: " & _middleName & vbCrLf &
+                                "Last name: " & _lastName & vbCrLf &
+                                "Age: " & _age.ToString() & vbCrLf &
+                                "Phone number: " & _cpNum & vbCrLf &
+                                "Address: " & _address & vbCrLf &
+                                "Gender: " & _gender & vbCrLf & vbCrLf &
+                                "USER'S ANSWERS:" & vbCrLf & vbCrLf &
+                                "1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
+                                "not set" & vbCrLf &
+                                "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
+                                "not set" & vbCrLf &
+                                "3. Do you currently have any of the following conditions during this time?" & vbCrLf &
+                                "not set" & vbCrLf
                                 )
             txtFile.Close()
             MessageBox.Show("Submitted successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -1,5 +1,6 @@
 ﻿Public Class FormMain
     Dim user As User
+    Dim userType As String
     Public Sub New()
 
         ' This call is required by the designer.
@@ -7,18 +8,21 @@
 
         ' Add any initialization after the InitializeComponent() call.
         user = New User()
+        userType = ""
     End Sub
     Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
-
+        timer.Start()
+        userType = "faculty"
     End Sub
 
     Private Sub btnStudent_Click(sender As Object, e As EventArgs) Handles btnStudent.Click
-        'lblWelcomeH2.Visible = False
         timer.Start()
+        userType = "student"
     End Sub
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
-
+        timer.Start()
+        userType = "guest"
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -43,6 +47,7 @@
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Try
             If CheckRequiredFields() Then
+                user.UserType = userType
                 user.FirstName = txtBxFirstName.Text
                 user.MiddleName = txtBxMiddleName.Text
                 user.LastName = txtBxLastName.Text
@@ -52,6 +57,11 @@
                 user.Gender = txtBxGender.Text
                 user.CreateTxtFile()
             Else
+                For Each lbl As Label In panelContent.Controls.OfType(Of Label)
+                    If lbl.Tag = "lblSayingRequired" Then
+                        lbl.Visible = True
+                    End If
+                Next
                 MessageBox.Show("Please fill out all required fields", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Catch ex As Exception
