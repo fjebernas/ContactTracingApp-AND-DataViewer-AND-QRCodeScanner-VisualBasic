@@ -42,7 +42,7 @@ Partial Class FormMain
         Me.chkBxDB = New System.Windows.Forms.CheckBox()
         Me.chkBxCough = New System.Windows.Forms.CheckBox()
         Me.chkBxFever = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxSecondQuestion = New System.Windows.Forms.GroupBox()
         Me.rdoSecondQuestionNS = New System.Windows.Forms.RadioButton()
         Me.rdoSecondQuestionNo = New System.Windows.Forms.RadioButton()
         Me.rdoSecondQuestionYes = New System.Windows.Forms.RadioButton()
@@ -73,7 +73,7 @@ Partial Class FormMain
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -215,7 +215,7 @@ Partial Class FormMain
         Me.panelContent.Controls.Add(Me.chkBxDB)
         Me.panelContent.Controls.Add(Me.chkBxCough)
         Me.panelContent.Controls.Add(Me.chkBxFever)
-        Me.panelContent.Controls.Add(Me.GroupBox1)
+        Me.panelContent.Controls.Add(Me.gbxSecondQuestion)
         Me.panelContent.Controls.Add(Me.gbxFirstQuestion)
         Me.panelContent.Controls.Add(Me.txtBxCpNum)
         Me.panelContent.Controls.Add(Me.lblCPnum)
@@ -327,16 +327,16 @@ Partial Class FormMain
         Me.chkBxFever.Text = "Fever"
         Me.chkBxFever.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'gbxSecondQuestion
         '
-        Me.GroupBox1.Controls.Add(Me.rdoSecondQuestionNS)
-        Me.GroupBox1.Controls.Add(Me.rdoSecondQuestionNo)
-        Me.GroupBox1.Controls.Add(Me.rdoSecondQuestionYes)
-        Me.GroupBox1.Location = New System.Drawing.Point(27, 292)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(371, 42)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
+        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionNS)
+        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionNo)
+        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionYes)
+        Me.gbxSecondQuestion.Location = New System.Drawing.Point(27, 292)
+        Me.gbxSecondQuestion.Name = "gbxSecondQuestion"
+        Me.gbxSecondQuestion.Size = New System.Drawing.Size(371, 42)
+        Me.gbxSecondQuestion.TabIndex = 2
+        Me.gbxSecondQuestion.TabStop = False
         '
         'rdoSecondQuestionNS
         '
@@ -658,8 +658,8 @@ Partial Class FormMain
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContent.ResumeLayout(False)
         Me.panelContent.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbxSecondQuestion.ResumeLayout(False)
+        Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
         Me.ResumeLayout(False)
@@ -689,7 +689,7 @@ Partial Class FormMain
     Friend WithEvents chkBxDB As CheckBox
     Friend WithEvents chkBxCough As CheckBox
     Friend WithEvents chkBxFever As CheckBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbxSecondQuestion As GroupBox
     Friend WithEvents rdoSecondQuestionNS As RadioButton
     Friend WithEvents rdoSecondQuestionNo As RadioButton
     Friend WithEvents rdoSecondQuestionYes As RadioButton

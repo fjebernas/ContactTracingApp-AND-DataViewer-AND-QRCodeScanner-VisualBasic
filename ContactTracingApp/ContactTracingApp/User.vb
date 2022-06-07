@@ -11,6 +11,11 @@ Public Class User
     Private _address As String
     Private _cpNum As String
     Private _gender As String
+    Private _firstQuestionAnswer As String
+    Private _secondQuestionAnswer As String
+    Private _fever As String
+    Private _cough As String
+    Private _dB As String
 #End Region
 #Region "Properties"
     Public Property UserType As String
@@ -77,6 +82,49 @@ Public Class User
             _gender = value
         End Set
     End Property
+    Public Property FirstQuestionAnswer As String
+        Get
+            Return _firstQuestionAnswer
+        End Get
+        Set(value As String)
+            _firstQuestionAnswer = value
+        End Set
+    End Property
+    Public Property SecondQuestionAnswer As String
+        Get
+            Return _secondQuestionAnswer
+        End Get
+        Set(value As String)
+            _secondQuestionAnswer = value
+        End Set
+    End Property
+    Public WriteOnly Property Fever As Boolean
+        Set(value As Boolean)
+            If value Then
+                _fever = "Yes"
+            Else
+                _fever = "No"
+            End If
+        End Set
+    End Property
+    Public WriteOnly Property Cough As Boolean
+        Set(value As Boolean)
+            If value Then
+                _cough = "Yes"
+            Else
+                _cough = "No"
+            End If
+        End Set
+    End Property
+    Public WriteOnly Property DifficultyBreathing As Boolean
+        Set(value As Boolean)
+            If value Then
+                _dB = "Yes"
+            Else
+                _dB = "No"
+            End If
+        End Set
+    End Property
 #End Region
     Public Sub New()
 
@@ -96,17 +144,20 @@ Public Class User
                                 "Gender: " & _gender & vbCrLf & vbCrLf &
                                 "USER'S ANSWERS:" & vbCrLf & vbCrLf &
                                 "1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
-                                "not set" & vbCrLf &
+                                _firstQuestionAnswer & vbCrLf &
                                 "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
-                                "not set" & vbCrLf &
-                                "3. Do you currently have any of the following conditions during this time?" & vbCrLf &
-                                "not set" & vbCrLf
+                                _secondQuestionAnswer & vbCrLf & vbCrLf &
+                                "USER'S SYMPTOMS CHECKLIST:" & vbCrLf & vbCrLf &
+                                "Fever: " &
+                                _fever & vbCrLf &
+                                "Cough: " &
+                                _cough & vbCrLf &
+                                "Difficulty breathing: " & _dB & vbCrLf
                                 )
             txtFile.Close()
             MessageBox.Show("Submitted successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
     End Sub
 End Class

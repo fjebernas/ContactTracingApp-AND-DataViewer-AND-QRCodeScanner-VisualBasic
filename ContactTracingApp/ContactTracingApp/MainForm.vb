@@ -1,4 +1,6 @@
-﻿Public Class FormMain
+﻿Imports System.Linq
+
+Public Class FormMain
     Dim user As User
     Dim userType As String
     Public Sub New()
@@ -10,19 +12,16 @@
         user = New User()
         userType = ""
     End Sub
-    Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
-        timer.Start()
-        userType = "faculty"
-    End Sub
 
-    Private Sub btnStudent_Click(sender As Object, e As EventArgs) Handles btnStudent.Click
+    Private Sub btnUserType_Click(sender As Object, e As EventArgs) Handles btnStudent.Click, btnGuest.Click, btnFaculty.Click
+        Dim btn As Button = (sender)
+        For Each item As Button In panelBottom.Controls.OfType(Of Button)
+            If Not (item.Text = btn.Text) Then
+                item.Visible = False
+            End If
+        Next
         timer.Start()
-        userType = "student"
-    End Sub
-
-    Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
-        timer.Start()
-        userType = "guest"
+        userType = btn.Text
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -55,6 +54,11 @@
                 user.Address = txtBxAddress.Text
                 user.CpNum = txtBxCpNum.Text
                 user.Gender = txtBxGender.Text
+                user.FirstQuestionAnswer = gbxFirstQuestion.Controls.OfType(Of RadioButton).FirstOrDefault(Function(rdoBtn) rdoBtn.Checked = True).Text
+                user.SecondQuestionAnswer = gbxSecondQuestion.Controls.OfType(Of RadioButton).FirstOrDefault(Function(rdoBtn) rdoBtn.Checked = True).Text
+                user.Fever = chkBxFever.Checked
+                user.DifficultyBreathing = chkBxDB.Checked
+                user.Cough = chkBxCough.Checked
                 user.CreateTxtFile()
             Else
                 For Each lbl As Label In panelContent.Controls.OfType(Of Label)
@@ -78,12 +82,12 @@
         Return True
     End Function
 
-    Private Sub txtBx_Active(sender As Object, e As EventArgs) Handles txtBxFirstName.Enter, txtBxMiddleName.Enter, txtBxLastName.Enter, txtBxGender.Enter, txtBxCpNum.Enter, txtBxAge.Enter, txtBxAddress.Enter
+    Private Sub txtBx_Active(sender As Object, e As EventArgs) Handles txtBxMiddleName.Enter, txtBxLastName.Enter, txtBxGender.Enter, txtBxFirstName.Enter, txtBxCpNum.Enter, txtBxAge.Enter, txtBxAddress.Enter
         Dim txtBx As TextBox = sender
         txtBx.BackColor = Color.LightYellow
     End Sub
 
-    Private Sub txtBx_NoLongerActive(sender As Object, e As EventArgs) Handles txtBxFirstName.Leave, txtBxMiddleName.Leave, txtBxLastName.Leave, txtBxGender.Leave, txtBxCpNum.Leave, txtBxAge.Leave, txtBxAddress.Leave
+    Private Sub txtBx_NoLongerActive(sender As Object, e As EventArgs) Handles txtBxMiddleName.Leave, txtBxLastName.Leave, txtBxGender.Leave, txtBxFirstName.Leave, txtBxCpNum.Leave, txtBxAge.Leave, txtBxAddress.Leave
         Dim txtBx As TextBox = sender
         txtBx.BackColor = Color.White
     End Sub
