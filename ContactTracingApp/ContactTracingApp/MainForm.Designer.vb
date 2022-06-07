@@ -41,6 +41,12 @@ Partial Class FormMain
         Me.lblRequired1 = New System.Windows.Forms.Label()
         Me.chkBxDB = New System.Windows.Forms.CheckBox()
         Me.chkBxCough = New System.Windows.Forms.CheckBox()
+        Me.chkBxDiarrhea = New System.Windows.Forms.CheckBox()
+        Me.chkBxSoreThroat = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chBxLossOfTasteAndSmell = New System.Windows.Forms.CheckBox()
         Me.chkBxFever = New System.Windows.Forms.CheckBox()
         Me.gbxSecondQuestion = New System.Windows.Forms.GroupBox()
         Me.rdoSecondQuestionNS = New System.Windows.Forms.RadioButton()
@@ -69,12 +75,8 @@ Partial Class FormMain
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.chBxLossOfTasteAndSmell = New System.Windows.Forms.CheckBox()
-        Me.chkBxSoreThroat = New System.Windows.Forms.CheckBox()
-        Me.chkBxDiarrhea = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.timerDate = New System.Windows.Forms.Timer(Me.components)
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,6 +166,7 @@ Partial Class FormMain
         'panelTop
         '
         Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(232, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.lblDate)
         Me.panelTop.Controls.Add(Me.PictureBox1)
         Me.panelTop.Controls.Add(Me.lblWelcomeH2)
         Me.panelTop.Controls.Add(Me.lblWelcomeH1)
@@ -327,6 +330,72 @@ Partial Class FormMain
         Me.chkBxCough.TabIndex = 15
         Me.chkBxCough.Text = "Cough"
         Me.chkBxCough.UseVisualStyleBackColor = True
+        '
+        'chkBxDiarrhea
+        '
+        Me.chkBxDiarrhea.AutoSize = True
+        Me.chkBxDiarrhea.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBxDiarrhea.Location = New System.Drawing.Point(233, 460)
+        Me.chkBxDiarrhea.Name = "chkBxDiarrhea"
+        Me.chkBxDiarrhea.Size = New System.Drawing.Size(82, 21)
+        Me.chkBxDiarrhea.TabIndex = 14
+        Me.chkBxDiarrhea.Text = "Diarrhea"
+        Me.chkBxDiarrhea.UseVisualStyleBackColor = True
+        '
+        'chkBxSoreThroat
+        '
+        Me.chkBxSoreThroat.AutoSize = True
+        Me.chkBxSoreThroat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBxSoreThroat.Location = New System.Drawing.Point(233, 433)
+        Me.chkBxSoreThroat.Name = "chkBxSoreThroat"
+        Me.chkBxSoreThroat.Size = New System.Drawing.Size(98, 21)
+        Me.chkBxSoreThroat.TabIndex = 14
+        Me.chkBxSoreThroat.Text = "Sore throat"
+        Me.chkBxSoreThroat.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(459, 460)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(100, 21)
+        Me.CheckBox3.TabIndex = 14
+        Me.CheckBox3.Text = "Headaches"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(459, 433)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(82, 21)
+        Me.CheckBox2.TabIndex = 14
+        Me.CheckBox2.Text = "Tiredness"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(459, 406)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(97, 21)
+        Me.CheckBox1.TabIndex = 14
+        Me.CheckBox1.Text = "Chest pain"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'chBxLossOfTasteAndSmell
+        '
+        Me.chBxLossOfTasteAndSmell.AutoSize = True
+        Me.chBxLossOfTasteAndSmell.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chBxLossOfTasteAndSmell.Location = New System.Drawing.Point(233, 406)
+        Me.chBxLossOfTasteAndSmell.Name = "chBxLossOfTasteAndSmell"
+        Me.chBxLossOfTasteAndSmell.Size = New System.Drawing.Size(158, 21)
+        Me.chBxLossOfTasteAndSmell.TabIndex = 14
+        Me.chBxLossOfTasteAndSmell.Text = "Loss of taste or smell"
+        Me.chBxLossOfTasteAndSmell.UseVisualStyleBackColor = True
         '
         'chkBxFever
         '
@@ -652,71 +721,20 @@ Partial Class FormMain
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First name"
         '
-        'chBxLossOfTasteAndSmell
+        'lblDate
         '
-        Me.chBxLossOfTasteAndSmell.AutoSize = True
-        Me.chBxLossOfTasteAndSmell.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chBxLossOfTasteAndSmell.Location = New System.Drawing.Point(233, 406)
-        Me.chBxLossOfTasteAndSmell.Name = "chBxLossOfTasteAndSmell"
-        Me.chBxLossOfTasteAndSmell.Size = New System.Drawing.Size(158, 21)
-        Me.chBxLossOfTasteAndSmell.TabIndex = 14
-        Me.chBxLossOfTasteAndSmell.Text = "Loss of taste or smell"
-        Me.chBxLossOfTasteAndSmell.UseVisualStyleBackColor = True
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblDate.Location = New System.Drawing.Point(400, 9)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(71, 18)
+        Me.lblDate.TabIndex = 2
+        Me.lblDate.Text = "**Date**"
         '
-        'chkBxSoreThroat
+        'timerDate
         '
-        Me.chkBxSoreThroat.AutoSize = True
-        Me.chkBxSoreThroat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxSoreThroat.Location = New System.Drawing.Point(233, 433)
-        Me.chkBxSoreThroat.Name = "chkBxSoreThroat"
-        Me.chkBxSoreThroat.Size = New System.Drawing.Size(98, 21)
-        Me.chkBxSoreThroat.TabIndex = 14
-        Me.chkBxSoreThroat.Text = "Sore throat"
-        Me.chkBxSoreThroat.UseVisualStyleBackColor = True
-        '
-        'chkBxDiarrhea
-        '
-        Me.chkBxDiarrhea.AutoSize = True
-        Me.chkBxDiarrhea.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxDiarrhea.Location = New System.Drawing.Point(233, 460)
-        Me.chkBxDiarrhea.Name = "chkBxDiarrhea"
-        Me.chkBxDiarrhea.Size = New System.Drawing.Size(82, 21)
-        Me.chkBxDiarrhea.TabIndex = 14
-        Me.chkBxDiarrhea.Text = "Diarrhea"
-        Me.chkBxDiarrhea.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(459, 406)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(97, 21)
-        Me.CheckBox1.TabIndex = 14
-        Me.CheckBox1.Text = "Chest pain"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(459, 433)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(82, 21)
-        Me.CheckBox2.TabIndex = 14
-        Me.CheckBox2.Text = "Tiredness"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(459, 460)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox3.TabIndex = 14
-        Me.CheckBox3.Text = "Headaches"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.timerDate.Interval = 1000
         '
         'FormMain
         '
@@ -795,4 +813,6 @@ Partial Class FormMain
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents lblDate As Label
+    Friend WithEvents timerDate As Timer
 End Class

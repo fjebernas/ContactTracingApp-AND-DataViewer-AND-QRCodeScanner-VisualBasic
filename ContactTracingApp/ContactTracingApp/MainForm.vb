@@ -1,5 +1,4 @@
-﻿Imports System.Linq
-
+﻿
 Public Class FormMain
     Dim user As User
     Dim userType As String
@@ -11,6 +10,7 @@ Public Class FormMain
         ' Add any initialization after the InitializeComponent() call.
         user = New User()
         userType = ""
+        timerDate.Start()
     End Sub
 
     Private Sub btnUserType_Click(sender As Object, e As EventArgs) Handles btnStudent.Click, btnGuest.Click, btnFaculty.Click
@@ -93,5 +93,9 @@ Public Class FormMain
     Private Sub txtBx_NoLongerActive(sender As Object, e As EventArgs) Handles txtBxMiddleName.Leave, txtBxLastName.Leave, txtBxGender.Leave, txtBxFirstName.Leave, txtBxCpNum.Leave, txtBxAge.Leave, txtBxAddress.Leave
         Dim txtBx As TextBox = sender
         txtBx.BackColor = Color.White
+    End Sub
+
+    Private Sub timerDate_Tick(sender As Object, e As EventArgs) Handles timerDate.Tick
+        lblDate.Text = Date.Now.ToString("f")
     End Sub
 End Class

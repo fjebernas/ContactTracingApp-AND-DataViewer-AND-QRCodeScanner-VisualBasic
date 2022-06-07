@@ -111,22 +111,25 @@ Public Class User
         Try
             txtFile = File.CreateText(PATH & _lastName & "," & _firstName & " " & _middleName & ".txt")
             txtFile.WriteLine("Selected type: " & _userType & vbCrLf & vbCrLf &
-                                "First name: " & _firstName & vbCrLf &
-                                "Middle name: " & _middleName & vbCrLf &
-                                "Last name: " & _lastName & vbCrLf &
-                                "Age: " & _age.ToString() & vbCrLf &
-                                "Phone number: " & _cpNum & vbCrLf &
-                                "Address: " & _address & vbCrLf &
-                                "Gender: " & _gender & vbCrLf & vbCrLf &
+                                "Time submitted: " & Date.Now.ToString() & vbCrLf & vbCrLf &
+                                "USER'S DETAILS:" & vbCrLf & vbCrLf &
+                                "   First name: " & _firstName & vbCrLf &
+                                "   Middle name: " & _middleName & vbCrLf &
+                                "   Last name: " & _lastName & vbCrLf &
+                                "   Age: " & _age.ToString() & vbCrLf &
+                                "   Phone number: " & _cpNum & vbCrLf &
+                                "   Address: " & _address & vbCrLf &
+                                "   Gender: " & _gender & vbCrLf & vbCrLf &
                                 "USER'S ANSWERS:" & vbCrLf & vbCrLf &
                                 "1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
-                                _firstQuestionAnswer & vbCrLf &
+                                "   " & _firstQuestionAnswer & vbCrLf &
                                 "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
-                                _secondQuestionAnswer & vbCrLf & vbCrLf &
+                                "   " & _secondQuestionAnswer & vbCrLf & vbCrLf &
                                 "USER'S SYMPTOMS:" & vbCrLf
                                 )
+            'loop through the list and print each item to the txt file
             For Each symptom In _symptoms
-                txtFile.WriteLine(symptom)
+                txtFile.WriteLine("   " & symptom)
             Next
             txtFile.Close()
             MessageBox.Show("Submitted successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
