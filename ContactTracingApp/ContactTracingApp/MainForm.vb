@@ -56,9 +56,12 @@ Public Class FormMain
                 user.Gender = txtBxGender.Text
                 user.FirstQuestionAnswer = gbxFirstQuestion.Controls.OfType(Of RadioButton).FirstOrDefault(Function(rdoBtn) rdoBtn.Checked = True).Text
                 user.SecondQuestionAnswer = gbxSecondQuestion.Controls.OfType(Of RadioButton).FirstOrDefault(Function(rdoBtn) rdoBtn.Checked = True).Text
-                user.Fever = chkBxFever.Checked
-                user.DifficultyBreathing = chkBxDB.Checked
-                user.Cough = chkBxCough.Checked
+                'find all checked symptoms in the contract tracing form and add it to the user.array
+                For Each chkBx As CheckBox In panelContent.Controls.OfType(Of CheckBox)
+                    If chkBx.Checked Then
+                        user.Symptoms = chkBx.Text
+                    End If
+                Next
                 user.CreateTxtFile()
             Else
                 For Each lbl As Label In panelContent.Controls.OfType(Of Label)
