@@ -95,7 +95,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Toolbox.vb" />
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>

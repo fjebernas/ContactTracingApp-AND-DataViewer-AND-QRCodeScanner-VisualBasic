@@ -63,6 +63,8 @@ Public Class FormMain
                     End If
                 Next
                 user.CreateTxtFile()
+                ResetAllControls()
+                user.ClearUserData()
             Else
                 For Each lbl As Label In panelContent.Controls.OfType(Of Label)
                     If lbl.Tag = "lblSayingRequired" Then
@@ -97,5 +99,20 @@ Public Class FormMain
 
     Private Sub timerDate_Tick(sender As Object, e As EventArgs) Handles timerDate.Tick
         lblDate.Text = Date.Now.ToString("f")
+    End Sub
+
+    Public Sub ResetAllControls()
+        For Each txtBx In panelContent.Controls.OfType(Of TextBox)
+            txtBx.Text = ""
+        Next
+        For Each chkBx In panelContent.Controls.OfType(Of CheckBox)
+            chkBx.CheckState = CheckState.Unchecked
+        Next
+        For Each rdoBtn In gbxFirstQuestion.Controls.OfType(Of RadioButton)
+            rdoBtn.Checked = False
+        Next
+        For Each rdoBtn In gbxSecondQuestion.Controls.OfType(Of RadioButton)
+            rdoBtn.Checked = False
+        Next
     End Sub
 End Class
