@@ -1,0 +1,20 @@
+Selected type: Student
+
+Time submitted: 08/06/2022 9:28:59 pm
+
+USER'S DETAILS:
+   First name: asdf
+   Middle name: asd
+   Last name: asdf
+   Age: 12
+   Phone number: 124
+   Address: sdf
+   Gender: A
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Not sure
+
+USER'S SYMPTOMS:

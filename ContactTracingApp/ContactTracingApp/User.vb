@@ -131,9 +131,9 @@ Public Class User
                                 "   Gender: " & _gender & vbCrLf & vbCrLf &
                                 "USER'S ANSWERS:" & vbCrLf &
                                 "1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
-                                "   " & _firstQuestionAnswer & vbCrLf &
+                                "   Answer => " & _firstQuestionAnswer & vbCrLf &
                                 "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
-                                "   " & _secondQuestionAnswer & vbCrLf & vbCrLf &
+                                "   Answer => " & _secondQuestionAnswer & vbCrLf & vbCrLf &
                                 "USER'S SYMPTOMS:"
                                 )
             'loop through the list and print each item to the txt file

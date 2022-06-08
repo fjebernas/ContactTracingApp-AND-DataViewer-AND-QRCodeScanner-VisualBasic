@@ -2,6 +2,9 @@
 Public Class FormMain
     Dim user As User
     Dim userType As String
+    Dim formMinHeight As UShort
+    Dim formMaxHeight As UShort
+    Dim isFormOpen As Boolean
     Public Sub New()
 
         ' This call is required by the designer.
@@ -11,6 +14,9 @@ Public Class FormMain
         user = New User()
         userType = ""
         timerDate.Start()
+        formMinHeight = 310
+        formMaxHeight = 810
+        isFormOpen = False
     End Sub
 
     Private Sub btnUserType_Click(sender As Object, e As EventArgs) Handles btnStudent.Click, btnGuest.Click, btnFaculty.Click
@@ -25,21 +31,44 @@ Public Class FormMain
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
-        If Me.Height < 793 Then
-            Me.Height += 20
-        Else
-            timer.Stop()
-            For Each btn As Button In panelBottom.Controls.OfType(Of Button)
-                btn.Visible = False
-                If btn.Name = "btnSubmit" Then
-                    btn.Visible = True
-                End If
-            Next
+        If Not (isFormOpen) Then
+            If Me.Height < formMaxHeight Then
+                Me.Height += 20
+            Else
+                timer.Stop()
+                isFormOpen = True
+                For Each btn As Button In panelBottom.Controls.OfType(Of Button)
+                    btn.Visible = False
+                    If btn.Name = "btnSubmit" Then
+                        btn.Visible = True
+                    End If
+                Next
+                btnCancel.Visible = True
 #Region "Change 'Are you a: ' label to 'Please fill out the following fields:'"
-            lblWelcomeH2.Location = New Point(206, 105)
-            lblWelcomeH2.Font = New Font("Century Gothic", "12")
-            lblWelcomeH2.Text = "Kindly fill out the following fields:"
+                lblWelcomeH2.Location = New Point(206, 105)
+                lblWelcomeH2.Font = New Font("Century Gothic", "12")
+                lblWelcomeH2.Text = "Kindly fill out the following fields:"
 #End Region
+            End If
+        Else
+            If Me.Height > formMinHeight Then
+                Me.Height -= 20
+            Else
+                timer.Stop()
+                isFormOpen = False
+                For Each btn As Button In panelBottom.Controls.OfType(Of Button)
+                    btn.Visible = True
+                    If btn.Name = "btnSubmit" Then
+                        btn.Visible = False
+                    End If
+                    btnCancel.Visible = False
+#Region "Change 'Please fill out the following fields:' label to '      Are you a:'"
+                    lblWelcomeH2.Location = New Point(206, 92)
+                    lblWelcomeH2.Font = New Font("Century Gothic", "20")
+                    lblWelcomeH2.Text = "      Are you a:"
+#End Region
+                Next
+            End If
         End If
     End Sub
 
@@ -63,8 +92,7 @@ Public Class FormMain
                     End If
                 Next
                 user.CreateTxtFile()
-                ResetAllControls()
-                user.ClearUserData()
+                ResetToStart()
             Else
                 For Each lbl As Label In panelContent.Controls.OfType(Of Label)
                     If lbl.Tag = "lblSayingRequired" Then
@@ -98,10 +126,15 @@ Public Class FormMain
     End Sub
 
     Private Sub timerDate_Tick(sender As Object, e As EventArgs) Handles timerDate.Tick
-        lblDate.Text = Date.Now.ToString("f")
+        lblDate.Text = Date.Now.ToString("F")
     End Sub
 
-    Public Sub ResetAllControls()
+    Private Sub ResetToStart()
+        ResetAllControls()
+        user.ClearUserData()
+        timer.Start()
+    End Sub
+    Private Sub ResetAllControls()
         For Each txtBx In panelContent.Controls.OfType(Of TextBox)
             txtBx.Text = ""
         Next
@@ -114,5 +147,9 @@ Public Class FormMain
         For Each rdoBtn In gbxSecondQuestion.Controls.OfType(Of RadioButton)
             rdoBtn.Checked = False
         Next
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        ResetToStart()
     End Sub
 End Class
