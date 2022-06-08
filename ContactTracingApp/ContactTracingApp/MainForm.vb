@@ -15,7 +15,7 @@ Public Class FormMain
         userType = ""
         timerDate.Start()
         formMinHeight = 310
-        formMaxHeight = 810
+        formMaxHeight = 840
         isFormOpen = False
     End Sub
 
@@ -26,8 +26,9 @@ Public Class FormMain
                 item.Visible = False
             End If
         Next
-        timer.Start()
         userType = btn.Text
+        lblSelected.Text = userType
+        timer.Start()
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -107,12 +108,30 @@ Public Class FormMain
     End Sub
 
     Private Function CheckRequiredFields() As Boolean
+        Dim checkGbxOne As Boolean = False
+        Dim checkGbxTwo As Boolean = False
+
         For Each txtBx As TextBox In panelContent.Controls.OfType(Of TextBox)
             If txtBx.Tag = "requiredField" And txtBx.Text = "" Then
                 Return False
             End If
         Next
-        Return True
+        For Each rdoBtn As RadioButton In gbxFirstQuestion.Controls.OfType(Of RadioButton)
+            If rdoBtn.Checked Then
+                checkGbxOne = True
+                Exit For
+            End If
+        Next
+        For Each rdoBtn As RadioButton In gbxSecondQuestion.Controls.OfType(Of RadioButton)
+            If rdoBtn.Checked Then
+                checkGbxTwo = True
+                Exit For
+            End If
+        Next
+        If checkGbxOne And checkGbxTwo Then
+            Return True
+        End If
+        Return False
     End Function
 
     Private Sub txtBx_Active(sender As Object, e As EventArgs) Handles txtBxMiddleName.Enter, txtBxLastName.Enter, txtBxGender.Enter, txtBxFirstName.Enter, txtBxCpNum.Enter, txtBxAge.Enter, txtBxAddress.Enter

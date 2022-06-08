@@ -288,7 +288,7 @@
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACmSURBVDhPrZFB
+        cgAAAHIBsYahGgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACmSURBVDhPrZFB
         DoIwEEVnwQW8QnFXPVZ7Dokx0VMpiUaoh4Cb4DT+MV0UOkTfboa8Rwv0F0bnjoNzF4xFwnbf9sYGjESD
         9weOTJpIlK/VZgr17onVB01kVhaWIkVZyEXUssByg0jzlY2947EOOcmqN6fIKWLgZWyHtY7kCme+wm1V
         JJWxih9RF8nJQjGyJAuzEY0sZCOj96cYwViEIy3/2gfGXyB6A/w4nvPS+BZLAAAAAElFTkSuQmCC
@@ -385,7 +385,7 @@
     <value>97, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>84</value>
+    <value>36</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
