@@ -30,5 +30,20 @@ Public Class FormAdmin
         formAdminLogin.Close()
     End Sub
 
-
+    Private Sub btnDisplayData_Click(sender As Object, e As EventArgs) Handles btnDisplayData.Click
+        Dim lines() As String
+        lines = File.ReadAllLines(fileNames(0))
+        txtBxFirstName.Text = lines(5).Replace("   First name: ", "")
+        txtBxMiddleName.Text = lines(6).Replace("   Middle name: ", "")
+        txtBxLastName.Text = lines(7).Replace("   Last name: ", "")
+        txtBxAge.Text = lines(8).Replace("   Age: ", "")
+        txtBxCpNum.Text = lines(9).Replace("   Phone number: ", "")
+        txtBxAddress.Text = lines(10).Replace("   Address: ", "")
+        txtBxGender.Text = lines(11).Replace("   Gender: ", "")
+        If lines(15).Equals("   Answer => Yes") Then
+            rdoFirstQuestionYes.Checked = True
+        Else
+            rdoFirstQuestionNo.Checked = True
+        End If
+    End Sub
 End Class
