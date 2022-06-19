@@ -32,7 +32,7 @@ Public Class FormAdmin
 
     Private Sub btnDisplayData_Click(sender As Object, e As EventArgs) Handles btnDisplayData.Click
         Dim lines() As String
-        lines = File.ReadAllLines(fileNames(1))
+        lines = File.ReadAllLines("C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingAppEntries\" & listBxEntries.Text & ".txt")
         lblSelected.Text = lines(0).Replace("Selected type: ", "")
         lblDate.Text = lines(2).Replace("Time submitted: ", "")
         txtBxFirstName.Text = lines(5).Replace("   First name: ", "")
