@@ -11,3 +11,4 @@ C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\Contac
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.exe
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.xml
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.pdb
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.FormAdminLogin.resources

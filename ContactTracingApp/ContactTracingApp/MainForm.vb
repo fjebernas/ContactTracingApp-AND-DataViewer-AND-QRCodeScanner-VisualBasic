@@ -172,4 +172,9 @@ Public Class FormMain
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         ResetToStart()
     End Sub
+
+    Private Sub picBxAdmin_Click(sender As Object, e As EventArgs) Handles picBxAdmin.Click
+        Dim formAdminLogin As FormAdminLogin = New FormAdminLogin(Me)
+        formAdminLogin.ShowDialog()
+    End Sub
 End Class
