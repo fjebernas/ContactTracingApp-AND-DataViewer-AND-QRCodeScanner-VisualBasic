@@ -1,1 +1,1 @@
-# ContactTracingApp-VisualBasic
+# ContactTracingApp and ContractTracingDataViewer using VisualBasic
