@@ -26,6 +26,7 @@ Partial Class FormAdmin
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelBottom = New System.Windows.Forms.Panel()
         Me.panelNav = New System.Windows.Forms.Panel()
+        Me.btnDisplayData = New System.Windows.Forms.Button()
         Me.listBxEntries = New System.Windows.Forms.ListBox()
         Me.panelContent = New System.Windows.Forms.Panel()
         Me.lblDate = New System.Windows.Forms.Label()
@@ -35,14 +36,14 @@ Partial Class FormAdmin
         Me.chkBxCough = New System.Windows.Forms.CheckBox()
         Me.chkBxDiarrhea = New System.Windows.Forms.CheckBox()
         Me.chkBxSoreThroat = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkBxHeadaches = New System.Windows.Forms.CheckBox()
+        Me.chkBxTiredness = New System.Windows.Forms.CheckBox()
+        Me.chkBxChestpain = New System.Windows.Forms.CheckBox()
         Me.chBxLossOfTasteAndSmell = New System.Windows.Forms.CheckBox()
         Me.chkBxFever = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.gbxSecondQuestion = New System.Windows.Forms.GroupBox()
+        Me.rdoSecondQuestionNo = New System.Windows.Forms.RadioButton()
+        Me.rdoSecondQuestionYes = New System.Windows.Forms.RadioButton()
         Me.gbxFirstQuestion = New System.Windows.Forms.GroupBox()
         Me.rdoFirstQuestionNo = New System.Windows.Forms.RadioButton()
         Me.rdoFirstQuestionYes = New System.Windows.Forms.RadioButton()
@@ -64,11 +65,10 @@ Partial Class FormAdmin
         Me.lblMiddleName = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.btnDisplayData = New System.Windows.Forms.Button()
         Me.panelTop.SuspendLayout()
         Me.panelNav.SuspendLayout()
         Me.panelContent.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,6 +112,16 @@ Partial Class FormAdmin
         Me.panelNav.Size = New System.Drawing.Size(265, 486)
         Me.panelNav.TabIndex = 2
         '
+        'btnDisplayData
+        '
+        Me.btnDisplayData.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDisplayData.Location = New System.Drawing.Point(76, 439)
+        Me.btnDisplayData.Name = "btnDisplayData"
+        Me.btnDisplayData.Size = New System.Drawing.Size(117, 36)
+        Me.btnDisplayData.TabIndex = 1
+        Me.btnDisplayData.Text = "Display Data"
+        Me.btnDisplayData.UseVisualStyleBackColor = True
+        '
         'listBxEntries
         '
         Me.listBxEntries.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -131,12 +141,12 @@ Partial Class FormAdmin
         Me.panelContent.Controls.Add(Me.chkBxCough)
         Me.panelContent.Controls.Add(Me.chkBxDiarrhea)
         Me.panelContent.Controls.Add(Me.chkBxSoreThroat)
-        Me.panelContent.Controls.Add(Me.CheckBox3)
-        Me.panelContent.Controls.Add(Me.CheckBox2)
-        Me.panelContent.Controls.Add(Me.CheckBox1)
+        Me.panelContent.Controls.Add(Me.chkBxHeadaches)
+        Me.panelContent.Controls.Add(Me.chkBxTiredness)
+        Me.panelContent.Controls.Add(Me.chkBxChestpain)
         Me.panelContent.Controls.Add(Me.chBxLossOfTasteAndSmell)
         Me.panelContent.Controls.Add(Me.chkBxFever)
-        Me.panelContent.Controls.Add(Me.GroupBox1)
+        Me.panelContent.Controls.Add(Me.gbxSecondQuestion)
         Me.panelContent.Controls.Add(Me.gbxFirstQuestion)
         Me.panelContent.Controls.Add(Me.lblThirdQuestion1)
         Me.panelContent.Controls.Add(Me.lblSecondQuestion2)
@@ -243,41 +253,41 @@ Partial Class FormAdmin
         Me.chkBxSoreThroat.Text = "Sore throat"
         Me.chkBxSoreThroat.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'chkBxHeadaches
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.CheckBox3.Location = New System.Drawing.Point(464, 448)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(100, 20)
-        Me.CheckBox3.TabIndex = 104
-        Me.CheckBox3.Text = "Headaches"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.chkBxHeadaches.AutoSize = True
+        Me.chkBxHeadaches.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBxHeadaches.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.chkBxHeadaches.Location = New System.Drawing.Point(464, 448)
+        Me.chkBxHeadaches.Name = "chkBxHeadaches"
+        Me.chkBxHeadaches.Size = New System.Drawing.Size(100, 20)
+        Me.chkBxHeadaches.TabIndex = 104
+        Me.chkBxHeadaches.Text = "Headaches"
+        Me.chkBxHeadaches.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chkBxTiredness
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.CheckBox2.Location = New System.Drawing.Point(464, 421)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(86, 20)
-        Me.CheckBox2.TabIndex = 105
-        Me.CheckBox2.Text = "Tiredness"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chkBxTiredness.AutoSize = True
+        Me.chkBxTiredness.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBxTiredness.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.chkBxTiredness.Location = New System.Drawing.Point(464, 421)
+        Me.chkBxTiredness.Name = "chkBxTiredness"
+        Me.chkBxTiredness.Size = New System.Drawing.Size(86, 20)
+        Me.chkBxTiredness.TabIndex = 105
+        Me.chkBxTiredness.Text = "Tiredness"
+        Me.chkBxTiredness.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'chkBxChestpain
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.CheckBox1.Location = New System.Drawing.Point(464, 394)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(96, 20)
-        Me.CheckBox1.TabIndex = 106
-        Me.CheckBox1.Text = "Chest pain"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkBxChestpain.AutoSize = True
+        Me.chkBxChestpain.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBxChestpain.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.chkBxChestpain.Location = New System.Drawing.Point(464, 394)
+        Me.chkBxChestpain.Name = "chkBxChestpain"
+        Me.chkBxChestpain.Size = New System.Drawing.Size(96, 20)
+        Me.chkBxChestpain.TabIndex = 106
+        Me.chkBxChestpain.Text = "Chest pain"
+        Me.chkBxChestpain.UseVisualStyleBackColor = True
         '
         'chBxLossOfTasteAndSmell
         '
@@ -303,41 +313,41 @@ Partial Class FormAdmin
         Me.chkBxFever.Text = "Fever"
         Me.chkBxFever.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'gbxSecondQuestion
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Location = New System.Drawing.Point(39, 309)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(209, 42)
-        Me.GroupBox1.TabIndex = 101
-        Me.GroupBox1.TabStop = False
+        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionNo)
+        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionYes)
+        Me.gbxSecondQuestion.Location = New System.Drawing.Point(39, 309)
+        Me.gbxSecondQuestion.Name = "gbxSecondQuestion"
+        Me.gbxSecondQuestion.Size = New System.Drawing.Size(209, 42)
+        Me.gbxSecondQuestion.TabIndex = 101
+        Me.gbxSecondQuestion.TabStop = False
         '
-        'RadioButton1
+        'rdoSecondQuestionNo
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.ForeColor = System.Drawing.Color.Maroon
-        Me.RadioButton1.Location = New System.Drawing.Point(153, 15)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(43, 20)
-        Me.RadioButton1.TabIndex = 9
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "No"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdoSecondQuestionNo.AutoSize = True
+        Me.rdoSecondQuestionNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoSecondQuestionNo.ForeColor = System.Drawing.Color.Maroon
+        Me.rdoSecondQuestionNo.Location = New System.Drawing.Point(153, 15)
+        Me.rdoSecondQuestionNo.Name = "rdoSecondQuestionNo"
+        Me.rdoSecondQuestionNo.Size = New System.Drawing.Size(43, 20)
+        Me.rdoSecondQuestionNo.TabIndex = 9
+        Me.rdoSecondQuestionNo.TabStop = True
+        Me.rdoSecondQuestionNo.Text = "No"
+        Me.rdoSecondQuestionNo.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rdoSecondQuestionYes
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.ForeColor = System.Drawing.Color.DarkGreen
-        Me.RadioButton2.Location = New System.Drawing.Point(11, 15)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(47, 20)
-        Me.RadioButton2.TabIndex = 8
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Yes"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdoSecondQuestionYes.AutoSize = True
+        Me.rdoSecondQuestionYes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdoSecondQuestionYes.ForeColor = System.Drawing.Color.DarkGreen
+        Me.rdoSecondQuestionYes.Location = New System.Drawing.Point(11, 15)
+        Me.rdoSecondQuestionYes.Name = "rdoSecondQuestionYes"
+        Me.rdoSecondQuestionYes.Size = New System.Drawing.Size(47, 20)
+        Me.rdoSecondQuestionYes.TabIndex = 8
+        Me.rdoSecondQuestionYes.TabStop = True
+        Me.rdoSecondQuestionYes.Text = "Yes"
+        Me.rdoSecondQuestionYes.UseVisualStyleBackColor = True
         '
         'gbxFirstQuestion
         '
@@ -583,16 +593,6 @@ Partial Class FormAdmin
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First Name"
         '
-        'btnDisplayData
-        '
-        Me.btnDisplayData.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDisplayData.Location = New System.Drawing.Point(76, 439)
-        Me.btnDisplayData.Name = "btnDisplayData"
-        Me.btnDisplayData.Size = New System.Drawing.Size(117, 36)
-        Me.btnDisplayData.TabIndex = 1
-        Me.btnDisplayData.Text = "Display Data"
-        Me.btnDisplayData.UseVisualStyleBackColor = True
-        '
         'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -610,8 +610,8 @@ Partial Class FormAdmin
         Me.panelNav.ResumeLayout(False)
         Me.panelContent.ResumeLayout(False)
         Me.panelContent.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbxSecondQuestion.ResumeLayout(False)
+        Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
         Me.ResumeLayout(False)
@@ -642,9 +642,9 @@ Partial Class FormAdmin
     Friend WithEvents lblSecondQuestion2 As Label
     Friend WithEvents lblSecondQuestion1 As Label
     Friend WithEvents lblThirdQuestion1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents gbxSecondQuestion As GroupBox
+    Friend WithEvents rdoSecondQuestionNo As RadioButton
+    Friend WithEvents rdoSecondQuestionYes As RadioButton
     Friend WithEvents gbxFirstQuestion As GroupBox
     Friend WithEvents rdoFirstQuestionNo As RadioButton
     Friend WithEvents rdoFirstQuestionYes As RadioButton
@@ -652,9 +652,9 @@ Partial Class FormAdmin
     Friend WithEvents chkBxCough As CheckBox
     Friend WithEvents chkBxDiarrhea As CheckBox
     Friend WithEvents chkBxSoreThroat As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkBxHeadaches As CheckBox
+    Friend WithEvents chkBxTiredness As CheckBox
+    Friend WithEvents chkBxChestpain As CheckBox
     Friend WithEvents chBxLossOfTasteAndSmell As CheckBox
     Friend WithEvents chkBxFever As CheckBox
     Friend WithEvents lblSelected As Label

@@ -1,0 +1,29 @@
+Selected type: Student
+
+Time submitted: 20/06/2022 6:56:03 am
+
+USER'S DETAILS:
+   First name: Jason
+   Middle name: Matthews
+   Last name: Bourne
+   Age: 55
+   Phone number: 123678
+   Address: Chipotle, USA
+   Gender: M
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Diarrhea
+   Sore throat
+   Headaches
+   Tiredness
+   Chest pain
+   Loss of taste or smell
+   Fever

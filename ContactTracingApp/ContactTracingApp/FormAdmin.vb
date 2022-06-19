@@ -32,7 +32,9 @@ Public Class FormAdmin
 
     Private Sub btnDisplayData_Click(sender As Object, e As EventArgs) Handles btnDisplayData.Click
         Dim lines() As String
-        lines = File.ReadAllLines(fileNames(0))
+        lines = File.ReadAllLines(fileNames(1))
+        lblSelected.Text = lines(0).Replace("Selected type: ", "")
+        lblDate.Text = lines(2).Replace("Time submitted: ", "")
         txtBxFirstName.Text = lines(5).Replace("   First name: ", "")
         txtBxMiddleName.Text = lines(6).Replace("   Middle name: ", "")
         txtBxLastName.Text = lines(7).Replace("   Last name: ", "")
@@ -45,5 +47,32 @@ Public Class FormAdmin
         Else
             rdoFirstQuestionNo.Checked = True
         End If
+        If lines(17).Equals("   Answer => Yes") Then
+            rdoSecondQuestionYes.Checked = True
+        Else
+            rdoSecondQuestionNo.Checked = True
+        End If
+        For Each line As String In lines
+            Select Case line
+                Case "   Fever"
+                    chkBxFever.Checked = True
+                Case "   Cough"
+                    chkBxCough.Checked = True
+                Case "   Difficulty breathing"
+                    chkBxDB.Checked = True
+                Case "   Loss of taste or smell"
+                    chBxLossOfTasteAndSmell.Checked = True
+                Case "   Sore throat"
+                    chkBxSoreThroat.Checked = True
+                Case "   Diarrhea"
+                    chkBxDiarrhea.Checked = True
+                Case "   Chest pain"
+                    chkBxChestpain.Checked = True
+                Case "   Tiredness"
+                    chkBxTiredness.Checked = True
+                Case "   Headaches"
+                    chkBxHeadaches.Checked = True
+            End Select
+        Next
     End Sub
 End Class
