@@ -30,6 +30,7 @@ Partial Class FormMain
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnFaculty = New System.Windows.Forms.Button()
         Me.panelTop = New System.Windows.Forms.Panel()
+        Me.picBxAdmin = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWelcomeH2 = New System.Windows.Forms.Label()
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
@@ -81,14 +82,13 @@ Partial Class FormMain
         Me.lblSelectedLabel = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.timerDate = New System.Windows.Forms.Timer(Me.components)
-        Me.picBxAdmin = New System.Windows.Forms.PictureBox()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
+        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
         Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
-        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelBottom
@@ -179,6 +179,15 @@ Partial Class FormMain
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(658, 133)
         Me.panelTop.TabIndex = 1
+        '
+        'picBxAdmin
+        '
+        Me.picBxAdmin.Image = CType(resources.GetObject("picBxAdmin.Image"), System.Drawing.Image)
+        Me.picBxAdmin.Location = New System.Drawing.Point(578, 12)
+        Me.picBxAdmin.Name = "picBxAdmin"
+        Me.picBxAdmin.Size = New System.Drawing.Size(68, 67)
+        Me.picBxAdmin.TabIndex = 2
+        Me.picBxAdmin.TabStop = False
         '
         'PictureBox1
         '
@@ -812,15 +821,6 @@ Partial Class FormMain
         '
         Me.timerDate.Interval = 1000
         '
-        'picBxAdmin
-        '
-        Me.picBxAdmin.Image = CType(resources.GetObject("picBxAdmin.Image"), System.Drawing.Image)
-        Me.picBxAdmin.Location = New System.Drawing.Point(578, 12)
-        Me.picBxAdmin.Name = "picBxAdmin"
-        Me.picBxAdmin.Size = New System.Drawing.Size(68, 67)
-        Me.picBxAdmin.TabIndex = 2
-        Me.picBxAdmin.TabStop = False
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -840,6 +840,7 @@ Partial Class FormMain
         Me.panelBottom.ResumeLayout(False)
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
+        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContent.ResumeLayout(False)
         Me.panelContent.PerformLayout()
@@ -847,7 +848,6 @@ Partial Class FormMain
         Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
-        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
