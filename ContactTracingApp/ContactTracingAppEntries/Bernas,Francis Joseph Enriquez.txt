@@ -1,0 +1,21 @@
+Selected type: Student
+
+Time submitted: 20/06/2022 2:34:01 am
+
+USER'S DETAILS:
+   First name: Francis Joseph
+   Middle name: Enriquez
+   Last name: Bernas
+   Age: 26
+   Phone number: 09511929716
+   Address: 1312A Int.6 Masinop St. Tondo, Manila
+   Gender: M
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => No
+
+USER'S SYMPTOMS:
+   Tiredness
