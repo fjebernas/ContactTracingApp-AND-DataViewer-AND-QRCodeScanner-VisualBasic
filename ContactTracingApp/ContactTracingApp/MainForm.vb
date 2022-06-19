@@ -2,8 +2,8 @@
 Public Class FormMain
     Dim user As User
     Dim userType As String
-    Dim formMinHeight As UShort
-    Dim formMaxHeight As UShort
+    ReadOnly formMinHeight As UShort
+    ReadOnly formMaxHeight As UShort
     Dim isFormOpen As Boolean
     Public Sub New()
 
@@ -33,6 +33,7 @@ Public Class FormMain
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
         If Not (isFormOpen) Then
+            btnCancel.Visible = True
             If Me.Height < formMaxHeight Then
                 Me.Height += 20
             Else
@@ -44,7 +45,6 @@ Public Class FormMain
                         btn.Visible = True
                     End If
                 Next
-                btnCancel.Visible = True
 #Region "Change 'Are you a: ' label to 'Please fill out the following fields:'"
                 lblWelcomeH2.Location = New Point(206, 105)
                 lblWelcomeH2.Font = New Font("Century Gothic", "12")
@@ -62,13 +62,13 @@ Public Class FormMain
                     If btn.Name = "btnSubmit" Then
                         btn.Visible = False
                     End If
-                    btnCancel.Visible = False
-#Region "Change 'Please fill out the following fields:' label to '      Are you a:'"
-                    lblWelcomeH2.Location = New Point(206, 92)
-                    lblWelcomeH2.Font = New Font("Century Gothic", "20")
-                    lblWelcomeH2.Text = "      Are you a:"
-#End Region
                 Next
+                btnCancel.Visible = False
+#Region "Change 'Please fill out the following fields:' label to '      Are you a:'"
+                lblWelcomeH2.Location = New Point(206, 92)
+                lblWelcomeH2.Font = New Font("Century Gothic", "20")
+                lblWelcomeH2.Text = "      Are you a:"
+#End Region
             End If
         End If
     End Sub
@@ -92,6 +92,7 @@ Public Class FormMain
                         user.Symptoms = chkBx.Text
                     End If
                 Next
+                'create the txt file and reset the program
                 user.CreateTxtFile()
                 ResetToStart()
             Else

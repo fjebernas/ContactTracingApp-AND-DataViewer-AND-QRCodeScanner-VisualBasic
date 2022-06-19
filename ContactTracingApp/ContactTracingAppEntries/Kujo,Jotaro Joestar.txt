@@ -1,23 +1,26 @@
-Selected type: Student
+Selected type: Guest
 
-Time submitted: 09/06/2022 12:32:14 am
+Time submitted: 10/06/2022 8:28:58 am
 
 USER'S DETAILS:
-   First name: Francis Joseph
-   Middle name: Enriquez
-   Last name: Bernas
-   Age: 26
-   Phone number: 09611728321
-   Address: Tondo, Manila
+   First name: Jotaro
+   Middle name: Joestar
+   Last name: Kujo
+   Age: 18
+   Phone number: 0923718123
+   Address: Tokyo, Japan
    Gender: M
 
 USER'S ANSWERS:
 1. Have you traveled outside the country anytime from last month until now?
-   Answer => No
+   Answer => Yes
 2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
-   Answer => Not sure
+   Answer => Yes
 
 USER'S SYMPTOMS:
+   Difficulty breathing
    Cough
    Headaches
    Tiredness
+   Loss of taste or smell
+   Fever

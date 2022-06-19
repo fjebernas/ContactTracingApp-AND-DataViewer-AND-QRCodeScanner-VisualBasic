@@ -30,13 +30,15 @@ Partial Class FormMain
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnFaculty = New System.Windows.Forms.Button()
         Me.panelTop = New System.Windows.Forms.Panel()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWelcomeH2 = New System.Windows.Forms.Label()
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
         Me.panelContent = New System.Windows.Forms.Panel()
+        Me.lblRequired6 = New System.Windows.Forms.Label()
+        Me.lblRequired5 = New System.Windows.Forms.Label()
         Me.lblRequired4 = New System.Windows.Forms.Label()
         Me.lblRequired3 = New System.Windows.Forms.Label()
         Me.lblRequired2 = New System.Windows.Forms.Label()
@@ -79,14 +81,14 @@ Partial Class FormMain
         Me.lblSelectedLabel = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.timerDate = New System.Windows.Forms.Timer(Me.components)
-        Me.lblRequired5 = New System.Windows.Forms.Label()
-        Me.lblRequired6 = New System.Windows.Forms.Label()
+        Me.picBxAdmin = New System.Windows.Forms.PictureBox()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
         Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
+        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelBottom
@@ -167,7 +169,7 @@ Partial Class FormMain
         'panelTop
         '
         Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.panelTop.Controls.Add(Me.btnCancel)
+        Me.panelTop.Controls.Add(Me.picBxAdmin)
         Me.panelTop.Controls.Add(Me.PictureBox1)
         Me.panelTop.Controls.Add(Me.lblWelcomeH2)
         Me.panelTop.Controls.Add(Me.lblWelcomeH1)
@@ -177,22 +179,6 @@ Partial Class FormMain
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(658, 133)
         Me.panelTop.TabIndex = 1
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.Red
-        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
-        Me.btnCancel.Location = New System.Drawing.Point(556, 92)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(90, 33)
-        Me.btnCancel.TabIndex = 0
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCancel.UseVisualStyleBackColor = False
-        Me.btnCancel.Visible = False
         '
         'PictureBox1
         '
@@ -226,12 +212,28 @@ Partial Class FormMain
         Me.lblWelcomeH1.TabIndex = 0
         Me.lblWelcomeH1.Text = "Contact Tracing App"
         '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.Red
+        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
+        Me.btnCancel.Location = New System.Drawing.Point(559, 6)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(90, 33)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.btnCancel.Visible = False
+        '
         'lblDate
         '
         Me.lblDate.AutoSize = True
         Me.lblDate.Font = New System.Drawing.Font("Century Gothic", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblDate.Location = New System.Drawing.Point(377, 18)
+        Me.lblDate.Location = New System.Drawing.Point(290, 13)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(72, 18)
         Me.lblDate.TabIndex = 2
@@ -245,6 +247,7 @@ Partial Class FormMain
         '
         Me.panelContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.panelContent.Controls.Add(Me.btnCancel)
         Me.panelContent.Controls.Add(Me.lblDate)
         Me.panelContent.Controls.Add(Me.lblRequired6)
         Me.panelContent.Controls.Add(Me.lblRequired5)
@@ -289,6 +292,32 @@ Partial Class FormMain
         Me.panelContent.Name = "panelContent"
         Me.panelContent.Size = New System.Drawing.Size(658, 0)
         Me.panelContent.TabIndex = 2
+        '
+        'lblRequired6
+        '
+        Me.lblRequired6.AutoSize = True
+        Me.lblRequired6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired6.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired6.Location = New System.Drawing.Point(541, 295)
+        Me.lblRequired6.Name = "lblRequired6"
+        Me.lblRequired6.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired6.TabIndex = 17
+        Me.lblRequired6.Tag = "lblSayingRequired"
+        Me.lblRequired6.Text = "*required"
+        Me.lblRequired6.Visible = False
+        '
+        'lblRequired5
+        '
+        Me.lblRequired5.AutoSize = True
+        Me.lblRequired5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRequired5.ForeColor = System.Drawing.Color.Red
+        Me.lblRequired5.Location = New System.Drawing.Point(541, 214)
+        Me.lblRequired5.Name = "lblRequired5"
+        Me.lblRequired5.Size = New System.Drawing.Size(61, 15)
+        Me.lblRequired5.TabIndex = 17
+        Me.lblRequired5.Tag = "lblSayingRequired"
+        Me.lblRequired5.Text = "*required"
+        Me.lblRequired5.Visible = False
         '
         'lblRequired4
         '
@@ -751,7 +780,7 @@ Partial Class FormMain
         Me.lblSelected.AutoSize = True
         Me.lblSelected.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSelected.ForeColor = System.Drawing.Color.Gray
-        Me.lblSelected.Location = New System.Drawing.Point(111, 18)
+        Me.lblSelected.Location = New System.Drawing.Point(111, 14)
         Me.lblSelected.Name = "lblSelected"
         Me.lblSelected.Size = New System.Drawing.Size(140, 19)
         Me.lblSelected.TabIndex = 0
@@ -762,7 +791,7 @@ Partial Class FormMain
         Me.lblSelectedLabel.AutoSize = True
         Me.lblSelectedLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSelectedLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.lblSelectedLabel.Location = New System.Drawing.Point(22, 17)
+        Me.lblSelectedLabel.Location = New System.Drawing.Point(22, 13)
         Me.lblSelectedLabel.Name = "lblSelectedLabel"
         Me.lblSelectedLabel.Size = New System.Drawing.Size(92, 21)
         Me.lblSelectedLabel.TabIndex = 0
@@ -783,31 +812,14 @@ Partial Class FormMain
         '
         Me.timerDate.Interval = 1000
         '
-        'lblRequired5
+        'picBxAdmin
         '
-        Me.lblRequired5.AutoSize = True
-        Me.lblRequired5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired5.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired5.Location = New System.Drawing.Point(541, 214)
-        Me.lblRequired5.Name = "lblRequired5"
-        Me.lblRequired5.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired5.TabIndex = 17
-        Me.lblRequired5.Tag = "lblSayingRequired"
-        Me.lblRequired5.Text = "*required"
-        Me.lblRequired5.Visible = False
-        '
-        'lblRequired6
-        '
-        Me.lblRequired6.AutoSize = True
-        Me.lblRequired6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRequired6.ForeColor = System.Drawing.Color.Red
-        Me.lblRequired6.Location = New System.Drawing.Point(541, 295)
-        Me.lblRequired6.Name = "lblRequired6"
-        Me.lblRequired6.Size = New System.Drawing.Size(61, 15)
-        Me.lblRequired6.TabIndex = 17
-        Me.lblRequired6.Tag = "lblSayingRequired"
-        Me.lblRequired6.Text = "*required"
-        Me.lblRequired6.Visible = False
+        Me.picBxAdmin.Image = CType(resources.GetObject("picBxAdmin.Image"), System.Drawing.Image)
+        Me.picBxAdmin.Location = New System.Drawing.Point(578, 12)
+        Me.picBxAdmin.Name = "picBxAdmin"
+        Me.picBxAdmin.Size = New System.Drawing.Size(68, 67)
+        Me.picBxAdmin.TabIndex = 2
+        Me.picBxAdmin.TabStop = False
         '
         'FormMain
         '
@@ -835,6 +847,7 @@ Partial Class FormMain
         Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
+        CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -896,4 +909,5 @@ Partial Class FormMain
     Friend WithEvents lblSelectedLabel As Label
     Friend WithEvents lblRequired6 As Label
     Friend WithEvents lblRequired5 As Label
+    Friend WithEvents picBxAdmin As PictureBox
 End Class
