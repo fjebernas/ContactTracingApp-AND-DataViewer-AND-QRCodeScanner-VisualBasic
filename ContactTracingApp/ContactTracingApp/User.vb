@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class User
-    Private Const PATH As String = "C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingAppEntries\"
+    Public Shared ReadOnly PATH As String = "C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingAppEntries\"
 #Region "Private backing fields"
     Private _userType As String
     Private _firstName As String
