@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormAdmin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class FormAdmin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAdmin))
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelBottom = New System.Windows.Forms.Panel()
@@ -32,21 +33,8 @@ Partial Class FormAdmin
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblSelected = New System.Windows.Forms.Label()
         Me.lblSelectedLabel = New System.Windows.Forms.Label()
-        Me.chkBxDB = New System.Windows.Forms.CheckBox()
-        Me.chkBxCough = New System.Windows.Forms.CheckBox()
-        Me.chkBxDiarrhea = New System.Windows.Forms.CheckBox()
-        Me.chkBxSoreThroat = New System.Windows.Forms.CheckBox()
-        Me.chkBxHeadaches = New System.Windows.Forms.CheckBox()
-        Me.chkBxTiredness = New System.Windows.Forms.CheckBox()
-        Me.chkBxChestpain = New System.Windows.Forms.CheckBox()
-        Me.chBxLossOfTasteAndSmell = New System.Windows.Forms.CheckBox()
-        Me.chkBxFever = New System.Windows.Forms.CheckBox()
         Me.gbxSecondQuestion = New System.Windows.Forms.GroupBox()
-        Me.rdoSecondQuestionNo = New System.Windows.Forms.RadioButton()
-        Me.rdoSecondQuestionYes = New System.Windows.Forms.RadioButton()
         Me.gbxFirstQuestion = New System.Windows.Forms.GroupBox()
-        Me.rdoFirstQuestionNo = New System.Windows.Forms.RadioButton()
-        Me.rdoFirstQuestionYes = New System.Windows.Forms.RadioButton()
         Me.lblThirdQuestion1 = New System.Windows.Forms.Label()
         Me.lblSecondQuestion2 = New System.Windows.Forms.Label()
         Me.lblSecondQuestion1 = New System.Windows.Forms.Label()
@@ -65,16 +53,33 @@ Partial Class FormAdmin
         Me.lblMiddleName = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.lblDateSubmitted = New System.Windows.Forms.Label()
+        Me.lblFirstQuestionYes = New System.Windows.Forms.Label()
+        Me.lblFirstQuestionNo = New System.Windows.Forms.Label()
+        Me.lblSecondQuestionYes = New System.Windows.Forms.Label()
+        Me.lblSecondQuestionNo = New System.Windows.Forms.Label()
+        Me.lblSecondQuestionNS = New System.Windows.Forms.Label()
+        Me.gbxSymptoms = New System.Windows.Forms.GroupBox()
+        Me.lblFever = New System.Windows.Forms.Label()
+        Me.lblCough = New System.Windows.Forms.Label()
+        Me.lblDB = New System.Windows.Forms.Label()
+        Me.lblLossOfTasteAndSmell = New System.Windows.Forms.Label()
+        Me.lblSoreThroat = New System.Windows.Forms.Label()
+        Me.lblDiarrhea = New System.Windows.Forms.Label()
+        Me.lblChestPain = New System.Windows.Forms.Label()
+        Me.lblTiredness = New System.Windows.Forms.Label()
+        Me.lblHeadaches = New System.Windows.Forms.Label()
         Me.panelTop.SuspendLayout()
         Me.panelNav.SuspendLayout()
         Me.panelContent.SuspendLayout()
         Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
+        Me.gbxSymptoms.SuspendLayout()
         Me.SuspendLayout()
         '
         'panelTop
         '
-        Me.panelTop.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.panelTop.Controls.Add(Me.Label1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
@@ -86,6 +91,7 @@ Partial Class FormAdmin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(174, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(213, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(519, 42)
@@ -94,58 +100,57 @@ Partial Class FormAdmin
         '
         'panelBottom
         '
-        Me.panelBottom.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.panelBottom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 571)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 583)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.Size = New System.Drawing.Size(944, 48)
         Me.panelBottom.TabIndex = 1
         '
         'panelNav
         '
-        Me.panelNav.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.panelNav.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.panelNav.Controls.Add(Me.btnDisplayData)
         Me.panelNav.Controls.Add(Me.listBxEntries)
         Me.panelNav.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelNav.Location = New System.Drawing.Point(0, 85)
         Me.panelNav.Name = "panelNav"
-        Me.panelNav.Size = New System.Drawing.Size(265, 486)
+        Me.panelNav.Size = New System.Drawing.Size(265, 498)
         Me.panelNav.TabIndex = 2
         '
         'btnDisplayData
         '
-        Me.btnDisplayData.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDisplayData.BackColor = System.Drawing.Color.FromArgb(CType(CType(164, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnDisplayData.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDisplayData.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDisplayData.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btnDisplayData.Location = New System.Drawing.Point(76, 439)
         Me.btnDisplayData.Name = "btnDisplayData"
         Me.btnDisplayData.Size = New System.Drawing.Size(117, 36)
         Me.btnDisplayData.TabIndex = 1
         Me.btnDisplayData.Text = "Display Data"
-        Me.btnDisplayData.UseVisualStyleBackColor = True
+        Me.btnDisplayData.UseVisualStyleBackColor = False
         '
         'listBxEntries
         '
-        Me.listBxEntries.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listBxEntries.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(203, Byte), Integer))
+        Me.listBxEntries.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listBxEntries.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.listBxEntries.FormattingEnabled = True
-        Me.listBxEntries.ItemHeight = 17
+        Me.listBxEntries.ItemHeight = 16
         Me.listBxEntries.Location = New System.Drawing.Point(24, 54)
         Me.listBxEntries.Name = "listBxEntries"
-        Me.listBxEntries.Size = New System.Drawing.Size(220, 378)
+        Me.listBxEntries.Size = New System.Drawing.Size(220, 372)
         Me.listBxEntries.TabIndex = 0
         '
         'panelContent
         '
+        Me.panelContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(214, Byte), Integer))
+        Me.panelContent.Controls.Add(Me.gbxSymptoms)
         Me.panelContent.Controls.Add(Me.lblDate)
         Me.panelContent.Controls.Add(Me.lblSelected)
+        Me.panelContent.Controls.Add(Me.lblDateSubmitted)
         Me.panelContent.Controls.Add(Me.lblSelectedLabel)
-        Me.panelContent.Controls.Add(Me.chkBxDB)
-        Me.panelContent.Controls.Add(Me.chkBxCough)
-        Me.panelContent.Controls.Add(Me.chkBxDiarrhea)
-        Me.panelContent.Controls.Add(Me.chkBxSoreThroat)
-        Me.panelContent.Controls.Add(Me.chkBxHeadaches)
-        Me.panelContent.Controls.Add(Me.chkBxTiredness)
-        Me.panelContent.Controls.Add(Me.chkBxChestpain)
-        Me.panelContent.Controls.Add(Me.chBxLossOfTasteAndSmell)
-        Me.panelContent.Controls.Add(Me.chkBxFever)
         Me.panelContent.Controls.Add(Me.gbxSecondQuestion)
         Me.panelContent.Controls.Add(Me.gbxFirstQuestion)
         Me.panelContent.Controls.Add(Me.lblThirdQuestion1)
@@ -169,7 +174,7 @@ Partial Class FormAdmin
         Me.panelContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContent.Location = New System.Drawing.Point(265, 85)
         Me.panelContent.Name = "panelContent"
-        Me.panelContent.Size = New System.Drawing.Size(679, 486)
+        Me.panelContent.Size = New System.Drawing.Size(679, 498)
         Me.panelContent.TabIndex = 3
         '
         'lblDate
@@ -177,219 +182,58 @@ Partial Class FormAdmin
         Me.lblDate.AutoSize = True
         Me.lblDate.Font = New System.Drawing.Font("Century Gothic", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblDate.Location = New System.Drawing.Point(382, 15)
+        Me.lblDate.Location = New System.Drawing.Point(451, 14)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(72, 18)
+        Me.lblDate.Size = New System.Drawing.Size(0, 18)
         Me.lblDate.TabIndex = 113
-        Me.lblDate.Text = "**Date**"
         '
         'lblSelected
         '
         Me.lblSelected.AutoSize = True
         Me.lblSelected.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSelected.ForeColor = System.Drawing.Color.Gray
+        Me.lblSelected.ForeColor = System.Drawing.Color.DarkSlateBlue
         Me.lblSelected.Location = New System.Drawing.Point(122, 13)
         Me.lblSelected.Name = "lblSelected"
-        Me.lblSelected.Size = New System.Drawing.Size(140, 19)
+        Me.lblSelected.Size = New System.Drawing.Size(0, 19)
         Me.lblSelected.TabIndex = 111
-        Me.lblSelected.Text = "**selected type**"
         '
         'lblSelectedLabel
         '
         Me.lblSelectedLabel.AutoSize = True
         Me.lblSelectedLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSelectedLabel.ForeColor = System.Drawing.Color.Black
+        Me.lblSelectedLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblSelectedLabel.Location = New System.Drawing.Point(33, 12)
         Me.lblSelectedLabel.Name = "lblSelectedLabel"
-        Me.lblSelectedLabel.Size = New System.Drawing.Size(92, 21)
+        Me.lblSelectedLabel.Size = New System.Drawing.Size(96, 21)
         Me.lblSelectedLabel.TabIndex = 112
-        Me.lblSelectedLabel.Text = "Selected is"
-        '
-        'chkBxDB
-        '
-        Me.chkBxDB.AutoSize = True
-        Me.chkBxDB.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxDB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxDB.Location = New System.Drawing.Point(39, 448)
-        Me.chkBxDB.Name = "chkBxDB"
-        Me.chkBxDB.Size = New System.Drawing.Size(151, 20)
-        Me.chkBxDB.TabIndex = 110
-        Me.chkBxDB.Text = "Difficulty breathing"
-        Me.chkBxDB.UseVisualStyleBackColor = True
-        '
-        'chkBxCough
-        '
-        Me.chkBxCough.AutoSize = True
-        Me.chkBxCough.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxCough.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxCough.Location = New System.Drawing.Point(39, 421)
-        Me.chkBxCough.Name = "chkBxCough"
-        Me.chkBxCough.Size = New System.Drawing.Size(69, 20)
-        Me.chkBxCough.TabIndex = 109
-        Me.chkBxCough.Text = "Cough"
-        Me.chkBxCough.UseVisualStyleBackColor = True
-        '
-        'chkBxDiarrhea
-        '
-        Me.chkBxDiarrhea.AutoSize = True
-        Me.chkBxDiarrhea.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxDiarrhea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxDiarrhea.Location = New System.Drawing.Point(238, 448)
-        Me.chkBxDiarrhea.Name = "chkBxDiarrhea"
-        Me.chkBxDiarrhea.Size = New System.Drawing.Size(83, 20)
-        Me.chkBxDiarrhea.TabIndex = 102
-        Me.chkBxDiarrhea.Text = "Diarrhea"
-        Me.chkBxDiarrhea.UseVisualStyleBackColor = True
-        '
-        'chkBxSoreThroat
-        '
-        Me.chkBxSoreThroat.AutoSize = True
-        Me.chkBxSoreThroat.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxSoreThroat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxSoreThroat.Location = New System.Drawing.Point(238, 421)
-        Me.chkBxSoreThroat.Name = "chkBxSoreThroat"
-        Me.chkBxSoreThroat.Size = New System.Drawing.Size(96, 20)
-        Me.chkBxSoreThroat.TabIndex = 103
-        Me.chkBxSoreThroat.Text = "Sore throat"
-        Me.chkBxSoreThroat.UseVisualStyleBackColor = True
-        '
-        'chkBxHeadaches
-        '
-        Me.chkBxHeadaches.AutoSize = True
-        Me.chkBxHeadaches.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxHeadaches.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxHeadaches.Location = New System.Drawing.Point(464, 448)
-        Me.chkBxHeadaches.Name = "chkBxHeadaches"
-        Me.chkBxHeadaches.Size = New System.Drawing.Size(100, 20)
-        Me.chkBxHeadaches.TabIndex = 104
-        Me.chkBxHeadaches.Text = "Headaches"
-        Me.chkBxHeadaches.UseVisualStyleBackColor = True
-        '
-        'chkBxTiredness
-        '
-        Me.chkBxTiredness.AutoSize = True
-        Me.chkBxTiredness.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxTiredness.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxTiredness.Location = New System.Drawing.Point(464, 421)
-        Me.chkBxTiredness.Name = "chkBxTiredness"
-        Me.chkBxTiredness.Size = New System.Drawing.Size(86, 20)
-        Me.chkBxTiredness.TabIndex = 105
-        Me.chkBxTiredness.Text = "Tiredness"
-        Me.chkBxTiredness.UseVisualStyleBackColor = True
-        '
-        'chkBxChestpain
-        '
-        Me.chkBxChestpain.AutoSize = True
-        Me.chkBxChestpain.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxChestpain.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxChestpain.Location = New System.Drawing.Point(464, 394)
-        Me.chkBxChestpain.Name = "chkBxChestpain"
-        Me.chkBxChestpain.Size = New System.Drawing.Size(96, 20)
-        Me.chkBxChestpain.TabIndex = 106
-        Me.chkBxChestpain.Text = "Chest pain"
-        Me.chkBxChestpain.UseVisualStyleBackColor = True
-        '
-        'chBxLossOfTasteAndSmell
-        '
-        Me.chBxLossOfTasteAndSmell.AutoSize = True
-        Me.chBxLossOfTasteAndSmell.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chBxLossOfTasteAndSmell.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chBxLossOfTasteAndSmell.Location = New System.Drawing.Point(238, 394)
-        Me.chBxLossOfTasteAndSmell.Name = "chBxLossOfTasteAndSmell"
-        Me.chBxLossOfTasteAndSmell.Size = New System.Drawing.Size(158, 20)
-        Me.chBxLossOfTasteAndSmell.TabIndex = 107
-        Me.chBxLossOfTasteAndSmell.Text = "Loss of taste or smell"
-        Me.chBxLossOfTasteAndSmell.UseVisualStyleBackColor = True
-        '
-        'chkBxFever
-        '
-        Me.chkBxFever.AutoSize = True
-        Me.chkBxFever.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkBxFever.ForeColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.chkBxFever.Location = New System.Drawing.Point(39, 394)
-        Me.chkBxFever.Name = "chkBxFever"
-        Me.chkBxFever.Size = New System.Drawing.Size(60, 20)
-        Me.chkBxFever.TabIndex = 108
-        Me.chkBxFever.Text = "Fever"
-        Me.chkBxFever.UseVisualStyleBackColor = True
+        Me.lblSelectedLabel.Text = "Selected is:"
         '
         'gbxSecondQuestion
         '
-        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionNo)
-        Me.gbxSecondQuestion.Controls.Add(Me.rdoSecondQuestionYes)
+        Me.gbxSecondQuestion.Controls.Add(Me.lblSecondQuestionNS)
+        Me.gbxSecondQuestion.Controls.Add(Me.lblSecondQuestionNo)
+        Me.gbxSecondQuestion.Controls.Add(Me.lblSecondQuestionYes)
         Me.gbxSecondQuestion.Location = New System.Drawing.Point(39, 309)
         Me.gbxSecondQuestion.Name = "gbxSecondQuestion"
-        Me.gbxSecondQuestion.Size = New System.Drawing.Size(209, 42)
+        Me.gbxSecondQuestion.Size = New System.Drawing.Size(383, 42)
         Me.gbxSecondQuestion.TabIndex = 101
         Me.gbxSecondQuestion.TabStop = False
         '
-        'rdoSecondQuestionNo
-        '
-        Me.rdoSecondQuestionNo.AutoSize = True
-        Me.rdoSecondQuestionNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdoSecondQuestionNo.ForeColor = System.Drawing.Color.Maroon
-        Me.rdoSecondQuestionNo.Location = New System.Drawing.Point(153, 15)
-        Me.rdoSecondQuestionNo.Name = "rdoSecondQuestionNo"
-        Me.rdoSecondQuestionNo.Size = New System.Drawing.Size(43, 20)
-        Me.rdoSecondQuestionNo.TabIndex = 9
-        Me.rdoSecondQuestionNo.TabStop = True
-        Me.rdoSecondQuestionNo.Text = "No"
-        Me.rdoSecondQuestionNo.UseVisualStyleBackColor = True
-        '
-        'rdoSecondQuestionYes
-        '
-        Me.rdoSecondQuestionYes.AutoSize = True
-        Me.rdoSecondQuestionYes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdoSecondQuestionYes.ForeColor = System.Drawing.Color.DarkGreen
-        Me.rdoSecondQuestionYes.Location = New System.Drawing.Point(11, 15)
-        Me.rdoSecondQuestionYes.Name = "rdoSecondQuestionYes"
-        Me.rdoSecondQuestionYes.Size = New System.Drawing.Size(47, 20)
-        Me.rdoSecondQuestionYes.TabIndex = 8
-        Me.rdoSecondQuestionYes.TabStop = True
-        Me.rdoSecondQuestionYes.Text = "Yes"
-        Me.rdoSecondQuestionYes.UseVisualStyleBackColor = True
-        '
         'gbxFirstQuestion
         '
-        Me.gbxFirstQuestion.Controls.Add(Me.rdoFirstQuestionNo)
-        Me.gbxFirstQuestion.Controls.Add(Me.rdoFirstQuestionYes)
+        Me.gbxFirstQuestion.Controls.Add(Me.lblFirstQuestionNo)
+        Me.gbxFirstQuestion.Controls.Add(Me.lblFirstQuestionYes)
         Me.gbxFirstQuestion.Location = New System.Drawing.Point(37, 204)
         Me.gbxFirstQuestion.Name = "gbxFirstQuestion"
         Me.gbxFirstQuestion.Size = New System.Drawing.Size(209, 42)
         Me.gbxFirstQuestion.TabIndex = 100
         Me.gbxFirstQuestion.TabStop = False
         '
-        'rdoFirstQuestionNo
-        '
-        Me.rdoFirstQuestionNo.AutoSize = True
-        Me.rdoFirstQuestionNo.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdoFirstQuestionNo.ForeColor = System.Drawing.Color.Maroon
-        Me.rdoFirstQuestionNo.Location = New System.Drawing.Point(153, 15)
-        Me.rdoFirstQuestionNo.Name = "rdoFirstQuestionNo"
-        Me.rdoFirstQuestionNo.Size = New System.Drawing.Size(43, 20)
-        Me.rdoFirstQuestionNo.TabIndex = 9
-        Me.rdoFirstQuestionNo.TabStop = True
-        Me.rdoFirstQuestionNo.Text = "No"
-        Me.rdoFirstQuestionNo.UseVisualStyleBackColor = True
-        '
-        'rdoFirstQuestionYes
-        '
-        Me.rdoFirstQuestionYes.AutoSize = True
-        Me.rdoFirstQuestionYes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdoFirstQuestionYes.ForeColor = System.Drawing.Color.DarkGreen
-        Me.rdoFirstQuestionYes.Location = New System.Drawing.Point(11, 15)
-        Me.rdoFirstQuestionYes.Name = "rdoFirstQuestionYes"
-        Me.rdoFirstQuestionYes.Size = New System.Drawing.Size(47, 20)
-        Me.rdoFirstQuestionYes.TabIndex = 8
-        Me.rdoFirstQuestionYes.TabStop = True
-        Me.rdoFirstQuestionYes.Text = "Yes"
-        Me.rdoFirstQuestionYes.UseVisualStyleBackColor = True
-        '
         'lblThirdQuestion1
         '
         Me.lblThirdQuestion1.AutoSize = True
         Me.lblThirdQuestion1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblThirdQuestion1.ForeColor = System.Drawing.Color.Black
+        Me.lblThirdQuestion1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblThirdQuestion1.Location = New System.Drawing.Point(33, 365)
         Me.lblThirdQuestion1.Name = "lblThirdQuestion1"
         Me.lblThirdQuestion1.Size = New System.Drawing.Size(553, 21)
@@ -400,7 +244,7 @@ Partial Class FormAdmin
         '
         Me.lblSecondQuestion2.AutoSize = True
         Me.lblSecondQuestion2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSecondQuestion2.ForeColor = System.Drawing.Color.Black
+        Me.lblSecondQuestion2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblSecondQuestion2.Location = New System.Drawing.Point(33, 285)
         Me.lblSecondQuestion2.Name = "lblSecondQuestion2"
         Me.lblSecondQuestion2.Size = New System.Drawing.Size(421, 21)
@@ -411,7 +255,7 @@ Partial Class FormAdmin
         '
         Me.lblSecondQuestion1.AutoSize = True
         Me.lblSecondQuestion1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSecondQuestion1.ForeColor = System.Drawing.Color.Black
+        Me.lblSecondQuestion1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblSecondQuestion1.Location = New System.Drawing.Point(33, 258)
         Me.lblSecondQuestion1.Name = "lblSecondQuestion1"
         Me.lblSecondQuestion1.Size = New System.Drawing.Size(579, 21)
@@ -422,7 +266,7 @@ Partial Class FormAdmin
         '
         Me.lblFirstQuestion.AutoSize = True
         Me.lblFirstQuestion.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFirstQuestion.ForeColor = System.Drawing.Color.Black
+        Me.lblFirstQuestion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblFirstQuestion.Location = New System.Drawing.Point(34, 180)
         Me.lblFirstQuestion.Name = "lblFirstQuestion"
         Me.lblFirstQuestion.Size = New System.Drawing.Size(589, 21)
@@ -431,6 +275,7 @@ Partial Class FormAdmin
         '
         'txtBxCpNum
         '
+        Me.txtBxCpNum.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxCpNum.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxCpNum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxCpNum.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -446,7 +291,7 @@ Partial Class FormAdmin
         '
         Me.lblCPnum.AutoSize = True
         Me.lblCPnum.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCPnum.ForeColor = System.Drawing.Color.Black
+        Me.lblCPnum.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblCPnum.Location = New System.Drawing.Point(385, 114)
         Me.lblCPnum.Name = "lblCPnum"
         Me.lblCPnum.Size = New System.Drawing.Size(89, 21)
@@ -455,6 +300,7 @@ Partial Class FormAdmin
         '
         'txtBxGender
         '
+        Me.txtBxGender.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxGender.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -469,7 +315,7 @@ Partial Class FormAdmin
         '
         Me.lblGender.AutoSize = True
         Me.lblGender.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGender.ForeColor = System.Drawing.Color.Black
+        Me.lblGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblGender.Location = New System.Drawing.Point(558, 112)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(70, 21)
@@ -478,6 +324,7 @@ Partial Class FormAdmin
         '
         'txtBxAddress
         '
+        Me.txtBxAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxAddress.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -493,7 +340,7 @@ Partial Class FormAdmin
         '
         Me.lblAddress.AutoSize = True
         Me.lblAddress.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAddress.ForeColor = System.Drawing.Color.Black
+        Me.lblAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblAddress.Location = New System.Drawing.Point(35, 112)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(72, 21)
@@ -502,6 +349,7 @@ Partial Class FormAdmin
         '
         'txtBxAge
         '
+        Me.txtBxAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxAge.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxAge.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -517,7 +365,7 @@ Partial Class FormAdmin
         '
         Me.lblAge.AutoSize = True
         Me.lblAge.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAge.ForeColor = System.Drawing.Color.Black
+        Me.lblAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblAge.Location = New System.Drawing.Point(556, 43)
         Me.lblAge.Name = "lblAge"
         Me.lblAge.Size = New System.Drawing.Size(44, 21)
@@ -526,6 +374,7 @@ Partial Class FormAdmin
         '
         'txtBxLastName
         '
+        Me.txtBxLastName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxLastName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxLastName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxLastName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -541,6 +390,7 @@ Partial Class FormAdmin
         '
         Me.lblLastName.AutoSize = True
         Me.lblLastName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblLastName.Location = New System.Drawing.Point(382, 45)
         Me.lblLastName.Name = "lblLastName"
         Me.lblLastName.Size = New System.Drawing.Size(93, 21)
@@ -549,6 +399,7 @@ Partial Class FormAdmin
         '
         'txtBxMiddleName
         '
+        Me.txtBxMiddleName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxMiddleName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxMiddleName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -564,6 +415,7 @@ Partial Class FormAdmin
         '
         Me.lblMiddleName.AutoSize = True
         Me.lblMiddleName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMiddleName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblMiddleName.Location = New System.Drawing.Point(208, 45)
         Me.lblMiddleName.Name = "lblMiddleName"
         Me.lblMiddleName.Size = New System.Drawing.Size(115, 21)
@@ -572,6 +424,7 @@ Partial Class FormAdmin
         '
         'txtBxFirstName
         '
+        Me.txtBxFirstName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBxFirstName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxFirstName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
@@ -587,21 +440,206 @@ Partial Class FormAdmin
         '
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.lblFirstName.Location = New System.Drawing.Point(34, 45)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(91, 21)
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First Name"
         '
+        'lblDateSubmitted
+        '
+        Me.lblDateSubmitted.AutoSize = True
+        Me.lblDateSubmitted.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDateSubmitted.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.lblDateSubmitted.Location = New System.Drawing.Point(316, 12)
+        Me.lblDateSubmitted.Name = "lblDateSubmitted"
+        Me.lblDateSubmitted.Size = New System.Drawing.Size(138, 21)
+        Me.lblDateSubmitted.TabIndex = 112
+        Me.lblDateSubmitted.Text = "Date submitted:"
+        '
+        'lblFirstQuestionYes
+        '
+        Me.lblFirstQuestionYes.AutoSize = True
+        Me.lblFirstQuestionYes.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstQuestionYes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblFirstQuestionYes.Location = New System.Drawing.Point(6, 16)
+        Me.lblFirstQuestionYes.Name = "lblFirstQuestionYes"
+        Me.lblFirstQuestionYes.Size = New System.Drawing.Size(33, 18)
+        Me.lblFirstQuestionYes.TabIndex = 113
+        Me.lblFirstQuestionYes.Text = "Yes"
+        '
+        'lblFirstQuestionNo
+        '
+        Me.lblFirstQuestionNo.AutoSize = True
+        Me.lblFirstQuestionNo.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstQuestionNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblFirstQuestionNo.Location = New System.Drawing.Point(170, 16)
+        Me.lblFirstQuestionNo.Name = "lblFirstQuestionNo"
+        Me.lblFirstQuestionNo.Size = New System.Drawing.Size(29, 18)
+        Me.lblFirstQuestionNo.TabIndex = 113
+        Me.lblFirstQuestionNo.Text = "No"
+        '
+        'lblSecondQuestionYes
+        '
+        Me.lblSecondQuestionYes.AutoSize = True
+        Me.lblSecondQuestionYes.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecondQuestionYes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblSecondQuestionYes.Location = New System.Drawing.Point(6, 16)
+        Me.lblSecondQuestionYes.Name = "lblSecondQuestionYes"
+        Me.lblSecondQuestionYes.Size = New System.Drawing.Size(33, 18)
+        Me.lblSecondQuestionYes.TabIndex = 113
+        Me.lblSecondQuestionYes.Text = "Yes"
+        '
+        'lblSecondQuestionNo
+        '
+        Me.lblSecondQuestionNo.AutoSize = True
+        Me.lblSecondQuestionNo.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecondQuestionNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblSecondQuestionNo.Location = New System.Drawing.Point(168, 16)
+        Me.lblSecondQuestionNo.Name = "lblSecondQuestionNo"
+        Me.lblSecondQuestionNo.Size = New System.Drawing.Size(29, 18)
+        Me.lblSecondQuestionNo.TabIndex = 113
+        Me.lblSecondQuestionNo.Text = "No"
+        '
+        'lblSecondQuestionNS
+        '
+        Me.lblSecondQuestionNS.AutoSize = True
+        Me.lblSecondQuestionNS.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSecondQuestionNS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblSecondQuestionNS.Location = New System.Drawing.Point(312, 16)
+        Me.lblSecondQuestionNS.Name = "lblSecondQuestionNS"
+        Me.lblSecondQuestionNS.Size = New System.Drawing.Size(67, 18)
+        Me.lblSecondQuestionNS.TabIndex = 113
+        Me.lblSecondQuestionNS.Text = "Not sure"
+        '
+        'gbxSymptoms
+        '
+        Me.gbxSymptoms.Controls.Add(Me.lblHeadaches)
+        Me.gbxSymptoms.Controls.Add(Me.lblDiarrhea)
+        Me.gbxSymptoms.Controls.Add(Me.lblDB)
+        Me.gbxSymptoms.Controls.Add(Me.lblTiredness)
+        Me.gbxSymptoms.Controls.Add(Me.lblSoreThroat)
+        Me.gbxSymptoms.Controls.Add(Me.lblCough)
+        Me.gbxSymptoms.Controls.Add(Me.lblChestPain)
+        Me.gbxSymptoms.Controls.Add(Me.lblLossOfTasteAndSmell)
+        Me.gbxSymptoms.Controls.Add(Me.lblFever)
+        Me.gbxSymptoms.Location = New System.Drawing.Point(38, 390)
+        Me.gbxSymptoms.Name = "gbxSymptoms"
+        Me.gbxSymptoms.Size = New System.Drawing.Size(579, 90)
+        Me.gbxSymptoms.TabIndex = 114
+        Me.gbxSymptoms.TabStop = False
+        '
+        'lblFever
+        '
+        Me.lblFever.AutoSize = True
+        Me.lblFever.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFever.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblFever.Location = New System.Drawing.Point(5, 16)
+        Me.lblFever.Name = "lblFever"
+        Me.lblFever.Size = New System.Drawing.Size(48, 18)
+        Me.lblFever.TabIndex = 113
+        Me.lblFever.Text = "Fever"
+        '
+        'lblCough
+        '
+        Me.lblCough.AutoSize = True
+        Me.lblCough.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCough.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblCough.Location = New System.Drawing.Point(5, 41)
+        Me.lblCough.Name = "lblCough"
+        Me.lblCough.Size = New System.Drawing.Size(58, 18)
+        Me.lblCough.TabIndex = 113
+        Me.lblCough.Text = "Cough"
+        '
+        'lblDB
+        '
+        Me.lblDB.AutoSize = True
+        Me.lblDB.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblDB.Location = New System.Drawing.Point(5, 66)
+        Me.lblDB.Name = "lblDB"
+        Me.lblDB.Size = New System.Drawing.Size(136, 18)
+        Me.lblDB.TabIndex = 113
+        Me.lblDB.Text = "Difficult Breathing"
+        '
+        'lblLossOfTasteAndSmell
+        '
+        Me.lblLossOfTasteAndSmell.AutoSize = True
+        Me.lblLossOfTasteAndSmell.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLossOfTasteAndSmell.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblLossOfTasteAndSmell.Location = New System.Drawing.Point(226, 16)
+        Me.lblLossOfTasteAndSmell.Name = "lblLossOfTasteAndSmell"
+        Me.lblLossOfTasteAndSmell.Size = New System.Drawing.Size(168, 18)
+        Me.lblLossOfTasteAndSmell.TabIndex = 113
+        Me.lblLossOfTasteAndSmell.Text = "Loss of taste and smell"
+        '
+        'lblSoreThroat
+        '
+        Me.lblSoreThroat.AutoSize = True
+        Me.lblSoreThroat.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSoreThroat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblSoreThroat.Location = New System.Drawing.Point(226, 41)
+        Me.lblSoreThroat.Name = "lblSoreThroat"
+        Me.lblSoreThroat.Size = New System.Drawing.Size(87, 18)
+        Me.lblSoreThroat.TabIndex = 113
+        Me.lblSoreThroat.Text = "Sore throat"
+        '
+        'lblDiarrhea
+        '
+        Me.lblDiarrhea.AutoSize = True
+        Me.lblDiarrhea.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiarrhea.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblDiarrhea.Location = New System.Drawing.Point(226, 66)
+        Me.lblDiarrhea.Name = "lblDiarrhea"
+        Me.lblDiarrhea.Size = New System.Drawing.Size(72, 18)
+        Me.lblDiarrhea.TabIndex = 113
+        Me.lblDiarrhea.Text = "Diarrhea"
+        '
+        'lblChestPain
+        '
+        Me.lblChestPain.AutoSize = True
+        Me.lblChestPain.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblChestPain.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblChestPain.Location = New System.Drawing.Point(462, 16)
+        Me.lblChestPain.Name = "lblChestPain"
+        Me.lblChestPain.Size = New System.Drawing.Size(86, 18)
+        Me.lblChestPain.TabIndex = 113
+        Me.lblChestPain.Text = "Chest pain"
+        '
+        'lblTiredness
+        '
+        Me.lblTiredness.AutoSize = True
+        Me.lblTiredness.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTiredness.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblTiredness.Location = New System.Drawing.Point(462, 41)
+        Me.lblTiredness.Name = "lblTiredness"
+        Me.lblTiredness.Size = New System.Drawing.Size(74, 18)
+        Me.lblTiredness.TabIndex = 113
+        Me.lblTiredness.Text = "Tiredness"
+        '
+        'lblHeadaches
+        '
+        Me.lblHeadaches.AutoSize = True
+        Me.lblHeadaches.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeadaches.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.lblHeadaches.Location = New System.Drawing.Point(462, 66)
+        Me.lblHeadaches.Name = "lblHeadaches"
+        Me.lblHeadaches.Size = New System.Drawing.Size(93, 18)
+        Me.lblHeadaches.TabIndex = 113
+        Me.lblHeadaches.Text = "Headaches"
+        '
         'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 619)
+        Me.ClientSize = New System.Drawing.Size(944, 631)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelNav)
         Me.Controls.Add(Me.panelBottom)
         Me.Controls.Add(Me.panelTop)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Contact Tracing Data Viewer"
@@ -614,6 +652,8 @@ Partial Class FormAdmin
         Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
+        Me.gbxSymptoms.ResumeLayout(False)
+        Me.gbxSymptoms.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -643,22 +683,25 @@ Partial Class FormAdmin
     Friend WithEvents lblSecondQuestion1 As Label
     Friend WithEvents lblThirdQuestion1 As Label
     Friend WithEvents gbxSecondQuestion As GroupBox
-    Friend WithEvents rdoSecondQuestionNo As RadioButton
-    Friend WithEvents rdoSecondQuestionYes As RadioButton
     Friend WithEvents gbxFirstQuestion As GroupBox
-    Friend WithEvents rdoFirstQuestionNo As RadioButton
-    Friend WithEvents rdoFirstQuestionYes As RadioButton
-    Friend WithEvents chkBxDB As CheckBox
-    Friend WithEvents chkBxCough As CheckBox
-    Friend WithEvents chkBxDiarrhea As CheckBox
-    Friend WithEvents chkBxSoreThroat As CheckBox
-    Friend WithEvents chkBxHeadaches As CheckBox
-    Friend WithEvents chkBxTiredness As CheckBox
-    Friend WithEvents chkBxChestpain As CheckBox
-    Friend WithEvents chBxLossOfTasteAndSmell As CheckBox
-    Friend WithEvents chkBxFever As CheckBox
     Friend WithEvents lblSelected As Label
     Friend WithEvents lblSelectedLabel As Label
     Friend WithEvents lblDate As Label
     Friend WithEvents btnDisplayData As Button
+    Friend WithEvents lblDateSubmitted As Label
+    Friend WithEvents gbxSymptoms As GroupBox
+    Friend WithEvents lblSecondQuestionNS As Label
+    Friend WithEvents lblSecondQuestionNo As Label
+    Friend WithEvents lblSecondQuestionYes As Label
+    Friend WithEvents lblFirstQuestionNo As Label
+    Friend WithEvents lblFirstQuestionYes As Label
+    Friend WithEvents lblHeadaches As Label
+    Friend WithEvents lblDiarrhea As Label
+    Friend WithEvents lblDB As Label
+    Friend WithEvents lblTiredness As Label
+    Friend WithEvents lblSoreThroat As Label
+    Friend WithEvents lblCough As Label
+    Friend WithEvents lblChestPain As Label
+    Friend WithEvents lblLossOfTasteAndSmell As Label
+    Friend WithEvents lblFever As Label
 End Class

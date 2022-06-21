@@ -4,6 +4,8 @@ Public Class FormAdmin
     Dim formMain As FormMain
     Dim formAdminLogin As FormAdminLogin
     Dim fileNames() As String
+    Dim colorOn As Color = Color.FromArgb(26, 67, 20)
+    Dim colorOff As Color = Color.FromArgb(180, 170, 169)
 
     Public Sub New(ByVal formMain As FormMain, ByVal formAdminLogin As FormAdminLogin)
 
@@ -31,8 +33,9 @@ Public Class FormAdmin
     End Sub
 
     Private Sub btnDisplayData_Click(sender As Object, e As EventArgs) Handles btnDisplayData.Click
+        ClearControls()
         Dim lines() As String
-        lines = File.ReadAllLines("C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingAppEntries\" & listBxEntries.Text & ".txt")
+        lines = File.ReadAllLines(User.PATH & listBxEntries.Text & ".txt")
         lblSelected.Text = lines(0).Replace("Selected type: ", "")
         lblDate.Text = lines(2).Replace("Time submitted: ", "")
         txtBxFirstName.Text = lines(5).Replace("   First name: ", "")
@@ -43,36 +46,53 @@ Public Class FormAdmin
         txtBxAddress.Text = lines(10).Replace("   Address: ", "")
         txtBxGender.Text = lines(11).Replace("   Gender: ", "")
         If lines(15).Equals("   Answer => Yes") Then
-            rdoFirstQuestionYes.Checked = True
+            lblFirstQuestionYes.ForeColor = colorOn
         Else
-            rdoFirstQuestionNo.Checked = True
+            lblFirstQuestionNo.ForeColor = colorOn
         End If
         If lines(17).Equals("   Answer => Yes") Then
-            rdoSecondQuestionYes.Checked = True
+            lblSecondQuestionYes.ForeColor = colorOn
+        ElseIf lines(17).Equals("   Answer => No") Then
+            lblSecondQuestionNo.ForeColor = colorOn
         Else
-            rdoSecondQuestionNo.Checked = True
+            lblSecondQuestionNS.ForeColor = colorOn
         End If
         For Each line As String In lines
             Select Case line
                 Case "   Fever"
-                    chkBxFever.Checked = True
+                    lblFever.ForeColor = colorOn
                 Case "   Cough"
-                    chkBxCough.Checked = True
+                    lblCough.ForeColor = colorOn
                 Case "   Difficulty breathing"
-                    chkBxDB.Checked = True
+                    lblDB.ForeColor = colorOn
                 Case "   Loss of taste or smell"
-                    chBxLossOfTasteAndSmell.Checked = True
+                    lblLossOfTasteAndSmell.ForeColor = colorOn
                 Case "   Sore throat"
-                    chkBxSoreThroat.Checked = True
+                    lblSoreThroat.ForeColor = colorOn
                 Case "   Diarrhea"
-                    chkBxDiarrhea.Checked = True
+                    lblDiarrhea.ForeColor = colorOn
                 Case "   Chest pain"
-                    chkBxChestpain.Checked = True
+                    lblChestPain.ForeColor = colorOn
                 Case "   Tiredness"
-                    chkBxTiredness.Checked = True
+                    lblTiredness.ForeColor = colorOn
                 Case "   Headaches"
-                    chkBxHeadaches.Checked = True
+                    lblHeadaches.ForeColor = colorOn
             End Select
+        Next
+    End Sub
+
+    Private Sub ClearControls()
+        For Each txtBx As TextBox In panelContent.Controls.OfType(Of TextBox)
+            txtBx.Text = ""
+        Next
+        For Each answer As Label In gbxFirstQuestion.Controls.OfType(Of Label)
+            answer.ForeColor = colorOff
+        Next
+        For Each answer As Label In gbxSecondQuestion.Controls.OfType(Of Label)
+            answer.ForeColor = colorOff
+        Next
+        For Each symptom As Label In gbxSymptoms.Controls.OfType(Of Label)
+            symptom.ForeColor = colorOff
         Next
     End Sub
 End Class
