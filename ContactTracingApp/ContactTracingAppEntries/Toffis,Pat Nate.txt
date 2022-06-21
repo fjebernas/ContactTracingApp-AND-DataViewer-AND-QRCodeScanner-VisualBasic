@@ -1,0 +1,25 @@
+Selected type: Guest
+
+Time submitted: 22/06/2022 1:58:30 am
+
+USER'S DETAILS:
+   First name: Pat
+   Middle name: Nate
+   Last name: Toffis
+   Age: 29
+   Phone number: 08126
+   Address: A Bldg. Paper St. ATL, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Diarrhea
+   Chest pain
+   Loss of taste or smell
+   Fever

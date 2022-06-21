@@ -1,0 +1,24 @@
+Selected type: Student
+
+Time submitted: 22/06/2022 2:09:42 am
+
+USER'S DETAILS:
+   First name: Staum
+   Middle name: Alippa
+   Last name: Clowd
+   Age: 19
+   Phone number: 007123
+   Address: ap.2 Blue St. MS, US
+   Gender: M
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => No
+
+USER'S SYMPTOMS:
+   Sore throat
+   Headaches
+   Chest pain
+   Loss of taste or smell

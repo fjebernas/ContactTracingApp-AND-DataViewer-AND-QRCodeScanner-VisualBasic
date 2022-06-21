@@ -1,0 +1,27 @@
+Selected type: Faculty
+
+Time submitted: 22/06/2022 1:53:57 am
+
+USER'S DETAILS:
+   First name: Ev
+   Middle name: Raymond
+   Last name: Lasting
+   Age: 53
+   Phone number: 0127211
+   Address: Lot.2 Grater St. SC, UN
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Sore throat
+   Tiredness
+   Chest pain
+   Loss of taste or smell
+   Fever

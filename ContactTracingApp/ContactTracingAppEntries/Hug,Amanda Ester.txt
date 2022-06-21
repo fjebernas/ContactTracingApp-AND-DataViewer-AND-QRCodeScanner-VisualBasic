@@ -1,0 +1,26 @@
+Selected type: Faculty
+
+Time submitted: 22/06/2022 2:07:45 am
+
+USER'S DETAILS:
+   First name: Amanda
+   Middle name: Ester
+   Last name: Hug
+   Age: 39
+   Phone number: 012245
+   Address: Lot.4 Colin St. WDC, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Diarrhea
+   Tiredness
+   Chest pain
+   Fever

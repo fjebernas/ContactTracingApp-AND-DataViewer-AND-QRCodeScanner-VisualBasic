@@ -1,0 +1,24 @@
+Selected type: Faculty
+
+Time submitted: 22/06/2022 2:15:39 am
+
+USER'S DETAILS:
+   First name: Dulcie
+   Middle name: Good
+   Last name: Grieta
+   Age: 42
+   Phone number: 0012487
+   Address: Post St. Rd. 10, NY, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => No
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Tiredness
+   Loss of taste or smell

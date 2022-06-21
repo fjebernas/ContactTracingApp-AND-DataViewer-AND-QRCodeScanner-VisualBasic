@@ -1,0 +1,24 @@
+Selected type: Faculty
+
+Time submitted: 22/06/2022 1:51:58 am
+
+USER'S DETAILS:
+   First name: Lynn
+   Middle name: Neal
+   Last name: O'Leeum
+   Age: 17
+   Phone number: 0122245
+   Address: Blk.3 Stager St. Hoors Town, MS
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => No
+
+USER'S SYMPTOMS:
+   Cough
+   Sore throat
+   Headaches
+   Chest pain

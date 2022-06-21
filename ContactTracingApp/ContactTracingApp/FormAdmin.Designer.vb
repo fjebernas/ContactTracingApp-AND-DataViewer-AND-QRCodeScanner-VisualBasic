@@ -31,7 +31,11 @@ Partial Class FormAdmin
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblFooter = New System.Windows.Forms.Label()
         Me.panelNav = New System.Windows.Forms.Panel()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.listBxEntries = New System.Windows.Forms.ListBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtBxSearch = New System.Windows.Forms.TextBox()
         Me.panelContent = New System.Windows.Forms.Panel()
         Me.gbxSymptoms = New System.Windows.Forms.GroupBox()
         Me.lblHeadaches = New System.Windows.Forms.Label()
@@ -72,8 +76,6 @@ Partial Class FormAdmin
         Me.lblMiddleName = New System.Windows.Forms.Label()
         Me.txtBxFirstName = New System.Windows.Forms.TextBox()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelBottom.SuspendLayout()
@@ -92,13 +94,13 @@ Partial Class FormAdmin
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
         Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(944, 85)
+        Me.panelTop.Size = New System.Drawing.Size(970, 85)
         Me.panelTop.TabIndex = 0
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(190, 10)
+        Me.PictureBox1.Location = New System.Drawing.Point(191, 10)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
         Me.PictureBox1.TabIndex = 1
@@ -109,7 +111,7 @@ Partial Class FormAdmin
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(174, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(265, 21)
+        Me.Label1.Location = New System.Drawing.Point(266, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(519, 42)
         Me.Label1.TabIndex = 0
@@ -124,7 +126,7 @@ Partial Class FormAdmin
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.panelBottom.Location = New System.Drawing.Point(0, 579)
         Me.panelBottom.Name = "panelBottom"
-        Me.panelBottom.Size = New System.Drawing.Size(944, 67)
+        Me.panelBottom.Size = New System.Drawing.Size(970, 67)
         Me.panelBottom.TabIndex = 1
         '
         'linklblGithub
@@ -133,7 +135,7 @@ Partial Class FormAdmin
         Me.linklblGithub.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.linklblGithub.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.linklblGithub.LinkColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.linklblGithub.Location = New System.Drawing.Point(388, 37)
+        Me.linklblGithub.Location = New System.Drawing.Point(379, 37)
         Me.linklblGithub.Name = "linklblGithub"
         Me.linklblGithub.Size = New System.Drawing.Size(479, 17)
         Me.linklblGithub.TabIndex = 113
@@ -145,7 +147,7 @@ Partial Class FormAdmin
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(137, 37)
+        Me.Label2.Location = New System.Drawing.Point(128, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(250, 17)
         Me.Label2.TabIndex = 112
@@ -156,7 +158,7 @@ Partial Class FormAdmin
         Me.lblFooter.AutoSize = True
         Me.lblFooter.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFooter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
-        Me.lblFooter.Location = New System.Drawing.Point(354, 14)
+        Me.lblFooter.Location = New System.Drawing.Point(345, 14)
         Me.lblFooter.Name = "lblFooter"
         Me.lblFooter.Size = New System.Drawing.Size(291, 17)
         Me.lblFooter.TabIndex = 112
@@ -165,27 +167,81 @@ Partial Class FormAdmin
         'panelNav
         '
         Me.panelNav.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.panelNav.Controls.Add(Me.btnSearch)
         Me.panelNav.Controls.Add(Me.listBxEntries)
         Me.panelNav.Controls.Add(Me.Label4)
         Me.panelNav.Controls.Add(Me.Label3)
+        Me.panelNav.Controls.Add(Me.txtBxSearch)
         Me.panelNav.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelNav.Location = New System.Drawing.Point(0, 85)
         Me.panelNav.Name = "panelNav"
-        Me.panelNav.Size = New System.Drawing.Size(265, 494)
+        Me.panelNav.Size = New System.Drawing.Size(307, 494)
         Me.panelNav.TabIndex = 2
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.Purple
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSearch.Image = CType(resources.GetObject("btnSearch.Image"), System.Drawing.Image)
+        Me.btnSearch.Location = New System.Drawing.Point(196, 10)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(92, 33)
+        Me.btnSearch.TabIndex = 113
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'listBxEntries
         '
         Me.listBxEntries.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(203, Byte), Integer))
         Me.listBxEntries.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listBxEntries.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listBxEntries.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listBxEntries.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.listBxEntries.FormattingEnabled = True
-        Me.listBxEntries.ItemHeight = 16
-        Me.listBxEntries.Location = New System.Drawing.Point(24, 52)
+        Me.listBxEntries.ItemHeight = 20
+        Me.listBxEntries.Location = New System.Drawing.Point(24, 94)
         Me.listBxEntries.Name = "listBxEntries"
-        Me.listBxEntries.Size = New System.Drawing.Size(220, 416)
+        Me.listBxEntries.Size = New System.Drawing.Size(255, 380)
         Me.listBxEntries.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(19, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 20)
+        Me.Label4.TabIndex = 112
+        Me.Label4.Text = "his/her info:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(20, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(234, 20)
+        Me.Label3.TabIndex = 112
+        Me.Label3.Text = "Double-click a name to display"
+        '
+        'txtBxSearch
+        '
+        Me.txtBxSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtBxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBxSearch.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBxSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.txtBxSearch.Location = New System.Drawing.Point(21, 13)
+        Me.txtBxSearch.Multiline = True
+        Me.txtBxSearch.Name = "txtBxSearch"
+        Me.txtBxSearch.Size = New System.Drawing.Size(168, 26)
+        Me.txtBxSearch.TabIndex = 2
+        Me.txtBxSearch.Tag = "requiredField"
+        Me.txtBxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'panelContent
         '
@@ -216,9 +272,9 @@ Partial Class FormAdmin
         Me.panelContent.Controls.Add(Me.txtBxFirstName)
         Me.panelContent.Controls.Add(Me.lblFirstName)
         Me.panelContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelContent.Location = New System.Drawing.Point(265, 85)
+        Me.panelContent.Location = New System.Drawing.Point(307, 85)
         Me.panelContent.Name = "panelContent"
-        Me.panelContent.Size = New System.Drawing.Size(679, 494)
+        Me.panelContent.Size = New System.Drawing.Size(663, 494)
         Me.panelContent.TabIndex = 3
         '
         'gbxSymptoms
@@ -508,6 +564,7 @@ Partial Class FormAdmin
         Me.txtBxCpNum.Location = New System.Drawing.Point(389, 138)
         Me.txtBxCpNum.Multiline = True
         Me.txtBxCpNum.Name = "txtBxCpNum"
+        Me.txtBxCpNum.ReadOnly = True
         Me.txtBxCpNum.Size = New System.Drawing.Size(166, 32)
         Me.txtBxCpNum.TabIndex = 12
         Me.txtBxCpNum.Tag = "requiredField"
@@ -533,6 +590,7 @@ Partial Class FormAdmin
         Me.txtBxGender.Location = New System.Drawing.Point(562, 138)
         Me.txtBxGender.Multiline = True
         Me.txtBxGender.Name = "txtBxGender"
+        Me.txtBxGender.ReadOnly = True
         Me.txtBxGender.Size = New System.Drawing.Size(57, 32)
         Me.txtBxGender.TabIndex = 13
         Me.txtBxGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -557,6 +615,7 @@ Partial Class FormAdmin
         Me.txtBxAddress.Location = New System.Drawing.Point(38, 138)
         Me.txtBxAddress.Multiline = True
         Me.txtBxAddress.Name = "txtBxAddress"
+        Me.txtBxAddress.ReadOnly = True
         Me.txtBxAddress.Size = New System.Drawing.Size(342, 32)
         Me.txtBxAddress.TabIndex = 11
         Me.txtBxAddress.Tag = "requiredField"
@@ -582,6 +641,7 @@ Partial Class FormAdmin
         Me.txtBxAge.Location = New System.Drawing.Point(560, 69)
         Me.txtBxAge.Multiline = True
         Me.txtBxAge.Name = "txtBxAge"
+        Me.txtBxAge.ReadOnly = True
         Me.txtBxAge.Size = New System.Drawing.Size(57, 32)
         Me.txtBxAge.TabIndex = 6
         Me.txtBxAge.Tag = "requiredField"
@@ -607,6 +667,7 @@ Partial Class FormAdmin
         Me.txtBxLastName.Location = New System.Drawing.Point(386, 69)
         Me.txtBxLastName.Multiline = True
         Me.txtBxLastName.Name = "txtBxLastName"
+        Me.txtBxLastName.ReadOnly = True
         Me.txtBxLastName.Size = New System.Drawing.Size(168, 32)
         Me.txtBxLastName.TabIndex = 2
         Me.txtBxLastName.Tag = "requiredField"
@@ -632,6 +693,7 @@ Partial Class FormAdmin
         Me.txtBxMiddleName.Location = New System.Drawing.Point(212, 69)
         Me.txtBxMiddleName.Multiline = True
         Me.txtBxMiddleName.Name = "txtBxMiddleName"
+        Me.txtBxMiddleName.ReadOnly = True
         Me.txtBxMiddleName.Size = New System.Drawing.Size(168, 32)
         Me.txtBxMiddleName.TabIndex = 2
         Me.txtBxMiddleName.Tag = "requiredField"
@@ -657,6 +719,7 @@ Partial Class FormAdmin
         Me.txtBxFirstName.Location = New System.Drawing.Point(38, 69)
         Me.txtBxFirstName.Multiline = True
         Me.txtBxFirstName.Name = "txtBxFirstName"
+        Me.txtBxFirstName.ReadOnly = True
         Me.txtBxFirstName.Size = New System.Drawing.Size(168, 32)
         Me.txtBxFirstName.TabIndex = 2
         Me.txtBxFirstName.Tag = "requiredField"
@@ -673,33 +736,11 @@ Partial Class FormAdmin
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First Name"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(20, 7)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(234, 20)
-        Me.Label3.TabIndex = 112
-        Me.Label3.Text = "Double-click a name to display"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(19, 24)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 20)
-        Me.Label4.TabIndex = 112
-        Me.Label4.Text = "his/her info:"
-        '
         'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 646)
+        Me.ClientSize = New System.Drawing.Size(970, 646)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelNav)
         Me.Controls.Add(Me.panelBottom)
@@ -779,4 +820,6 @@ Partial Class FormAdmin
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtBxSearch As TextBox
 End Class

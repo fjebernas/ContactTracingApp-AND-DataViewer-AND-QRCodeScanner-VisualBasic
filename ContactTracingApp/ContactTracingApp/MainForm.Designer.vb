@@ -30,8 +30,11 @@ Partial Class FormMain
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnFaculty = New System.Windows.Forms.Button()
         Me.panelTop = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.picBxAdmin = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblWelcomeH2 = New System.Windows.Forms.Label()
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -84,6 +87,7 @@ Partial Class FormMain
         Me.timerDate = New System.Windows.Forms.Timer(Me.components)
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
@@ -169,8 +173,11 @@ Partial Class FormMain
         'panelTop
         '
         Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.PictureBox2)
         Me.panelTop.Controls.Add(Me.picBxAdmin)
         Me.panelTop.Controls.Add(Me.PictureBox1)
+        Me.panelTop.Controls.Add(Me.Label2)
+        Me.panelTop.Controls.Add(Me.Label1)
         Me.panelTop.Controls.Add(Me.lblWelcomeH2)
         Me.panelTop.Controls.Add(Me.lblWelcomeH1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
@@ -179,6 +186,16 @@ Partial Class FormMain
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(658, 133)
         Me.panelTop.TabIndex = 1
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(622, 60)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(25, 23)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
         '
         'picBxAdmin
         '
@@ -193,11 +210,33 @@ Partial Class FormMain
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(91, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(90, 30)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(582, 102)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 17)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "if admin"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(570, 85)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Click above"
         '
         'lblWelcomeH2
         '
@@ -215,7 +254,7 @@ Partial Class FormMain
         Me.lblWelcomeH1.AutoSize = True
         Me.lblWelcomeH1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcomeH1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.lblWelcomeH1.Location = New System.Drawing.Point(166, 40)
+        Me.lblWelcomeH1.Location = New System.Drawing.Point(165, 40)
         Me.lblWelcomeH1.Name = "lblWelcomeH1"
         Me.lblWelcomeH1.Size = New System.Drawing.Size(379, 42)
         Me.lblWelcomeH1.TabIndex = 0
@@ -840,6 +879,7 @@ Partial Class FormMain
         Me.panelBottom.ResumeLayout(False)
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContent.ResumeLayout(False)
@@ -910,4 +950,7 @@ Partial Class FormMain
     Friend WithEvents lblRequired6 As Label
     Friend WithEvents lblRequired5 As Label
     Friend WithEvents picBxAdmin As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

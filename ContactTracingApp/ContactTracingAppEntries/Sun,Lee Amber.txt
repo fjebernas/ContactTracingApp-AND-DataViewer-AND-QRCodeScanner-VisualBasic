@@ -1,0 +1,23 @@
+Selected type: Student
+
+Time submitted: 22/06/2022 1:54:57 am
+
+USER'S DETAILS:
+   First name: Lee
+   Middle name: Amber
+   Last name: Sun
+   Age: 20
+   Phone number: 0911242
+   Address: 1212 Blk.6 Tree St. CH, US
+   Gender: M
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Cough
+   Sore throat
+   Tiredness

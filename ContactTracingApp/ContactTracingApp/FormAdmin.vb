@@ -30,7 +30,7 @@ Public Class FormAdmin
     End Sub
 
     Private Sub FormAdmin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        formMain.Close()
+        formMain.Show()
         formAdminLogin.Close()
     End Sub
 
@@ -54,10 +54,14 @@ Public Class FormAdmin
     End Sub
 
     Private Sub listBxEntries_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles listBxEntries.MouseDoubleClick
-        indexListBx = listBxEntries.IndexFromPoint(e.Location)
-        If Not (indexListBx = ListBox.NoMatches) Then
-            DisplayData(indexListBx)
-        End If
+        Try
+            indexListBx = listBxEntries.IndexFromPoint(e.Location)
+            If Not (indexListBx = ListBox.NoMatches) Then
+                DisplayData(indexListBx)
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub DisplayData(ByRef indexListBx As Byte)
@@ -107,5 +111,43 @@ Public Class FormAdmin
                     lblHeadaches.ForeColor = colorOn
             End Select
         Next
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim keyWord As String
+        keyWord = txtBxSearch.Text
+
+        Dim listOfNames As New List(Of String)()
+        For Each fileName As String In fileNames
+            fileName = Path.GetFileName(fileName)
+            fileName = fileName.Replace(".txt", "")
+            listOfNames.Add(fileName)
+        Next
+
+        Dim arrayOfNames() As String
+        arrayOfNames = listOfNames.ToArray()
+
+        If keyWord.Length >= 3 Then
+            For Each name As String In arrayOfNames
+                If name.ToLower().Contains(keyWord.ToLower()) Then
+                    listBxEntries.Text = name
+                    DisplayData(listBxEntries.SelectedIndex)
+                    Return
+                End If
+            Next
+
+            If Not ((listBxEntries.Text).ToLower()).Contains(keyWord.ToLower()) Then
+                MessageBox.Show("Name not found", "Notification")
+            End If
+        Else
+            MessageBox.Show("Please enter atleast 3 characters", "Notification")
+        End If
+    End Sub
+
+    Private Sub txtBxSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBxSearch.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnSearch.PerformClick()
+            txtBxSearch.Text = ""
+        End If
     End Sub
 End Class

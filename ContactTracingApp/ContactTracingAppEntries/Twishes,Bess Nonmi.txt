@@ -1,0 +1,25 @@
+Selected type: Guest
+
+Time submitted: 22/06/2022 2:06:55 am
+
+USER'S DETAILS:
+   First name: Bess
+   Middle name: Nonmi
+   Last name: Twishes
+   Age: 56
+   Phone number: 08121212
+   Address: A Bldg. Decco St. NY, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Not sure
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Sore throat
+   Headaches
+   Tiredness
+   Chest pain

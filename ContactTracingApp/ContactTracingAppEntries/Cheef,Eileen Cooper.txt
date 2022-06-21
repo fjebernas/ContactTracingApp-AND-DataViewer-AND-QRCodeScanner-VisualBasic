@@ -1,0 +1,24 @@
+Selected type: Student
+
+Time submitted: 22/06/2022 1:53:07 am
+
+USER'S DETAILS:
+   First name: Eileen
+   Middle name: Cooper
+   Last name: Cheef
+   Age: 16
+   Phone number: 827112
+   Address: Bld.6 Kewshun St. Col, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => No
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Not sure
+
+USER'S SYMPTOMS:
+   Headaches
+   Tiredness
+   Loss of taste or smell
+   Fever

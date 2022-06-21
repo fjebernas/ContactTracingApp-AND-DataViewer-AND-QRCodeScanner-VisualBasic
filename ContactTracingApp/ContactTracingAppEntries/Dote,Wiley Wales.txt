@@ -1,0 +1,26 @@
+Selected type: Guest
+
+Time submitted: 22/06/2022 2:13:46 am
+
+USER'S DETAILS:
+   First name: Wiley
+   Middle name: Wales
+   Last name: Dote
+   Age: 34
+   Phone number: 081241212
+   Address: Leek Bldg. Labor St. WS, US
+   Gender: M
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Yes
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Diarrhea
+   Tiredness
+   Chest pain
+   Fever

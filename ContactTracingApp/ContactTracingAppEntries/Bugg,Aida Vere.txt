@@ -1,0 +1,25 @@
+Selected type: Faculty
+
+Time submitted: 22/06/2022 1:50:00 am
+
+USER'S DETAILS:
+   First name: Aida
+   Middle name: Vere
+   Last name: Bugg
+   Age: 53
+   Phone number: 0082112
+   Address: Stockbrook St. NY, US
+   Gender: F
+
+USER'S ANSWERS:
+1. Have you traveled outside the country anytime from last month until now?
+   Answer => Yes
+2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?
+   Answer => Not sure
+
+USER'S SYMPTOMS:
+   Difficulty breathing
+   Cough
+   Sore throat
+   Headaches
+   Tiredness
