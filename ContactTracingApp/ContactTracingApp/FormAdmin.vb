@@ -7,6 +7,8 @@ Public Class FormAdmin
     Dim colorOn As Color = Color.FromArgb(10, 112, 41)
     Dim colorOff As Color = Color.FromArgb(180, 170, 169)
 
+    Dim indexListBx As Byte
+
     Public Sub New(ByVal formMain As FormMain, ByVal formAdminLogin As FormAdminLogin)
 
         ' This call is required by the designer.
@@ -32,10 +34,36 @@ Public Class FormAdmin
         formAdminLogin.Close()
     End Sub
 
-    Private Sub btnDisplayData_Click(sender As Object, e As EventArgs) Handles btnDisplayData.Click
+    Private Sub ClearControls()
+        For Each txtBx As TextBox In panelContent.Controls.OfType(Of TextBox)
+            txtBx.Text = ""
+        Next
+        For Each answer As Label In gbxFirstQuestion.Controls.OfType(Of Label)
+            answer.ForeColor = colorOff
+        Next
+        For Each answer As Label In gbxSecondQuestion.Controls.OfType(Of Label)
+            answer.ForeColor = colorOff
+        Next
+        For Each symptom As Label In gbxSymptoms.Controls.OfType(Of Label)
+            symptom.ForeColor = colorOff
+        Next
+    End Sub
+
+    Private Sub linklblGithub_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklblGithub.LinkClicked
+        Process.Start("https://github.com/fjebernas/ContactTracingApp-AND-DataViewer-VisualBasic")
+    End Sub
+
+    Private Sub listBxEntries_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles listBxEntries.MouseDoubleClick
+        indexListBx = listBxEntries.IndexFromPoint(e.Location)
+        If Not (indexListBx = ListBox.NoMatches) Then
+            DisplayData(indexListBx)
+        End If
+    End Sub
+
+    Private Sub DisplayData(ByRef indexListBx As Byte)
         ClearControls()
         Dim lines() As String
-        lines = File.ReadAllLines(User.PATH & listBxEntries.Text & ".txt")
+        lines = File.ReadAllLines(User.PATH & listBxEntries.Items(indexListBx) & ".txt")
         lblSelected.Text = lines(0).Replace("Selected type: ", "")
         lblDate.Text = lines(2).Replace("Time submitted: ", "")
         txtBxFirstName.Text = lines(5).Replace("   First name: ", "")
@@ -79,24 +107,5 @@ Public Class FormAdmin
                     lblHeadaches.ForeColor = colorOn
             End Select
         Next
-    End Sub
-
-    Private Sub ClearControls()
-        For Each txtBx As TextBox In panelContent.Controls.OfType(Of TextBox)
-            txtBx.Text = ""
-        Next
-        For Each answer As Label In gbxFirstQuestion.Controls.OfType(Of Label)
-            answer.ForeColor = colorOff
-        Next
-        For Each answer As Label In gbxSecondQuestion.Controls.OfType(Of Label)
-            answer.ForeColor = colorOff
-        Next
-        For Each symptom As Label In gbxSymptoms.Controls.OfType(Of Label)
-            symptom.ForeColor = colorOff
-        Next
-    End Sub
-
-    Private Sub linklblGithub_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklblGithub.LinkClicked
-        Process.Start("https://github.com/fjebernas/ContactTracingApp-AND-DataViewer-VisualBasic")
     End Sub
 End Class
