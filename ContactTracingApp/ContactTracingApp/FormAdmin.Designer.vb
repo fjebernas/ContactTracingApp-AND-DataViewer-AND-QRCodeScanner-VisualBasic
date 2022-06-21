@@ -69,17 +69,24 @@ Partial Class FormAdmin
         Me.lblChestPain = New System.Windows.Forms.Label()
         Me.lblTiredness = New System.Windows.Forms.Label()
         Me.lblHeadaches = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblFooter = New System.Windows.Forms.Label()
+        Me.linklblGithub = New System.Windows.Forms.LinkLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.panelTop.SuspendLayout()
+        Me.panelBottom.SuspendLayout()
         Me.panelNav.SuspendLayout()
         Me.panelContent.SuspendLayout()
         Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
         Me.gbxSymptoms.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelTop
         '
         Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.PictureBox1)
         Me.panelTop.Controls.Add(Me.Label1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
@@ -92,7 +99,7 @@ Partial Class FormAdmin
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(174, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(213, 21)
+        Me.Label1.Location = New System.Drawing.Point(265, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(519, 42)
         Me.Label1.TabIndex = 0
@@ -101,10 +108,13 @@ Partial Class FormAdmin
         'panelBottom
         '
         Me.panelBottom.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.panelBottom.Controls.Add(Me.linklblGithub)
+        Me.panelBottom.Controls.Add(Me.Label2)
+        Me.panelBottom.Controls.Add(Me.lblFooter)
         Me.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBottom.Location = New System.Drawing.Point(0, 583)
+        Me.panelBottom.Location = New System.Drawing.Point(0, 579)
         Me.panelBottom.Name = "panelBottom"
-        Me.panelBottom.Size = New System.Drawing.Size(944, 48)
+        Me.panelBottom.Size = New System.Drawing.Size(944, 67)
         Me.panelBottom.TabIndex = 1
         '
         'panelNav
@@ -115,7 +125,7 @@ Partial Class FormAdmin
         Me.panelNav.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelNav.Location = New System.Drawing.Point(0, 85)
         Me.panelNav.Name = "panelNav"
-        Me.panelNav.Size = New System.Drawing.Size(265, 498)
+        Me.panelNav.Size = New System.Drawing.Size(265, 494)
         Me.panelNav.TabIndex = 2
         '
         'btnDisplayData
@@ -174,15 +184,15 @@ Partial Class FormAdmin
         Me.panelContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContent.Location = New System.Drawing.Point(265, 85)
         Me.panelContent.Name = "panelContent"
-        Me.panelContent.Size = New System.Drawing.Size(679, 498)
+        Me.panelContent.Size = New System.Drawing.Size(679, 494)
         Me.panelContent.TabIndex = 3
         '
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Font = New System.Drawing.Font("Century Gothic", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblDate.Location = New System.Drawing.Point(451, 14)
+        Me.lblDate.Location = New System.Drawing.Point(451, 13)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(0, 18)
         Me.lblDate.TabIndex = 113
@@ -629,11 +639,55 @@ Partial Class FormAdmin
         Me.lblHeadaches.TabIndex = 113
         Me.lblHeadaches.Text = "Headaches"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(190, 10)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'lblFooter
+        '
+        Me.lblFooter.AutoSize = True
+        Me.lblFooter.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFooter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.lblFooter.Location = New System.Drawing.Point(354, 14)
+        Me.lblFooter.Name = "lblFooter"
+        Me.lblFooter.Size = New System.Drawing.Size(291, 17)
+        Me.lblFooter.TabIndex = 112
+        Me.lblFooter.Text = "Contact Tracing App and Data Viewer 2022"
+        '
+        'linklblGithub
+        '
+        Me.linklblGithub.AutoSize = True
+        Me.linklblGithub.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.linklblGithub.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.linklblGithub.LinkColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.linklblGithub.Location = New System.Drawing.Point(388, 37)
+        Me.linklblGithub.Name = "linklblGithub"
+        Me.linklblGithub.Size = New System.Drawing.Size(479, 17)
+        Me.linklblGithub.TabIndex = 113
+        Me.linklblGithub.TabStop = True
+        Me.linklblGithub.Text = "https://github.com/fjebernas/ContactTracingApp-AND-DataViewer-VisualBasic"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(137, 37)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(250, 17)
+        Me.Label2.TabIndex = 112
+        Me.Label2.Text = "Francis Joseph E. Bernas | Github link:"
+        '
         'FormAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 631)
+        Me.ClientSize = New System.Drawing.Size(944, 646)
         Me.Controls.Add(Me.panelContent)
         Me.Controls.Add(Me.panelNav)
         Me.Controls.Add(Me.panelBottom)
@@ -645,6 +699,8 @@ Partial Class FormAdmin
         Me.Text = "Contact Tracing Data Viewer"
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
+        Me.panelBottom.ResumeLayout(False)
+        Me.panelBottom.PerformLayout()
         Me.panelNav.ResumeLayout(False)
         Me.panelContent.ResumeLayout(False)
         Me.panelContent.PerformLayout()
@@ -654,6 +710,7 @@ Partial Class FormAdmin
         Me.gbxFirstQuestion.PerformLayout()
         Me.gbxSymptoms.ResumeLayout(False)
         Me.gbxSymptoms.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -704,4 +761,8 @@ Partial Class FormAdmin
     Friend WithEvents lblChestPain As Label
     Friend WithEvents lblLossOfTasteAndSmell As Label
     Friend WithEvents lblFever As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents linklblGithub As LinkLabel
+    Friend WithEvents lblFooter As Label
+    Friend WithEvents Label2 As Label
 End Class

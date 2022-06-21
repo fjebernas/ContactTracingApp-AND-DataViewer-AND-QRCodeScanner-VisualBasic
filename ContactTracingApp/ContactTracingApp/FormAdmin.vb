@@ -4,7 +4,7 @@ Public Class FormAdmin
     Dim formMain As FormMain
     Dim formAdminLogin As FormAdminLogin
     Dim fileNames() As String
-    Dim colorOn As Color = Color.FromArgb(26, 67, 20)
+    Dim colorOn As Color = Color.FromArgb(10, 112, 41)
     Dim colorOff As Color = Color.FromArgb(180, 170, 169)
 
     Public Sub New(ByVal formMain As FormMain, ByVal formAdminLogin As FormAdminLogin)
@@ -94,5 +94,9 @@ Public Class FormAdmin
         For Each symptom As Label In gbxSymptoms.Controls.OfType(Of Label)
             symptom.ForeColor = colorOff
         Next
+    End Sub
+
+    Private Sub linklblGithub_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklblGithub.LinkClicked
+        Process.Start("https://github.com/fjebernas/ContactTracingApp-AND-DataViewer-VisualBasic")
     End Sub
 End Class

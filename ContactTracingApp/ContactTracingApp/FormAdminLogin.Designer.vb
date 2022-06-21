@@ -100,7 +100,7 @@ Partial Class FormAdminLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormAdminLogin"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Admin login"
         Me.gbxLogin.ResumeLayout(False)
         Me.gbxLogin.PerformLayout()
