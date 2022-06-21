@@ -18,7 +18,8 @@
             Dim formAdmin As FormAdmin = New FormAdmin(formMain, Me)
             formAdmin.Show()
         Else
-            MessageBox.Show("wrong password!")
+            lblWrongPassword.Visible = True
+            txtBxPassword.Text = ""
         End If
     End Sub
 

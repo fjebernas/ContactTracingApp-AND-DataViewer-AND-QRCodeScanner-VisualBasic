@@ -28,6 +28,7 @@ Partial Class FormAdminLogin
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.gbxLogin = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblWrongPassword = New System.Windows.Forms.Label()
         Me.gbxLogin.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,6 +49,7 @@ Partial Class FormAdminLogin
         Me.txtBxPassword.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxPassword.Location = New System.Drawing.Point(27, 54)
         Me.txtBxPassword.Name = "txtBxPassword"
+        Me.txtBxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtBxPassword.Size = New System.Drawing.Size(124, 21)
         Me.txtBxPassword.TabIndex = 1
         '
@@ -68,6 +70,7 @@ Partial Class FormAdminLogin
         '
         'gbxLogin
         '
+        Me.gbxLogin.Controls.Add(Me.lblWrongPassword)
         Me.gbxLogin.Controls.Add(Me.lblPassword)
         Me.gbxLogin.Controls.Add(Me.btnLogin)
         Me.gbxLogin.Controls.Add(Me.txtBxPassword)
@@ -88,6 +91,17 @@ Partial Class FormAdminLogin
         Me.PictureBox1.Size = New System.Drawing.Size(130, 129)
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
+        '
+        'lblWrongPassword
+        '
+        Me.lblWrongPassword.AutoSize = True
+        Me.lblWrongPassword.ForeColor = System.Drawing.Color.Red
+        Me.lblWrongPassword.Location = New System.Drawing.Point(114, 9)
+        Me.lblWrongPassword.Name = "lblWrongPassword"
+        Me.lblWrongPassword.Size = New System.Drawing.Size(99, 16)
+        Me.lblWrongPassword.TabIndex = 3
+        Me.lblWrongPassword.Text = "wrong password!"
+        Me.lblWrongPassword.Visible = False
         '
         'FormAdminLogin
         '
@@ -114,4 +128,5 @@ Partial Class FormAdminLogin
     Friend WithEvents btnLogin As Button
     Friend WithEvents gbxLogin As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblWrongPassword As Label
 End Class
