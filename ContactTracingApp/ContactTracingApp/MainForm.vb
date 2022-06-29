@@ -173,16 +173,23 @@ Public Class FormMain
         ResetToStart()
     End Sub
 
-    Private Sub picBxAdmin_Click(sender As Object, e As EventArgs) Handles picBxAdmin.Click
-        Dim formAdminLogin As FormAdminLogin = New FormAdminLogin(Me)
-        formAdminLogin.ShowDialog()
-    End Sub
-
     Private Sub picBxOptions_Click(sender As Object, e As EventArgs) Handles picBxOptions.Click
         If panelOptions.Visible = False Then
             panelOptions.Visible = True
         Else
             panelOptions.Visible = False
         End If
+    End Sub
+
+    Private Sub picBxAdmin_Click(sender As Object, e As EventArgs) Handles picBxAdmin.Click
+        Dim formAdminLogin As FormAdminLogin = New FormAdminLogin(Me)
+        picBxOptions_Click(Me.picBxOptions, e)
+        formAdminLogin.ShowDialog()
+    End Sub
+
+    Private Sub picBxQRCode_Click(sender As Object, e As EventArgs) Handles picBxQRCode.Click
+        Dim formQRCodeScanner As FormQRCodeScanner = New FormQRCodeScanner()
+        picBxOptions_Click(Me.picBxOptions, e)
+        formQRCodeScanner.Show()
     End Sub
 End Class
