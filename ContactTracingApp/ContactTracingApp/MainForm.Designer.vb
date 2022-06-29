@@ -880,7 +880,7 @@ Partial Class FormMain
         Me.panelOptions.Controls.Add(Me.Label2)
         Me.panelOptions.Controls.Add(Me.Label3)
         Me.panelOptions.Controls.Add(Me.Label1)
-        Me.panelOptions.Location = New System.Drawing.Point(319, 0)
+        Me.panelOptions.Location = New System.Drawing.Point(321, 0)
         Me.panelOptions.Name = "panelOptions"
         Me.panelOptions.Size = New System.Drawing.Size(339, 133)
         Me.panelOptions.TabIndex = 4
@@ -930,6 +930,7 @@ Partial Class FormMain
         '
         'picBxOptions
         '
+        Me.picBxOptions.BackColor = System.Drawing.Color.DarkSlateGray
         Me.picBxOptions.Image = CType(resources.GetObject("picBxOptions.Image"), System.Drawing.Image)
         Me.picBxOptions.Location = New System.Drawing.Point(606, 12)
         Me.picBxOptions.Name = "picBxOptions"
