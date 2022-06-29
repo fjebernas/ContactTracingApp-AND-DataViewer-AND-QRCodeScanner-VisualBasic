@@ -27,8 +27,8 @@ Partial Class FormAdminLogin
         Me.txtBxPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.gbxLogin = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWrongPassword = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.gbxLogin.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,6 +46,7 @@ Partial Class FormAdminLogin
         '
         'txtBxPassword
         '
+        Me.txtBxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(223, Byte), Integer))
         Me.txtBxPassword.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBxPassword.Location = New System.Drawing.Point(27, 54)
         Me.txtBxPassword.Name = "txtBxPassword"
@@ -83,15 +84,6 @@ Partial Class FormAdminLogin
         Me.gbxLogin.TabStop = False
         Me.gbxLogin.Text = "Making sure it's you"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(39, 33)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(130, 129)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
         'lblWrongPassword
         '
         Me.lblWrongPassword.AutoSize = True
@@ -103,6 +95,15 @@ Partial Class FormAdminLogin
         Me.lblWrongPassword.Text = "wrong password!"
         Me.lblWrongPassword.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(39, 33)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(130, 129)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
         'FormAdminLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,6 +114,8 @@ Partial Class FormAdminLogin
         Me.Controls.Add(Me.gbxLogin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormAdminLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Admin login"
