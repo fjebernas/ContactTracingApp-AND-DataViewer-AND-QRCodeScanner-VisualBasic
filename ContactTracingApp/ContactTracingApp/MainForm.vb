@@ -177,4 +177,12 @@ Public Class FormMain
         Dim formAdminLogin As FormAdminLogin = New FormAdminLogin(Me)
         formAdminLogin.ShowDialog()
     End Sub
+
+    Private Sub picBxOptions_Click(sender As Object, e As EventArgs) Handles picBxOptions.Click
+        If panelOptions.Visible = False Then
+            panelOptions.Visible = True
+        Else
+            panelOptions.Visible = False
+        End If
+    End Sub
 End Class
