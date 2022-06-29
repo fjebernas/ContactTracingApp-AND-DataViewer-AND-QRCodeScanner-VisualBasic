@@ -871,7 +871,7 @@ Partial Class FormMain
         'panelOptions
         '
         Me.panelOptions.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.panelOptions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.panelOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelOptions.Controls.Add(Me.PictureBox4)
         Me.panelOptions.Controls.Add(Me.picBxQRCode)
         Me.panelOptions.Controls.Add(Me.PictureBox2)
@@ -880,9 +880,9 @@ Partial Class FormMain
         Me.panelOptions.Controls.Add(Me.Label2)
         Me.panelOptions.Controls.Add(Me.Label3)
         Me.panelOptions.Controls.Add(Me.Label1)
-        Me.panelOptions.Location = New System.Drawing.Point(321, 0)
+        Me.panelOptions.Location = New System.Drawing.Point(322, 1)
         Me.panelOptions.Name = "panelOptions"
-        Me.panelOptions.Size = New System.Drawing.Size(339, 133)
+        Me.panelOptions.Size = New System.Drawing.Size(339, 132)
         Me.panelOptions.TabIndex = 4
         Me.panelOptions.Visible = False
         '
@@ -930,7 +930,7 @@ Partial Class FormMain
         '
         'picBxOptions
         '
-        Me.picBxOptions.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.picBxOptions.BackColor = System.Drawing.Color.Transparent
         Me.picBxOptions.Image = CType(resources.GetObject("picBxOptions.Image"), System.Drawing.Image)
         Me.picBxOptions.Location = New System.Drawing.Point(606, 12)
         Me.picBxOptions.Name = "picBxOptions"

@@ -13,3 +13,15 @@ C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\Contac
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.pdb
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.FormAdminLogin.resources
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.FormAdmin.resources
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.FormQRCodeScanner.resources
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.dll
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.Video.dll
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.dll
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.presentation.dll
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.xml
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.Video.xml
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.xml
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.presentation.xml
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.vbproj.CopyComplete

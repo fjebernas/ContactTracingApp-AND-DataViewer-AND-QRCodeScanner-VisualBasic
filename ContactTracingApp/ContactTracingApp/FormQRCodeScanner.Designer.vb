@@ -35,7 +35,7 @@ Partial Class FormQRCodeScanner
         Me.MinimizeBox = False
         Me.Name = "FormQRCodeScanner"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormQRCodeScanner"
+        Me.Text = "Contact Tracing App - QR Code Scanner"
         Me.ResumeLayout(False)
 
     End Sub
