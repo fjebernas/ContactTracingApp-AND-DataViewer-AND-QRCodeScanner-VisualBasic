@@ -33,6 +33,9 @@ Partial Class FormQRCodeScanner
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'timer
+        '
+        '
         'label2
         '
         Me.label2.AutoSize = True
@@ -88,7 +91,7 @@ Partial Class FormQRCodeScanner
         Me.cboBxDevices.FormattingEnabled = True
         Me.cboBxDevices.Location = New System.Drawing.Point(14, 15)
         Me.cboBxDevices.Name = "cboBxDevices"
-        Me.cboBxDevices.Size = New System.Drawing.Size(21, 21)
+        Me.cboBxDevices.Size = New System.Drawing.Size(145, 21)
         Me.cboBxDevices.TabIndex = 7
         Me.cboBxDevices.Visible = False
         '

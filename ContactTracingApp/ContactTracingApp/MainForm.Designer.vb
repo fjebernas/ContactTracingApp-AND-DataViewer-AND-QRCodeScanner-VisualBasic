@@ -30,11 +30,17 @@ Partial Class FormMain
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnFaculty = New System.Windows.Forms.Button()
         Me.panelTop = New System.Windows.Forms.Panel()
+        Me.picBxOptions = New System.Windows.Forms.PictureBox()
+        Me.panelOptions = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.picBxQRCode = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.picBxAdmin = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblWelcomeH2 = New System.Windows.Forms.Label()
         Me.lblWelcomeH1 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -85,24 +91,18 @@ Partial Class FormMain
         Me.lblSelectedLabel = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.timerDate = New System.Windows.Forms.Timer(Me.components)
-        Me.panelOptions = New System.Windows.Forms.Panel()
-        Me.picBxQRCode = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.picBxOptions = New System.Windows.Forms.PictureBox()
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
+        CType(Me.picBxOptions, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelOptions.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBxQRCode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContent.SuspendLayout()
         Me.gbxSecondQuestion.SuspendLayout()
         Me.gbxFirstQuestion.SuspendLayout()
-        Me.panelOptions.SuspendLayout()
-        CType(Me.picBxQRCode, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBxOptions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelBottom
@@ -195,6 +195,55 @@ Partial Class FormMain
         Me.panelTop.Size = New System.Drawing.Size(658, 133)
         Me.panelTop.TabIndex = 1
         '
+        'picBxOptions
+        '
+        Me.picBxOptions.BackColor = System.Drawing.Color.Transparent
+        Me.picBxOptions.Image = CType(resources.GetObject("picBxOptions.Image"), System.Drawing.Image)
+        Me.picBxOptions.Location = New System.Drawing.Point(606, 12)
+        Me.picBxOptions.Name = "picBxOptions"
+        Me.picBxOptions.Size = New System.Drawing.Size(40, 36)
+        Me.picBxOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picBxOptions.TabIndex = 5
+        Me.picBxOptions.TabStop = False
+        '
+        'panelOptions
+        '
+        Me.panelOptions.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.panelOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelOptions.Controls.Add(Me.PictureBox4)
+        Me.panelOptions.Controls.Add(Me.picBxQRCode)
+        Me.panelOptions.Controls.Add(Me.PictureBox2)
+        Me.panelOptions.Controls.Add(Me.picBxAdmin)
+        Me.panelOptions.Controls.Add(Me.Label4)
+        Me.panelOptions.Controls.Add(Me.Label2)
+        Me.panelOptions.Controls.Add(Me.Label3)
+        Me.panelOptions.Controls.Add(Me.Label1)
+        Me.panelOptions.Location = New System.Drawing.Point(322, 1)
+        Me.panelOptions.Name = "panelOptions"
+        Me.panelOptions.Size = New System.Drawing.Size(339, 132)
+        Me.panelOptions.TabIndex = 4
+        Me.panelOptions.Visible = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(245, 102)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(25, 23)
+        Me.PictureBox4.TabIndex = 3
+        Me.PictureBox4.TabStop = False
+        '
+        'picBxQRCode
+        '
+        Me.picBxQRCode.Image = CType(resources.GetObject("picBxQRCode.Image"), System.Drawing.Image)
+        Me.picBxQRCode.Location = New System.Drawing.Point(199, 60)
+        Me.picBxQRCode.Name = "picBxQRCode"
+        Me.picBxQRCode.Size = New System.Drawing.Size(71, 67)
+        Me.picBxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picBxQRCode.TabIndex = 4
+        Me.picBxQRCode.TabStop = False
+        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
@@ -214,15 +263,16 @@ Partial Class FormMain
         Me.picBxAdmin.TabIndex = 2
         Me.picBxAdmin.TabStop = False
         '
-        'PictureBox1
+        'Label4
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(90, 30)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(74, 97)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(119, 17)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "QR code scanner"
         '
         'Label2
         '
@@ -235,6 +285,17 @@ Partial Class FormMain
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "(Admin access only)"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(97, 80)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(98, 17)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Click to go to"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -245,6 +306,16 @@ Partial Class FormMain
         Me.Label1.Size = New System.Drawing.Size(153, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Click to see all records"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(90, 30)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'lblWelcomeH2
         '
@@ -868,77 +939,6 @@ Partial Class FormMain
         '
         Me.timerDate.Interval = 1000
         '
-        'panelOptions
-        '
-        Me.panelOptions.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.panelOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelOptions.Controls.Add(Me.PictureBox4)
-        Me.panelOptions.Controls.Add(Me.picBxQRCode)
-        Me.panelOptions.Controls.Add(Me.PictureBox2)
-        Me.panelOptions.Controls.Add(Me.picBxAdmin)
-        Me.panelOptions.Controls.Add(Me.Label4)
-        Me.panelOptions.Controls.Add(Me.Label2)
-        Me.panelOptions.Controls.Add(Me.Label3)
-        Me.panelOptions.Controls.Add(Me.Label1)
-        Me.panelOptions.Location = New System.Drawing.Point(322, 1)
-        Me.panelOptions.Name = "panelOptions"
-        Me.panelOptions.Size = New System.Drawing.Size(339, 132)
-        Me.panelOptions.TabIndex = 4
-        Me.panelOptions.Visible = False
-        '
-        'picBxQRCode
-        '
-        Me.picBxQRCode.Image = CType(resources.GetObject("picBxQRCode.Image"), System.Drawing.Image)
-        Me.picBxQRCode.Location = New System.Drawing.Point(199, 60)
-        Me.picBxQRCode.Name = "picBxQRCode"
-        Me.picBxQRCode.Size = New System.Drawing.Size(71, 67)
-        Me.picBxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.picBxQRCode.TabIndex = 4
-        Me.picBxQRCode.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(245, 102)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(25, 23)
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(97, 80)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 17)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Click to go to"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(74, 97)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 17)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "QR code scanner"
-        '
-        'picBxOptions
-        '
-        Me.picBxOptions.BackColor = System.Drawing.Color.Transparent
-        Me.picBxOptions.Image = CType(resources.GetObject("picBxOptions.Image"), System.Drawing.Image)
-        Me.picBxOptions.Location = New System.Drawing.Point(606, 12)
-        Me.picBxOptions.Name = "picBxOptions"
-        Me.picBxOptions.Size = New System.Drawing.Size(40, 36)
-        Me.picBxOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.picBxOptions.TabIndex = 5
-        Me.picBxOptions.TabStop = False
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -960,6 +960,11 @@ Partial Class FormMain
         Me.panelBottom.ResumeLayout(False)
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
+        CType(Me.picBxOptions, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelOptions.ResumeLayout(False)
+        Me.panelOptions.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBxQRCode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBxAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -969,11 +974,6 @@ Partial Class FormMain
         Me.gbxSecondQuestion.PerformLayout()
         Me.gbxFirstQuestion.ResumeLayout(False)
         Me.gbxFirstQuestion.PerformLayout()
-        Me.panelOptions.ResumeLayout(False)
-        Me.panelOptions.PerformLayout()
-        CType(Me.picBxQRCode, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBxOptions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
