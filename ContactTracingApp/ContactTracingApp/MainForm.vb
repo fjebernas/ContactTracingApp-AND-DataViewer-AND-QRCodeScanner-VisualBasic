@@ -5,6 +5,7 @@ Public Class FormMain
     ReadOnly formMinHeight As UShort
     ReadOnly formMaxHeight As UShort
     Dim isFormOpen As Boolean
+    Dim isPanelOptionsOpen As Boolean
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,6 +18,7 @@ Public Class FormMain
         formMinHeight = 310
         formMaxHeight = 840
         isFormOpen = False
+        isPanelOptionsOpen = False
     End Sub
 
     Private Sub btnUserType_Click(sender As Object, e As EventArgs) Handles btnStudent.Click, btnGuest.Click, btnFaculty.Click
@@ -174,11 +176,7 @@ Public Class FormMain
     End Sub
 
     Private Sub picBxOptions_Click(sender As Object, e As EventArgs) Handles picBxOptions.Click
-        If panelOptions.Visible = False Then
-            panelOptions.Visible = True
-        Else
-            panelOptions.Visible = False
-        End If
+        timerOptionsPanel.Start()
     End Sub
 
     Private Sub picBxAdmin_Click(sender As Object, e As EventArgs) Handles picBxAdmin.Click
@@ -192,5 +190,23 @@ Public Class FormMain
         picBxOptions_Click(Me.picBxOptions, e)
         formQRCodeScanner.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub timerOptionsPanel_Tick(sender As Object, e As EventArgs) Handles timerOptionsPanel.Tick
+        If Not (isPanelOptionsOpen) Then
+            If panelOptions.Width < 340 Then
+                panelOptions.Width += 30
+            Else
+                timerOptionsPanel.Stop()
+                isPanelOptionsOpen = True
+            End If
+        Else
+            If panelOptions.Width > 0 Then
+                panelOptions.Width -= 30
+            Else
+                timerOptionsPanel.Stop()
+                isPanelOptionsOpen = False
+            End If
+        End If
     End Sub
 End Class

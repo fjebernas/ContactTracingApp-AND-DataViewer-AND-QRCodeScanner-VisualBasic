@@ -91,6 +91,7 @@ Partial Class FormMain
         Me.lblSelectedLabel = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.timerDate = New System.Windows.Forms.Timer(Me.components)
+        Me.timerOptionsPanel = New System.Windows.Forms.Timer(Me.components)
         Me.panelBottom.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.picBxOptions, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -208,8 +209,7 @@ Partial Class FormMain
         '
         'panelOptions
         '
-        Me.panelOptions.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.panelOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelOptions.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.panelOptions.Controls.Add(Me.PictureBox4)
         Me.panelOptions.Controls.Add(Me.picBxQRCode)
         Me.panelOptions.Controls.Add(Me.PictureBox2)
@@ -218,17 +218,19 @@ Partial Class FormMain
         Me.panelOptions.Controls.Add(Me.Label2)
         Me.panelOptions.Controls.Add(Me.Label3)
         Me.panelOptions.Controls.Add(Me.Label1)
-        Me.panelOptions.Location = New System.Drawing.Point(322, 1)
+        Me.panelOptions.Dock = System.Windows.Forms.DockStyle.Right
+        Me.panelOptions.Location = New System.Drawing.Point(658, 0)
+        Me.panelOptions.MaximumSize = New System.Drawing.Size(340, 133)
+        Me.panelOptions.MinimumSize = New System.Drawing.Size(0, 133)
         Me.panelOptions.Name = "panelOptions"
-        Me.panelOptions.Size = New System.Drawing.Size(339, 132)
+        Me.panelOptions.Size = New System.Drawing.Size(0, 133)
         Me.panelOptions.TabIndex = 4
-        Me.panelOptions.Visible = False
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(245, 102)
+        Me.PictureBox4.Location = New System.Drawing.Point(245, 103)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(25, 23)
         Me.PictureBox4.TabIndex = 3
@@ -237,7 +239,7 @@ Partial Class FormMain
         'picBxQRCode
         '
         Me.picBxQRCode.Image = CType(resources.GetObject("picBxQRCode.Image"), System.Drawing.Image)
-        Me.picBxQRCode.Location = New System.Drawing.Point(199, 60)
+        Me.picBxQRCode.Location = New System.Drawing.Point(199, 61)
         Me.picBxQRCode.Name = "picBxQRCode"
         Me.picBxQRCode.Size = New System.Drawing.Size(71, 67)
         Me.picBxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -248,7 +250,7 @@ Partial Class FormMain
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(66, 49)
+        Me.PictureBox2.Location = New System.Drawing.Point(66, 50)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(25, 23)
         Me.PictureBox2.TabIndex = 3
@@ -257,7 +259,7 @@ Partial Class FormMain
         'picBxAdmin
         '
         Me.picBxAdmin.Image = CType(resources.GetObject("picBxAdmin.Image"), System.Drawing.Image)
-        Me.picBxAdmin.Location = New System.Drawing.Point(25, 5)
+        Me.picBxAdmin.Location = New System.Drawing.Point(25, 6)
         Me.picBxAdmin.Name = "picBxAdmin"
         Me.picBxAdmin.Size = New System.Drawing.Size(68, 67)
         Me.picBxAdmin.TabIndex = 2
@@ -268,7 +270,7 @@ Partial Class FormMain
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(74, 97)
+        Me.Label4.Location = New System.Drawing.Point(74, 98)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(119, 17)
         Me.Label4.TabIndex = 0
@@ -279,7 +281,7 @@ Partial Class FormMain
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(97, 37)
+        Me.Label2.Location = New System.Drawing.Point(97, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(136, 17)
         Me.Label2.TabIndex = 0
@@ -290,7 +292,7 @@ Partial Class FormMain
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(97, 80)
+        Me.Label3.Location = New System.Drawing.Point(97, 81)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 17)
         Me.Label3.TabIndex = 0
@@ -301,7 +303,7 @@ Partial Class FormMain
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(97, 20)
+        Me.Label1.Location = New System.Drawing.Point(97, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(153, 17)
         Me.Label1.TabIndex = 0
@@ -939,6 +941,10 @@ Partial Class FormMain
         '
         Me.timerDate.Interval = 1000
         '
+        'timerOptionsPanel
+        '
+        Me.timerOptionsPanel.Interval = 1
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1045,4 +1051,5 @@ Partial Class FormMain
     Friend WithEvents picBxQRCode As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents timerOptionsPanel As Timer
 End Class
