@@ -140,9 +140,13 @@
   <ItemGroup>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdminLogin.resx">
       <DependentUpon>FormAdminLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQRCodeResult.resx">
+      <DependentUpon>FormQRCodeResult.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQRCodeScanner.resx">
       <DependentUpon>FormQRCodeScanner.vb</DependentUpon>

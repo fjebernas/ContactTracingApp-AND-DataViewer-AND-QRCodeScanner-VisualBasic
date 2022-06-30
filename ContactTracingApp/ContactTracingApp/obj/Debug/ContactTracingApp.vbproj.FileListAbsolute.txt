@@ -25,3 +25,4 @@ C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\Contac
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.xml
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\bin\Debug\zxing.presentation.xml
 C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.vbproj.CopyComplete
+C:\Users\franc\Documents\School\ELECTIVE 3\repos\ContactTracingApp-folder\ContactTracingApp\ContactTracingApp\obj\Debug\ContactTracingApp.FormQRCodeResult.resources

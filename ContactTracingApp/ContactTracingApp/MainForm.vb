@@ -188,8 +188,9 @@ Public Class FormMain
     End Sub
 
     Private Sub picBxQRCode_Click(sender As Object, e As EventArgs) Handles picBxQRCode.Click
-        Dim formQRCodeScanner As FormQRCodeScanner = New FormQRCodeScanner()
+        Dim formQRCodeScanner As FormQRCodeScanner = New FormQRCodeScanner(Me)
         picBxOptions_Click(Me.picBxOptions, e)
         formQRCodeScanner.Show()
+        Me.Hide()
     End Sub
 End Class

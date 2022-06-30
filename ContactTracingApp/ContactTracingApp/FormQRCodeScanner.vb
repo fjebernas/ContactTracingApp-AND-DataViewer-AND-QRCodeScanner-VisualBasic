@@ -3,18 +3,20 @@ Imports AForge.Video.DirectShow
 Imports ZXing
 
 Public Class FormQRCodeScanner
+    Dim formMain As FormMain
+
     Dim filterInfoCollection As FilterInfoCollection
     Dim captureDevice As VideoCaptureDevice
 
     Dim isCameraRunning As Boolean
 
-    Public Sub New()
+    Public Sub New(ByVal passedForm As FormMain)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
+        formMain = passedForm
     End Sub
 
     Private Sub FormQRCodeScanner_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,10 +33,9 @@ Public Class FormQRCodeScanner
             captureDevice = New VideoCaptureDevice(filterInfoCollection(cboBxDevices.SelectedIndex).MonikerString)
             AddHandler captureDevice.NewFrame, AddressOf CaptureDevice_NewFrame
             captureDevice.Start()
-
             isCameraRunning = True
-
             timer.Start()
+            btnStart.Text = "Stop"
         ElseIf isCameraRunning Then
             DevicesReset()
         End If
@@ -48,6 +49,7 @@ Public Class FormQRCodeScanner
         If isCameraRunning Then
             captureDevice.Stop()
         End If
+        formMain.Show()
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -73,5 +75,6 @@ Public Class FormQRCodeScanner
         End If
 
         isCameraRunning = False
+        btnStart.Text = "Start"
     End Sub
 End Class
