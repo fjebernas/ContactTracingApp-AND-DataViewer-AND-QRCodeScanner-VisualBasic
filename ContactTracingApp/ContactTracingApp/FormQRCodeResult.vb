@@ -13,18 +13,20 @@ Public Class FormQRCodeResult
 
         ' Add any initialization after the InitializeComponent() call.
 
+        txtBxQuesThree.Text = ""
         infos = (result.ToString()).Split("-")
 
-        txtBxName.Text = " " & infos(0)
-        txtBxAge.Text = " " & infos(1)
-        txtBxAddress.Text = " " & infos(2)
-        txtBxGender.Text = infos(3)
-        txtBxContactNo.Text = " " & infos(4)
-        txtBxQuesOne.Text = " " & infos(5)
-        txtBxQuesTwo.Text = " " & infos(6)
-        txtBxQuesThree.Text = " " & infos(7)
+        lblType.Text = " " & infos(0)
+        lblFN.Text = " " & infos(1)
+        lblAge.Text = " " & infos(2)
+        lblAddress.Text = " " & infos(3)
+        lblGender.Text = infos(4)
+        lblContactno.Text = " " & infos(5)
+        lblQuesOneAns.Text = " " & infos(6)
+        lblQuesTwoAns.Text = " " & infos(7)
+        txtBxQuesThree.Text = " " & infos(8)
 
-        nameParts = SplitName(txtBxName.Text)
+        nameParts = SplitName(lblFN.Text)
         fN = nameParts(0)
         sN = nameParts(1)
         nameParts(0) = nameParts(0).Replace(" ", "-")
@@ -43,27 +45,28 @@ Public Class FormQRCodeResult
     Private Sub btnYES_Click(sender As Object, e As EventArgs) Handles btnYES.Click
         timer.Stop()
 
-        Dim dataTxt As StreamWriter
+        Dim txtFile As StreamWriter
 
-        dataTxt = File.CreateText(User.PATH & wN & ".txt")
-        dataTxt.WriteLine("---------------Contact Tracing using QR Code---------------" & vbCrLf & vbCrLf & vbCrLf &
+        txtFile = File.CreateText(User.PATH & sN & "," & fN & ".txt")
+        txtFile.WriteLine("---------------Contact Tracing using QR Code---------------" & vbCrLf & vbCrLf & vbCrLf &
                               "Time submitted: " & DateTime.Now.ToString("dddd, MMM dd yyyy, hh:mm:ss tt") & vbCrLf & vbCrLf &
+                              "Selected type: " & lblType.Text & vbCrLf & vbCrLf &
                               "USER'S DETAILS:" & vbCrLf & vbCrLf &
-                              "First name: " & fN & vbCrLf &
-                              "Last name: " & sN & vbCrLf &
-                              "Age: " & txtBxAge.Text & vbCrLf &
-                              "Address: " & txtBxAddress.Text & vbCrLf &
-                              "Gender: " & txtBxGender.Text & vbCrLf &
-                              "Contact no.: " & txtBxContactNo.Text & vbCrLf & vbCrLf &
+                              "     First name: " & fN & vbCrLf &
+                              "     Last name: " & sN & vbCrLf &
+                              "     Age: " & lblAge.Text & vbCrLf &
+                              "     Address: " & lblAddress.Text & vbCrLf &
+                              "     Gender: " & lblGender.Text & vbCrLf &
+                              "     Contact no.: " & lblContactno.Text & vbCrLf & vbCrLf &
                               "USER'S ANSWERS:" & vbCrLf & vbCrLf &
-                              "1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
-                              "Answer:" & txtBxQuesOne.Text & vbCrLf &
-                              "2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
-                              "Answer:" & txtBxQuesTwo.Text & vbCrLf &
-                              "3. Health conditions or flu-like symptoms: (e.g. fever, cough, breathing difficulty, etc.)" & vbCrLf &
-                              "Answer:" & txtBxQuesThree.Text & vbCrLf
+                              "     1. Have you traveled outside the country anytime from last month until now?" & vbCrLf &
+                              "         Answer:" & lblQuesOneAns.Text & vbCrLf &
+                              "     2. Have you come into contact with anyone who has traveled outside your country between the period of last month until now?" & vbCrLf &
+                              "         Answer:" & lblQuesTwoAns.Text & vbCrLf &
+                              "     3. Health conditions or flu-like symptoms: (e.g. fever, cough, breathing difficulty, etc.)" & vbCrLf &
+                              "         Answer:" & txtBxQuesThree.Text & vbCrLf
                               )
-        dataTxt.Close()
+        txtFile.Close()
         MessageBox.Show("Submitted successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
         StartOver()
     End Sub

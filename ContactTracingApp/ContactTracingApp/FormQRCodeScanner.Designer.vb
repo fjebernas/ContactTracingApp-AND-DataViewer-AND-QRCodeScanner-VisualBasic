@@ -30,7 +30,9 @@ Partial Class FormQRCodeScanner
         Me.btnStart = New System.Windows.Forms.Button()
         Me.pictureBox = New System.Windows.Forms.PictureBox()
         Me.cboBxDevices = New System.Windows.Forms.ComboBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timer
@@ -41,7 +43,7 @@ Partial Class FormQRCodeScanner
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.label2.Location = New System.Drawing.Point(167, 83)
+        Me.label2.Location = New System.Drawing.Point(118, 83)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(189, 30)
         Me.label2.TabIndex = 10
@@ -52,7 +54,7 @@ Partial Class FormQRCodeScanner
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.label1.Location = New System.Drawing.Point(73, 41)
+        Me.label1.Location = New System.Drawing.Point(116, 41)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(379, 42)
         Me.label1.TabIndex = 11
@@ -91,9 +93,19 @@ Partial Class FormQRCodeScanner
         Me.cboBxDevices.FormattingEnabled = True
         Me.cboBxDevices.Location = New System.Drawing.Point(14, 15)
         Me.cboBxDevices.Name = "cboBxDevices"
-        Me.cboBxDevices.Size = New System.Drawing.Size(145, 21)
+        Me.cboBxDevices.Size = New System.Drawing.Size(10, 21)
         Me.cboBxDevices.TabIndex = 7
         Me.cboBxDevices.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(39, 46)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(71, 67)
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
         '
         'FormQRCodeScanner
         '
@@ -101,11 +113,13 @@ Partial Class FormQRCodeScanner
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(522, 642)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.pictureBox)
         Me.Controls.Add(Me.cboBxDevices)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -113,6 +127,7 @@ Partial Class FormQRCodeScanner
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Contact Tracing App - QR Code Scanner"
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -124,4 +139,5 @@ Partial Class FormQRCodeScanner
     Private WithEvents btnStart As Button
     Private WithEvents pictureBox As PictureBox
     Private WithEvents cboBxDevices As ComboBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
